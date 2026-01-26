@@ -2,138 +2,182 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Ehasan Hasan — B2B SaaS & AI Thought Leadership Writer</title>
+  <title>B2B SaaS & AI Thought Leadership Writer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Thought leadership writer helping B2B SaaS and AI brands build trust, visibility, and authority.">
+
   <style>
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       margin: 0;
-      background: #0f172a;
-      color: #e5e7eb;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: #ffffff;
+      color: #111111;
       line-height: 1.6;
     }
-    .container {
+
+    /* Header */
+    header {
+      border-bottom: 1px solid #e5e7eb;
+      background: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .brand span {
+      font-weight: 400;
+      color: #555;
+    }
+
+    nav a {
+      margin-left: 24px;
+      text-decoration: none;
+      color: #111;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Hero */
+    .hero {
+      max-width: 1100px;
+      margin: auto;
+      padding: 90px 20px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      max-width: 720px;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 640px;
+      margin: 20px 0 32px;
+      color: #444;
+    }
+
+    .cta {
+      display: inline-block;
+      background: #111;
+      color: #fff;
+      padding: 14px 26px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .cta:hover {
+      background: #000;
+    }
+
+    /* Why Me */
+    .section {
       max-width: 1100px;
       margin: auto;
       padding: 60px 20px;
+      border-top: 1px solid #e5e7eb;
     }
-    h1 {
-      font-size: 42px;
-      color: #ffffff;
+
+    .section h2 {
+      font-size: 28px;
+      margin-bottom: 24px;
     }
-    h2 {
-      color: #38bdf8;
-      margin-top: 60px;
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
     }
-    p {
-      max-width: 720px;
-      font-size: 18px;
-    }
-    .cta {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 14px 28px;
-      background: #38bdf8;
-      color: #020617;
-      text-decoration: none;
-      font-weight: 600;
+
+    .feature {
+      padding: 20px;
+      border: 1px solid #e5e7eb;
       border-radius: 8px;
     }
-    .box {
-      background: #020617;
-      padding: 24px;
-      border-radius: 12px;
-      margin-top: 20px;
+
+    .feature h3 {
+      margin-top: 0;
+      font-size: 18px;
     }
+
+    /* Footer */
     footer {
+      border-top: 1px solid #e5e7eb;
       text-align: center;
-      padding: 40px;
+      padding: 40px 20px;
+      color: #666;
       font-size: 14px;
-      color: #94a3b8;
     }
   </style>
-  <style>
-.navbar {
-  background: #020617;
-  padding: 16px 24px;
-  display: flex;
-  gap: 20px;
-}
-
-.navbar a {
-  color: #e5e7eb;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.navbar a:hover {
-  color: #38bdf8;
-}
-</style>
-
 </head>
+
 <body>
 
-  <div class="container">
-    <h1>B2B SaaS & AI Thought Leadership Writer</h1>
-
-    <p>
-      I help founders, executives, and B2B SaaS teams publish research-backed,
-      high-authority content that builds trust, drives visibility, and positions
-      them as credible leaders in the AI era.
-    </p>
-
-    <a class="cta" href="https://www.linkedin.com/in/YOUR-LINKEDIN">Contact on LinkedIn</a>
-
-    <h2>Why Work With Me</h2>
-    <div class="box">
-      <p>
-        I combine 15+ years of real-world IT experience — including CTO-level leadership —
-        with modern AI-assisted content strategy to translate complex ideas into
-        decision-maker-ready narratives.
-      </p>
+<header>
+  <div class="nav-container">
+    <div class="brand">
+      🧠 <strong>EhasanPro</strong> <span>Thought Leadership</span>
     </div>
-<body>
-
-  <nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <div class="container">
-    <h1>B2B SaaS & AI Thought Leadership Writer</h1>
-    ...
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </div>
+</header>
 
-</body>
+<section class="hero">
+  <h1>Thought Leadership Content for B2B SaaS & AI Brands</h1>
+  <p>
+    I help founders, executives, and SaaS teams publish research-backed,
+    high-authority content that earns trust, citations, and demand
+    in the AI search era.
+  </p>
+  <a class="cta" href="contact.html">Work With Me</a>
+</section>
 
-    <h2>What I Do</h2>
-    <div class="box">
-      <ul>
-        <li>Thought leadership articles (AI, Future of Work, B2B SaaS)</li>
-        <li>SEO content optimized for authority, not fluff</li>
-        <li>Executive LinkedIn ghostwriting</li>
-        <li>Research-driven content frameworks</li>
-        <li>Strategic keyword research & topic mapping</li>
-      </ul>
+<section class="section">
+  <h2>Why Choose Me</h2>
+  <div class="features">
+    <div class="feature">
+      <h3>Former CTO Perspective</h3>
+      <p>I translate complex AI and SaaS concepts into clear, decision-ready narratives.</p>
     </div>
-
-    <h2>Let’s Work Together</h2>
-    <div class="box">
-      <p>
-        If you want content that educates, persuades, and influences decision-makers —
-        not generic AI output — let’s talk.
-      </p>
-      <a class="cta" href="https://www.linkedin.com/in/YOUR-LINKEDIN">Message Me</a>
+    <div class="feature">
+      <h3>Authority-First SEO</h3>
+      <p>Content optimized for trust, citations, and long-term visibility—not fluff.</p>
+    </div>
+    <div class="feature">
+      <h3>Executive-Grade Writing</h3>
+      <p>Thought leadership that buyers, investors, and AI platforms actually trust.</p>
     </div>
   </div>
+</section>
 
-  <footer>
-    © 2026 Ehasan Hasan · Thought Leadership Writer
-  </footer>
+<footer>
+  © 2026 Ehasan Hasan · B2B SaaS & AI Thought Leadership Writer
+</footer>
 
 </body>
 </html>
