@@ -6,15 +6,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+    /* Global */
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      background: #ffffff;
-      color: #111111;
-      line-height: 1.6;
+      background: #f5f7fa; /* WordPress-style light gray */
+      color: #111;
+      line-height: 1.65;
     }
 
-    /* Header */
+    a {
+      color: #111;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Page Canvas */
+    .page {
+      background: #ffffff;
+      max-width: 1200px;
+      margin: 0 auto;
+      min-height: 100vh;
+    }
+
+    /* Header / Navigation */
     header {
       border-bottom: 1px solid #e5e7eb;
       background: #ffffff;
@@ -26,7 +44,7 @@
     .nav-container {
       max-width: 1100px;
       margin: auto;
-      padding: 16px 20px;
+      padding: 18px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -36,8 +54,8 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      font-weight: 700;
       font-size: 18px;
+      font-weight: 700;
     }
 
     .brand span {
@@ -46,85 +64,89 @@
     }
 
     nav a {
-      margin-left: 24px;
-      text-decoration: none;
-      color: #111;
+      margin-left: 26px;
       font-weight: 500;
+      color: #111;
     }
 
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    /* Hero */
+    /* Hero Section */
     .hero {
       max-width: 1100px;
       margin: auto;
-      padding: 90px 20px;
+      padding: 100px 20px 80px;
     }
 
     .hero h1 {
-      font-size: 42px;
-      max-width: 720px;
+      font-size: 46px;
       line-height: 1.2;
+      max-width: 760px;
+      margin-bottom: 20px;
     }
 
     .hero p {
-      font-size: 18px;
-      max-width: 640px;
-      margin: 20px 0 32px;
-      color: #444;
+      font-size: 19px;
+      max-width: 680px;
+      color: #333;
+      margin-bottom: 36px;
     }
 
     .cta {
       display: inline-block;
       background: #111;
-      color: #fff;
-      padding: 14px 26px;
+      color: #ffffff;
+      padding: 14px 28px;
       border-radius: 6px;
-      text-decoration: none;
       font-weight: 600;
     }
 
     .cta:hover {
       background: #000;
+      text-decoration: none;
     }
 
-    /* Why Me */
+    /* Sections */
     .section {
       max-width: 1100px;
       margin: auto;
-      padding: 60px 20px;
+      padding: 70px 20px;
       border-top: 1px solid #e5e7eb;
     }
 
     .section h2 {
-      font-size: 28px;
-      margin-bottom: 24px;
+      font-size: 30px;
+      margin-bottom: 30px;
     }
 
+    /* Why Me Cards */
     .features {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 30px;
     }
 
     .feature {
-      padding: 20px;
       border: 1px solid #e5e7eb;
       border-radius: 8px;
+      padding: 26px;
+      background: #ffffff;
     }
 
     .feature h3 {
+      font-size: 19px;
       margin-top: 0;
-      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    .feature p {
+      color: #444;
+      font-size: 16px;
     }
 
     /* Footer */
     footer {
       border-top: 1px solid #e5e7eb;
-      text-align: center;
       padding: 40px 20px;
+      text-align: center;
       color: #666;
       font-size: 14px;
     }
@@ -133,51 +155,64 @@
 
 <body>
 
-<header>
-  <div class="nav-container">
-    <div class="brand">
-      🧠 <strong>EhasanPro</strong> <span>Thought Leadership</span>
-    </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+<div class="page">
 
-<section class="hero">
-  <h1>Thought Leadership Content for B2B SaaS & AI Brands</h1>
-  <p>
-    I help founders, executives, and SaaS teams publish research-backed,
-    high-authority content that earns trust, citations, and demand
-    in the AI search era.
-  </p>
-  <a class="cta" href="contact.html">Work With Me</a>
-</section>
+  <header>
+    <div class="nav-container">
+      <div class="brand">
+        🧠 EhasanPro <span>Thought Leadership</span>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<section class="section">
-  <h2>Why Choose Me</h2>
-  <div class="features">
-    <div class="feature">
-      <h3>Former CTO Perspective</h3>
-      <p>I translate complex AI and SaaS concepts into clear, decision-ready narratives.</p>
-    </div>
-    <div class="feature">
-      <h3>Authority-First SEO</h3>
-      <p>Content optimized for trust, citations, and long-term visibility—not fluff.</p>
-    </div>
-    <div class="feature">
-      <h3>Executive-Grade Writing</h3>
-      <p>Thought leadership that buyers, investors, and AI platforms actually trust.</p>
-    </div>
-  </div>
-</section>
+  <section class="hero">
+    <h1>Thought Leadership Content for B2B SaaS & AI Brands</h1>
+    <p>
+      I help founders, executives, and B2B SaaS teams publish research-backed,
+      high-authority content that builds trust, earns AI citations,
+      and positions them as category leaders.
+    </p>
+    <a class="cta" href="contact.html">Work With Me</a>
+  </section>
 
-<footer>
-  © 2026 Ehasan Hasan · B2B SaaS & AI Thought Leadership Writer
-</footer>
+  <section class="section">
+    <h2>Why Choose Me</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>Former CTO Perspective</h3>
+        <p>
+          I combine 15+ years of real-world IT and CTO-level experience
+          with modern AI content strategy.
+        </p>
+      </div>
+      <div class="feature">
+        <h3>Authority-First SEO</h3>
+        <p>
+          Content optimized for trust, citations, and long-term visibility —
+          not keyword stuffing or generic AI output.
+        </p>
+      </div>
+      <div class="feature">
+        <h3>Executive-Grade Writing</h3>
+        <p>
+          Clear, persuasive narratives designed for founders,
+          buyers, and decision-makers in AI-driven markets.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Ehasan Hasan · B2B SaaS & AI Thought Leadership Writer
+  </footer>
+
+</div>
 
 </body>
 </html>
