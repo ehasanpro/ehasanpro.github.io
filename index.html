@@ -1,254 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>B2B SaaS & AI Thought Leadership Writer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enamul Hasan | AI & Future of Work Insights</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    /* Global */
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      background: #f5f7fa; /* WordPress-style light gray */
-      color: #111;
-      line-height: 1.65;
+      font-family: 'Inter', sans-serif;
+      background-color: #0f172a;
+      color: #f1f5f9;
     }
-
-    a {
-      color: #111;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* Page Canvas */
-    .page {
-      background: #ffffff;
-      max-width: 1200px;
-      margin: 0 auto;
-      min-height: 100vh;
-    }
-
-    /* Header / Navigation */
     header {
-      border-bottom: 1px solid #e5e7eb;
-      background: #ffffff;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .nav-container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 18px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 18px;
-      font-weight: 700;
-    }
-
-    .brand span {
-      font-weight: 400;
-      color: #555;
-    }
-
-    nav a {
-      margin-left: 26px;
-      font-weight: 500;
-      color: #111;
-    }
-
-    /* Hero Section */
-    .hero {
-      max-width: 1100px;
-      margin: auto;
-      padding: 100px 20px 80px;
-    }
-
-    .hero h1 {
-      font-size: 46px;
-      line-height: 1.2;
-      max-width: 760px;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 19px;
-      max-width: 680px;
-      color: #333;
-      margin-bottom: 36px;
-    }
-
-    .cta {
-      display: inline-block;
-      background: #111;
-      color: #ffffff;
-      padding: 14px 28px;
-      border-radius: 6px;
-      font-weight: 600;
-    }
-
-    .cta:hover {
-      background: #000;
-      text-decoration: none;
-    }
-
-    /* Sections */
-    .section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 70px 20px;
-      border-top: 1px solid #e5e7eb;
-    }
-
-    .section h2 {
-      font-size: 30px;
-      margin-bottom: 30px;
-    }
-
-    /* Why Me Cards */
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-    }
-
-    .feature {
-      border: 1px solid #e5e7eb;
-      border-radius: 8px;
-      padding: 26px;
-      background: #ffffff;
-    }
-
-    .feature h3 {
-      font-size: 19px;
-      margin-top: 0;
-      margin-bottom: 12px;
-    }
-
-    .feature p {
-      color: #444;
-      font-size: 16px;
-    }
-
-    /* Footer */
-    footer {
-      border-top: 1px solid #e5e7eb;
-      padding: 40px 20px;
+      padding: 60px 20px;
       text-align: center;
-      color: #666;
-      font-size: 14px;
+      background: linear-gradient(to right, #0f172a, #1e293b);
     }
-.brand img {
-  height: 36px;
-}
-.logo-box {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* left aligned */
-}
-
-.logo-box img {
-  width: 100px;   /* 🔥 logo size control */
-  height: auto;
-}
-
-.tagline {
-  font-size: 22px;
-  color: #333;
-  margin-top: 0px;
-  font-weight: 500;
-}
-.tagline {
-  font-size: 13px;
-  color: #555;
-  letter-spacing: 0.3px;
-}
-
-
-
-
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #94a3b8;
+    }
+    .hero-image {
+      max-width: 600px;
+      margin: 40px auto;
+      display: block;
+      border-radius: 12px;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #38bdf8;
+    }
+    section p {
+      line-height: 1.6;
+      color: #cbd5e1;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #64748b;
+    }
   </style>
 </head>
-
 <body>
 
-<div class="page">
-
   <header>
-    <div class="nav-container">
-    <div class="logo-box">
-  <img src="assets/ehasanpro-logo.png" alt="EhasanPro logo">
-  <p class="tagline">Thought Leadership Writer for B2B SaaS & AI Brands</p>
-</div>
-
-
-
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
+    <h1>Enamul Hasan</h1>
+    <p>AI Search Optimization & Thought Leadership for B2B SaaS Brands</p>
   </header>
 
-  <section class="hero">
-    <h1>Thought Leadership Content for B2B SaaS & AI Brands</h1>
+  <img src="hero-image.jpg" alt="AI Network Hero Image" class="hero-image" />
+
+  <section>
+    <h2>Welcome</h2>
     <p>
-      I help founders, executives, and B2B SaaS teams publish research-backed,
-      high-authority content that builds trust, earns AI citations,
-      and positions them as category leaders.
+      This is my digital corner for sharing frameworks, insights, and strategies on AI search visibility, executive branding, and the future of work. I help B2B SaaS and AI leaders build content that gets cited—not just clicked.
     </p>
-    <a class="cta" href="contact.html">Work With Me</a>
   </section>
 
-  <section class="section">
-    <h2>Why Choose Me</h2>
-    <div class="features">
-      <div class="feature">
-        <h3>Former CTO Perspective</h3>
-        <p>
-          I combine 15+ years of real-world IT and CTO-level experience
-          with modern AI content strategy.
-        </p>
-      </div>
-      <div class="feature">
-        <h3>Authority-First SEO</h3>
-        <p>
-          Content optimized for trust, citations, and long-term visibility —
-          not keyword stuffing or generic AI output.
-        </p>
-      </div>
-      <div class="feature">
-        <h3>Executive-Grade Writing</h3>
-        <p>
-          Clear, persuasive narratives designed for founders,
-          buyers, and decision-makers in AI-driven markets.
-        </p>
-      </div>
-    </div>
+  <section>
+    <h2>Services</h2>
+    <p>
+      • AI Search Optimization Frameworks<br>
+      • Executive Thought Leadership Content<br>
+      • Multi‑Platform Visibility (Google, Perplexity, ChatGPT)<br>
+      • Citation Economy Strategy
+    </p>
   </section>
 
   <footer>
-    © 2026 Ehasan Hasan · B2B SaaS & AI Thought Leadership Writer
+    © 2026 Enamul Hasan. Built for authority in the AI era.
   </footer>
-
-</div>
 
 </body>
 </html>
-
-
-
