@@ -3,42 +3,86 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EhasanPro | B2B SaaS & AI Growth Strategies</title>
+  <title>EhasanPro | B2B SaaS & AI Growth</title>
   <style>
+    /* ====== GLOBAL STYLES ====== */
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #ffffff;
+      background-color: #f9f9f9; /* 🔧 BODY BACKGROUND COLOR (off-white) */
       color: #333;
       line-height: 1.6;
     }
+
+    /* ====== HEADER ====== */
     header {
-      background-color: #f5f5f5;
-      padding: 40px 20px;
+      background-color: #ffffff; /* 🔧 HEADER BACKGROUND COLOR (white) */
       text-align: center;
+      padding: 20px 0 10px 0; /* 🔧 Adjust spacing between logo & tagline */
     }
-    header h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
+    .logo img {
+      height: 60px; /* 🔧 Logo size */
     }
-    header p {
-      font-size: 18px;
-      color: #666;
+    .tagline {
+      font-size: 16px; /* 🔧 Tagline font size */
+      color: #555;      /* 🔧 Tagline text color */
+      margin-top: 8px;  /* 🔧 Gap between logo and tagline */
     }
+
+    /* ====== NAVIGATION MENU ====== */
     nav {
-      background-color: #222;
-      padding: 10px 0;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      background-color: transparent;
+      padding: 15px 0;
     }
-    nav a {
-      color: #fff;
-      margin: 0 15px;
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 30px; /* 🔧 Space between menu items */
+    }
+    nav ul li {
+      position: relative;
+    }
+    nav ul li a {
       text-decoration: none;
-      font-size: 16px;
+      color: #333; /* 🔧 Menu text color */
+      font-size: 16px; /* 🔧 Menu font size */
+      padding: 8px 12px;
     }
-    nav a:hover {
-      color: #00bcd4;
+    nav ul li a:hover {
+      color: #00bcd4; /* 🔧 Hover color */
     }
+    /* ====== DROPDOWN ====== */
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 35px;
+      left: 0;
+      background-color: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 10px 0;
+      z-index: 1000;
+    }
+    nav ul li:hover ul {
+      display: block;
+    }
+    nav ul li ul li {
+      width: 220px;
+      text-align: left;
+    }
+    nav ul li ul li a {
+      display: block;
+      padding: 8px 16px;
+      color: #333;
+    }
+    nav ul li ul li a:hover {
+      background-color: #f0f0f0;
+    }
+
+    /* ====== SECTION STYLES ====== */
     section {
       display: flex;
       flex-wrap: wrap;
@@ -61,6 +105,8 @@
       height: auto;
       border-radius: 8px;
     }
+
+    /* ====== CTA SECTION ====== */
     .cta {
       text-align: center;
       padding: 40px 20px;
@@ -75,7 +121,7 @@
       margin-bottom: 30px;
     }
     .cta button {
-      background-color: #00bcd4;
+      background-color: #00bcd4; /* 🔧 CTA button color */
       color: white;
       border: none;
       padding: 12px 24px;
@@ -83,9 +129,11 @@
       border-radius: 4px;
       cursor: pointer;
     }
+
+    /* ====== FOOTER ====== */
     footer {
-      background-color: #222;
-      color: #ccc;
+      background-color: #222; /* 🔧 Footer background color */
+      color: #ccc;            /* 🔧 Footer text color */
       text-align: center;
       padding: 20px;
       font-size: 14px;
@@ -96,18 +144,30 @@
 
   <!-- HEADER -->
   <header>
-    <h1>Thought Leadership That Decision-Makers Trust. And AI Systems Cite.</h1>
-    <p>I help B2B SaaS and AI companies publish authority-building content that earns credibility, drives visibility in the AI search era, and positions leaders as the obvious choice in their category.</p>
-    <p><em>Former CTO • 15+ Years Technical Leadership • Built for Authority</em></p>
+    <div class="logo">
+      <img src="/ehasanpro-logo.png" alt="EhasanPro Logo" />
+    </div>
+    <div class="tagline">
+      B2B SaaS & AI Growth Strategies Hub
+    </div>
   </header>
 
-  <!-- NAVIGATION -->
+  <!-- NAVIGATION MENU -->
   <nav>
-    <a href="#">HOME</a>
-    <a href="#">ABOUT</a>
-    <a href="#">BLOGS</a>
-    <a href="#">CASE STUDIES / INSIGHTS</a>
-    <a href="#">CONTACT</a>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li>
+        <a href="#">Blog ▾</a>
+        <ul>
+          <li><a href="#">AI & Future of Work</a></li>
+          <li><a href="#">B2B & SaaS</a></li>
+          <li><a href="#">Digital Marketing & SEO</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Insights</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
   </nav>
 
   <!-- SECTION 1: HERO -->
@@ -115,6 +175,7 @@
     <div class="text">
       <h2>Thought Leadership Writer for B2B SaaS & AI Brands</h2>
       <p>I help founders, executives, and B2B SaaS teams publish research-backed, high-authority content that earns trust, drives AI-era visibility, and positions them as category leaders.</p>
+      <p><em>Former CTO-level technologist · AI & Search-driven content · Built for authority, not fluff</em></p>
       <p><strong>👉 View My Work</strong> | Book a Strategy Call</p>
     </div>
     <div class="image">
@@ -181,33 +242,3 @@
   </section>
 
   <!-- SECTION 6: WHO IT’S FOR -->
-  <section>
-    <div class="image">
-      <img src="images/who.jpg" alt="Professional silhouettes" />
-    </div>
-    <div class="text">
-      <h2>Who I Work With</h2>
-      <ul>
-        <li>B2B SaaS founders & leadership teams</li>
-        <li>AI startups & scale-ups</li>
-        <li>Consultants and professional services firms</li>
-        <li>Executives building personal authority</li>
-      </ul>
-      <p><strong>Not for:</strong> Low-cost content farms or volume-only SEO churn.</p>
-    </div>
-  </section>
-
-  <!-- FINAL CTA -->
-  <div class="cta">
-    <h2>Ready to Publish Content That Actually Builds Authority?</h2>
-    <p>If you want content that decision-makers trust—and AI platforms recognize—I can help.</p>
-    <button>👉 Request a Free Content & Visibility Review</button>
-  </div>
-
-  <!-- FOOTER -->
-  <footer>
-    &copy; 2026 EhasanPro. All rights reserved.
-  </footer>
-
-</body>
-</html>
