@@ -1,23 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>About — Ehasan Hasan</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>About — Mohammad Enamul Hasan</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== BASE ===== */
+body {
+  font-family: Georgia, serif;
+  background: #f7f7f6;
+  color: #111;
+  line-height: 1.65;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 50px 20px;
+}
+
+/* ===== HEADER ===== */
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.tagline {
+  font-size: 14px;
+  color: #060048;
+  margin-top: 4px;
+  letter-spacing: 0.8px;
+}
+
+nav a {
+  margin-left: 22px;
+  font-size: 15px;
+  font-weight: 550;
+  position: relative;
+}
+
+nav a:hover {
+  color: #060048;
+}
+
+/* ===== ABOUT LAYOUT ===== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.about-grid h1 {
+  font-size: 42px;
+  margin-bottom: 22px;
+  line-height: 1.2;
+}
+
+.about-grid p {
+  margin-bottom: 18px;
+  font-size: 17px;
+}
+
+.about-grid ul {
+  margin-top: 18px;
+  padding-left: 20px;
+}
+
+.about-grid li {
+  margin-bottom: 14px;
+}
+
+/* ===== IMAGE ===== */
+.author-image img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .about-grid h1 {
+    font-size: 34px;
+  }
+}
+</style>
 </head>
+
 <body>
-  <h1>About Me</h1>
 
-  <p>
-    I’m a B2B SaaS & AI Thought Leadership Writer with 15+ years of IT experience,
-    including CTO-level leadership.
-  </p>
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="container header-flex">
+    <div class="logo">
+      <img src="assets/ehasanpro-logo.png" alt="EhasanPro Logo">
+      <div class="tagline">B2B SaaS & AI Growth Strategies Hub</div>
+    </div>
 
-  <p>
-    I help founders and executives turn complex AI and SaaS ideas into
-    clear, credible narratives that build trust and authority.
-  </p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="#">Insights</a>
+      <a href="#">Copywriting</a>
+      <a href="#">How I Work</a>
+      <a href="#">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <a href="index.html">← Back to Home</a>
+<!-- ===== ABOUT ===== -->
+<section>
+  <div class="container about-grid">
+
+    <!-- TEXT -->
+    <div>
+      <h1>About Mohammad Enamul Hasan</h1>
+
+      <p>
+        I’m Mohammad Enamul Hasan, an MCP-certified professional with a deep passion for
+        writing and knowledge-sharing. For years, I’ve been closely connected to the world
+        of ideas, frameworks, and storytelling—though much of my work has remained
+        unpublished until now.
+      </p>
+
+      <p>
+        This site marks the beginning of a new chapter: a space where my thoughts,
+        strategies, and insights finally meet the world.
+      </p>
+
+      <p>
+        My journey blends technology, business, and communication. With a background in
+        systems and certification in Microsoft technologies, I understand how digital
+        transformation shapes the way we work. At the same time, my long-standing love for
+        writing allows me to translate complex concepts into clear, actionable narratives.
+      </p>
+
+      <p>Here, I focus on three powerful niches:</p>
+
+      <ul>
+        <li><strong>AI & the Future of Work</strong> — how AI is reshaping careers, skills, and opportunity</li>
+        <li><strong>B2B & SaaS Growth</strong> — strategies that help businesses scale and compete</li>
+        <li><strong>Digital Marketing & SEO</strong> — visibility, authority, and trust in the digital age</li>
+      </ul>
+
+      <p>
+        My mission is simple yet ambitious: to empower professionals and businesses with
+        insights that inspire action. Whether you’re a recruiter seeking thought
+        leadership, a client looking for strategy, or a reader curious about the future,
+        this site is designed to deliver clarity, credibility, and value.
+      </p>
+
+      <p>
+        I believe ideas only matter when they’re shared. That’s why I publish consistently
+        here—and across platforms like LinkedIn and Medium—to spark conversation and build
+        meaningful connections.
+      </p>
+
+      <p>
+        👉 If you’re ready to explore the future of work, discover SaaS growth strategies,
+        or unlock the power of digital marketing—you’re in the right place.
+      </p>
+    </div>
+
+    <!-- IMAGE -->
+    <div class="author-image">
+      <img src="assets/author-image.png" alt="Mohammad Enamul Hasan">
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 EhasanPro — All Rights Reserved
+</footer>
+
 </body>
 </html>
