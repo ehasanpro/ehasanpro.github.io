@@ -16,7 +16,7 @@
 /* ===== BASE ===== */
 body {
   font-family: Georgia, serif;
-  background: #f7f7f6;
+  background: #ffffff;
   color: #111;
   line-height: 1.6;
 }
@@ -44,7 +44,7 @@ header {
   align-items: center;
 }
 
-/* LOGO BLOCK */
+/* ===== LOGO ===== */
 .logo {
   display: flex;
   flex-direction: column;
@@ -52,54 +52,76 @@ header {
   line-height: 1;
 }
 
-
 .logo img {
-  height: 96px;   /* 🔥 76 → 96 (or 104 if you want bigger) */
+  height: 96px;          /* 🔥 REAL LOGO SIZE CONTROL */
   width: auto;
   display: block;
 }
 
-
 .tagline {
   font-size: 17px;
   color: #060048;
-  margin-top: 4px;     /* 🔥 gap control */
+  margin-top: 4px;
   line-height: 1.2;
   letter-spacing: 0.6px;
 }
 
-
-/* NAVIGATION */
+/* ===== NAVIGATION ===== */
 nav {
-  margin-left: 40px;   /* ✅ move nav slightly left */
+  display: flex;
+  align-items: center;
 }
 
 nav a {
-  margin-left: 20px;
-  font-size: 16px;     /* ✅ bigger nav text */
+  margin-left: 22px;
+  font-size: 16px;
   font-weight: 550;
+  transition: color 0.2s ease;
 }
-<nav>
-  <a href="#">Home</a>
-  <a href="#">About</a>
 
-  <div class="dropdown">
-    <a href="#" class="dropbtn">Insights ▾</a>
-    <div class="dropdown-content">
-      <a href="#">AI & Future of Work</a>
-      <a href="#">B2B & SaaS</a>
-      <a href="#">Digital Marketing & SEO</a>
-    </div>
-  </div>
+nav a:hover {
+  color: #060048;
+}
 
-  <a href="#">Copywriting</a>
-  <a href="#">How I Work</a>
-  <a href="#">Contact</a>
-</nav>
+/* ===== DROPDOWN ===== */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background: #ffffff;
+  min-width: 240px;
+  border: 1px solid #eee;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  z-index: 100;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 16px;
+  font-size: 15px;
+}
+
+.dropdown-content a:hover {
+  background: #f5f5f5;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
 /* ===== SECTIONS ===== */
 .section {
-  padding: 40px 0;
+  padding: 60px 0;
 }
 
 .two-col {
@@ -172,7 +194,7 @@ li {
 
 /* ===== CTA ===== */
 .cta {
-  background: #f0f0ef;
+  background: #f5f5f5;
 }
 
 /* ===== FOOTER ===== */
@@ -181,6 +203,7 @@ footer {
   padding: 30px;
   font-size: 14px;
   color: #666;
+  border-top: 1px solid #eee;
 }
 
 /* ===== MOBILE ===== */
@@ -197,20 +220,6 @@ footer {
     display: none;
   }
 }
-  nav a {
-  margin-left: 20px;
-  font-size: 16px;
-  font-weight: 550;
-  transition: color 0.2s ease;
-}
-
-nav a:hover {
-  color: #060048;   /* 🔥 brand navy */
-}
-nav a:hover {
-  color: #3b5cff;
-}
-
 </style>
 </head>
 
@@ -221,27 +230,26 @@ nav a:hover {
   <div class="container header-flex">
     <div class="logo">
       <img src="assets/ehasanpro-logo.png" alt="EhasanPro Logo">
-      <span class="tagline">B2B SaaS & AI Growth Strategies Hub</span>
+      <span class="tagline">Thought Leadership Writer for B2B SaaS & AI Brands</span>
     </div>
 
-   <nav>
-  <a href="#">Home</a>
-  <a href="#">About</a>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
 
-  <div class="dropdown">
-    <a href="#" class="dropbtn">Insights ▾</a>
-    <div class="dropdown-content">
-      <a href="#">AI & Future of Work</a>
-      <a href="#">B2B & SaaS</a>
-      <a href="#">Digital Marketing & SEO</a>
-    </div>
-  </div>
+      <div class="dropdown">
+        <a class="dropbtn">Insights ▾</a>
+        <div class="dropdown-content">
+          <a href="#">AI & Future of Work</a>
+          <a href="#">B2B & SaaS</a>
+          <a href="#">Digital Marketing & SEO</a>
+        </div>
+      </div>
 
-  <a href="#">Copywriting</a>
-  <a href="#">How I Work</a>
-  <a href="#">Contact</a>
-</nav>
-
+      <a href="#">Copywriting</a>
+      <a href="#">How I Work</a>
+      <a href="#">Contact</a>
+    </nav>
   </div>
 </header>
 
@@ -267,6 +275,7 @@ nav a:hover {
     </div>
   </div>
 </section>
+
 <!-- ===== WHAT YOU DO ===== -->
 <section class="section">
   <div class="container two-col">
@@ -276,14 +285,12 @@ nav a:hover {
 
     <div class="copy">
       <h2>I Turn Complex AI & SaaS Ideas Into Authority-Building Content</h2>
-      <p>AI doesn’t need more content.</p>
       <p>
-        I work with B2B SaaS companies and AI-focused teams to translate complex ideas—
-        AI strategy, future of work, digital transformation—into content
-        decision-makers trust and AI systems cite.
+        I work with B2B SaaS companies and AI-focused teams to translate complex ideas
+        into content decision-makers trust and AI systems cite.
       </p>
       <p class="muted">
-        This isn’t generic AI output. It’s experience-driven thought leadership.
+        Experience-driven thought leadership — not generic AI output.
       </p>
     </div>
   </div>
@@ -296,7 +303,7 @@ nav a:hover {
       <h2>Why Leaders Choose Me</h2>
       <ul>
         <li><strong>🧠 Real Technical Depth</strong> — 15+ years in IT</li>
-        <li><strong>📊 Research-Backed</strong> — data & frameworks</li>
+        <li><strong>📊 Research-Backed</strong> — frameworks & data</li>
         <li><strong>🤝 Executive Communication</strong></li>
         <li><strong>🚀 Built for AI Search</strong></li>
       </ul>
@@ -328,25 +335,6 @@ nav a:hover {
   </div>
 </section>
 
-<!-- ===== RESULTS ===== -->
-<section class="section">
-  <div class="container two-col">
-    <div class="copy">
-      <h2>Content That Works After It’s Published</h2>
-      <p><strong>Authority compounds.</strong></p>
-      <ul>
-        <li>Earn trust before sales calls</li>
-        <li>Appear in AI-generated answers</li>
-        <li>Higher-quality inbound leads</li>
-      </ul>
-    </div>
-
-    <div class="visual">
-      <img src="assets/copy-4.jpg" alt="Growth results">
-    </div>
-  </div>
-</section>
-
 <!-- ===== FINAL CTA ===== -->
 <section class="section cta">
   <div class="container two-col">
@@ -355,11 +343,12 @@ nav a:hover {
     </div>
 
     <div class="copy">
-      <h2>Ready to Publish Content That Actually Builds Authority?</h2>
+      <h2>Ready to Build Real Authority?</h2>
       <p>
-        If you want content that decision-makers trust—and AI platforms recognize—I can help.
+        If you want content decision-makers trust — and AI platforms recognize —
+        let’s talk.
       </p>
-      <a class="btn primary" href="#">Request a Free Content & Visibility Review</a>
+      <a class="btn primary" href="#">Request a Free Content Review</a>
     </div>
   </div>
 </section>
