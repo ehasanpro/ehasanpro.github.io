@@ -49,20 +49,25 @@ header {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  line-height: 1.15;
+  line-height: 1;
 }
+
 
 .logo img {
-  height: 76px;        /* ✅ LOGO REALLY BIGGER */
+  height: 96px;   /* 🔥 76 → 96 (or 104 if you want bigger) */
   width: auto;
+  display: block;
 }
 
+
 .tagline {
-  font-size: 16px;     /* ✅ TAGLINE BIGGER */
+  font-size: 17px;
   color: #060048;
-  margin-top: 0px;     /* ✅ VERY SMALL GAP */
-  letter-spacing: 1px;
+  margin-top: 4px;     /* 🔥 gap control */
+  line-height: 1.2;
+  letter-spacing: 0.6px;
 }
+
 
 /* NAVIGATION */
 nav {
@@ -74,6 +79,23 @@ nav a {
   font-size: 16px;     /* ✅ bigger nav text */
   font-weight: 550;
 }
+<nav>
+  <a href="#">Home</a>
+  <a href="#">About</a>
+
+  <div class="dropdown">
+    <a href="#" class="dropbtn">Insights ▾</a>
+    <div class="dropdown-content">
+      <a href="#">AI & Future of Work</a>
+      <a href="#">B2B & SaaS</a>
+      <a href="#">Digital Marketing & SEO</a>
+    </div>
+  </div>
+
+  <a href="#">Copywriting</a>
+  <a href="#">How I Work</a>
+  <a href="#">Contact</a>
+</nav>
 
 /* ===== SECTIONS ===== */
 .section {
@@ -188,14 +210,24 @@ footer {
       <span class="tagline">B2B SaaS & AI Growth Strategies Hub</span>
     </div>
 
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Insights</a>
-      <a href="#">Copywriting</a>
-      <a href="#">How I Work</a>
-      <a href="#">Contact</a>
-    </nav>
+   <nav>
+  <a href="#">Home</a>
+  <a href="#">About</a>
+
+  <div class="dropdown">
+    <a href="#" class="dropbtn">Insights ▾</a>
+    <div class="dropdown-content">
+      <a href="#">AI & Future of Work</a>
+      <a href="#">B2B & SaaS</a>
+      <a href="#">Digital Marketing & SEO</a>
+    </div>
+  </div>
+
+  <a href="#">Copywriting</a>
+  <a href="#">How I Work</a>
+  <a href="#">Contact</a>
+</nav>
+
   </div>
 </header>
 
