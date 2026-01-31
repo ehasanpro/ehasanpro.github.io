@@ -1,1 +1,264 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Page Title Here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== BASE ===== */
+body {
+  font-family: Georgia, serif;
+  background: #f1f1f1;
+  color: #111;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1180px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* ===== HEADER ===== */
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+}
+
+header .container {
+  padding: 14px 20px; /* header height control */
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===== LOGO ===== */
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1;
+}
+
+.logo img {
+  height: 90px;
+  width: auto;
+  display: block;
+}
+
+.tagline {
+  font-size: 15px;
+  color: #060048;
+  margin-top: 2px;
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
+
+/* ===== NAV ===== */
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  margin-left: 22px;
+  font-size: 16px;
+  font-weight: 550;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #060048;
+}
+
+/* ===== DROPDOWN ===== */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 28px;
+  left: 0;
+  background: #ffffff;
+  min-width: 220px;
+  border: 1px solid #eee;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  z-index: 100;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 16px;
+  font-size: 15px;
+}
+
+.dropdown-content a:hover {
+  background: #f5f5f5;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ===== PAGE CONTENT AREA ===== */
+.page-content {
+  background: transparent;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 14px;
+  color: #666;
+  border-top: 1px solid #eee;
+  background: #ffffff;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 900px) {
+  nav {
+    display: none;
+  }
+}
+
+/* ===== ABOUT PAGE ===== */
+.about-section {
+  padding: 60px 0;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-text h1 {
+  font-size: 44px;
+  margin-bottom: 20px;
+}
+
+.about-text h3 {
+  margin: 28px 0 14px;
+  font-size: 20px;
+}
+
+.about-text p {
+  margin-bottom: 16px;
+}
+
+.about-text ul {
+  padding-left: 18px;
+  margin-bottom: 20px;
+}
+
+.about-text li {
+  margin-bottom: 10px;
+}
+
+.about-cta {
+  font-weight: 600;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 6px;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image {
+    order: -1;
+    text-align: center;
+  }
+}
+
+
+</style>
+</head>
+
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="container header-flex">
+    <div class="logo">
+      <img src="assets/ehasanpro-logo.png" alt="EhasanPro Logo">
+      <span class="tagline">Thought Leadership Writer for B2B SaaS & AI Brands</span>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+
+      <div class="dropdown">
+        <a class="dropbtn">Insights ▾</a>
+        <div class="dropdown-content">
+          <a href="ai-future-of-work.html">AI & Future of Work</a>
+          <a href="b2b-saas.html">B2B & SaaS</a>
+          <a href="digital-marketing-seo.html">Digital Marketing & SEO</a>
+        </div>
+      </div>
+
+      <a href="copywriting.html">Copywriting</a>
+      <a href="how-i-work.html">How I Work</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===================================================
+     🔽 PAGE-SPECIFIC CONTENT STARTS HERE 🔽
+=================================================== -->
+
+<main class="page-content">
+  <div class="container">
+    <!-- 
+      এখানে তোমার page-specific sections বসাবে
+      Hero / About / Blog / CTA etc
+    -->
+  </div>
+</main>
+
+<!-- ===================================================
+     🔼 PAGE-SPECIFIC CONTENT ENDS HERE 🔼
+=================================================== -->
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  © 2026 EhasanPro — All Rights Reserved
+</footer>
+
+</body>
+</html>
+
+
