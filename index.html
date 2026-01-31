@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Thought Leadership Writer for B2B SaaS & AI Brands</title>
+<title>Page Title Here</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -38,6 +38,10 @@ header {
   border-bottom: 1px solid #eee;
 }
 
+header .container {
+  padding: 14px 20px; /* header height control */
+}
+
 .header-flex {
   display: flex;
   justify-content: space-between;
@@ -53,20 +57,20 @@ header {
 }
 
 .logo img {
-  height: 100px;          /* 🔥 REAL LOGO SIZE CONTROL */
+  height: 90px;
   width: auto;
   display: block;
 }
 
 .tagline {
-  font-size: 16px;
+  font-size: 15px;
   color: #060048;
-  margin-top: 0px;
-  line-height: 2;
+  margin-top: 2px;
+  line-height: 1.2;
   letter-spacing: 1px;
 }
 
-/* ===== NAVIGATION ===== */
+/* ===== NAV ===== */
 nav {
   display: flex;
   align-items: center;
@@ -86,7 +90,6 @@ nav a:hover {
 /* ===== DROPDOWN ===== */
 .dropdown {
   position: relative;
-  display: inline-block;
 }
 
 .dropbtn {
@@ -96,10 +99,10 @@ nav a:hover {
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 30px;
+  top: 28px;
   left: 0;
   background: #ffffff;
-  min-width: 240px;
+  min-width: 220px;
   border: 1px solid #eee;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
   z-index: 100;
@@ -119,82 +122,9 @@ nav a:hover {
   display: block;
 }
 
-/* ===== SECTIONS ===== */
-.section {
-  padding: 20px 0;
-}
-
-.two-col {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
-
-.copy h1 {
-  font-size: 52px;
-  line-height: 1.15;
-  margin-bottom: 20px;
-}
-
-.copy h2 {
-  font-size: 36px;
-  margin-bottom: 16px;
-}
-
-.copy p {
-  margin-bottom: 14px;
-}
-
-.lead {
-  font-size: 18px;
-}
-
-.proof {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 28px;
-}
-
-.visual img {
-  width: 100%;
-  border-radius: 4px;
-}
-
-/* ===== BUTTONS ===== */
-.btn {
-  display: inline-block;
-  padding: 12px 22px;
-  font-size: 15px;
-  margin-right: 12px;
-}
-
-.primary {
-  background: #111;
-  color: #fff;
-}
-
-.secondary {
-  border: 1px solid #111;
-  color: #111;
-}
-
-/* ===== LISTS ===== */
-ul {
-  padding-left: 18px;
-}
-
-li {
-  margin-bottom: 14px;
-}
-
-.muted {
-  color: #555;
-}
-
-/* ===== CTA ===== */
-.cta {
-  background: #f5f5f5;
+/* ===== PAGE CONTENT AREA ===== */
+.page-content {
+  background: transparent;
 }
 
 /* ===== FOOTER ===== */
@@ -204,22 +134,74 @@ footer {
   font-size: 14px;
   color: #666;
   border-top: 1px solid #eee;
+  background: #ffffff;
 }
 
 /* ===== MOBILE ===== */
 @media (max-width: 900px) {
-  .two-col {
-    grid-template-columns: 1fr;
-  }
-
-  .copy h1 {
-    font-size: 38px;
-  }
-
   nav {
     display: none;
   }
 }
+
+/* ===== ABOUT PAGE ===== */
+.about-section {
+  padding: 60px 0;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-text h1 {
+  font-size: 44px;
+  margin-bottom: 20px;
+}
+
+.about-text h3 {
+  margin: 28px 0 14px;
+  font-size: 20px;
+}
+
+.about-text p {
+  margin-bottom: 16px;
+}
+
+.about-text ul {
+  padding-left: 18px;
+  margin-bottom: 20px;
+}
+
+.about-text li {
+  margin-bottom: 10px;
+}
+
+.about-cta {
+  font-weight: 600;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 6px;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image {
+    order: -1;
+    text-align: center;
+  }
+}
+
+
 </style>
 </head>
 
@@ -234,128 +216,48 @@ footer {
     </div>
 
     <nav>
-      <a href="#">Home</a>
+      <a href="index.html">Home</a>
       <a href="about.html">About</a>
 
       <div class="dropdown">
         <a class="dropbtn">Insights ▾</a>
         <div class="dropdown-content">
-          <a href="#">AI & Future of Work</a>
-          <a href="#">B2B & SaaS</a>
-          <a href="#">Digital Marketing & SEO</a>
+          <a href="ai-future-of-work.html">AI & Future of Work</a>
+          <a href="b2b-saas.html">B2B & SaaS</a>
+          <a href="digital-marketing-seo.html">Digital Marketing & SEO</a>
         </div>
       </div>
 
       <a href="copywriting.html">Copywriting</a>
-      <a href="#">How I Work</a>
-      <a href="#">Contact</a>
+      <a href="how-i-work.html">How I Work</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
 
-<!-- ===== HERO ===== -->
-<section class="section">
-  <div class="container two-col">
-    <div class="copy">
-      <h1>Thought Leadership Writer for B2B SaaS & AI Brands</h1>
-      <p class="lead">
-        I help founders, executives, and B2B SaaS teams publish research-backed,
-        high-authority content that earns trust, drives AI-era visibility,
-        and positions them as category leaders.
-      </p>
-      <p class="proof">
-        Former CTO-level technologist · AI & Search-driven content · Built for authority, not fluff
-      </p>
-      <a class="btn primary" href="#">View My Work</a>
-      <a class="btn secondary" href="#">Book a Strategy Call</a>
-    </div>
+<!-- ===================================================
+     🔽 PAGE-SPECIFIC CONTENT STARTS HERE 🔽
+=================================================== -->
 
-    <div class="visual">
-      <img src="assets/hero.jpg" alt="AI strategy workspace">
-    </div>
+<main class="page-content">
+  <div class="container">
+    <!-- 
+      এখানে তোমার page-specific sections বসাবে
+      Hero / About / Blog / CTA etc
+    -->
   </div>
-</section>
+</main>
 
-<!-- ===== WHAT YOU DO ===== -->
-<section class="section">
-  <div class="container two-col">
-    <div class="visual">
-      <img src="assets/copy-1.jpg" alt="AI framework">
-    </div>
+<!-- ===================================================
+     🔼 PAGE-SPECIFIC CONTENT ENDS HERE 🔼
+=================================================== -->
 
-    <div class="copy">
-      <h2>I Turn Complex AI & SaaS Ideas Into Authority-Building Content</h2>
-      <p>
-        I work with B2B SaaS companies and AI-focused teams to translate complex ideas
-        into content decision-makers trust and AI systems cite.
-      </p>
-      <p class="muted">
-        Experience-driven thought leadership — not generic AI output.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- ===== WHY ME ===== -->
-<section class="section">
-  <div class="container two-col">
-    <div class="copy">
-      <h2>Why Leaders Choose Me</h2>
-      <ul>
-        <li><strong>🧠 Real Technical Depth</strong> — 15+ years in IT</li>
-        <li><strong>📊 Research-Backed</strong> — frameworks & data</li>
-        <li><strong>🤝 Executive Communication</strong></li>
-        <li><strong>🚀 Built for AI Search</strong></li>
-      </ul>
-    </div>
-
-    <div class="visual">
-      <img src="assets/copy-2.jpg" alt="Authority content">
-    </div>
-  </div>
-</section>
-
-<!-- ===== SERVICES ===== -->
-<section class="section">
-  <div class="container two-col">
-    <div class="visual">
-      <img src="assets/copy-3.jpg" alt="Services">
-    </div>
-
-    <div class="copy">
-      <h2>What I Help You Publish</h2>
-      <ul>
-        <li>Long-form thought leadership articles</li>
-        <li>Research-driven industry analysis</li>
-        <li>SEO & GEO authority content</li>
-        <li>LinkedIn ghostwriting</li>
-        <li>Reports & strategic narratives</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ===== FINAL CTA ===== -->
-<section class="section cta">
-  <div class="container two-col">
-    <div class="visual">
-      <img src="assets/copy-6.jpg" alt="Strategy call">
-    </div>
-
-    <div class="copy">
-      <h2>Ready to Build Real Authority?</h2>
-      <p>
-        If you want content decision-makers trust — and AI platforms recognize —
-        let’s talk.
-      </p>
-      <a class="btn primary" href="#">Request a Free Content Review</a>
-    </div>
-  </div>
-</section>
-
+<!-- ===== FOOTER ===== -->
 <footer>
   © 2026 EhasanPro — All Rights Reserved
 </footer>
 
 </body>
 </html>
+
+
