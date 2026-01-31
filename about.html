@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>About — Mohammad Enamul Hasan</title>
+<title>Copywriting</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -18,7 +18,7 @@ body {
   font-family: Georgia, serif;
   background: #f1f1f1;
   color: #111;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 a {
@@ -38,6 +38,10 @@ header {
   border-bottom: 1px solid #eee;
 }
 
+header .container {
+  padding: 14px 20px; /* header height control */
+}
+
 .header-flex {
   display: flex;
   justify-content: space-between;
@@ -53,15 +57,16 @@ header {
 }
 
 .logo img {
-  height: 100px;
+  height: 90px;
   width: auto;
   display: block;
 }
 
 .tagline {
-  font-size: 16px;
+  font-size: 15px;
   color: #060048;
-  line-height: 2;
+  margin-top: 2px;
+  line-height: 1.2;
   letter-spacing: 1px;
 }
 
@@ -75,6 +80,7 @@ nav a {
   margin-left: 22px;
   font-size: 16px;
   font-weight: 550;
+  transition: color 0.2s ease;
 }
 
 nav a:hover {
@@ -86,13 +92,17 @@ nav a:hover {
   position: relative;
 }
 
+.dropbtn {
+  cursor: pointer;
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 30px;
+  top: 28px;
   left: 0;
   background: #ffffff;
-  min-width: 240px;
+  min-width: 220px;
   border: 1px solid #eee;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
   z-index: 100;
@@ -101,6 +111,7 @@ nav a:hover {
 .dropdown-content a {
   display: block;
   padding: 10px 16px;
+  font-size: 15px;
 }
 
 .dropdown-content a:hover {
@@ -111,25 +122,11 @@ nav a:hover {
   display: block;
 }
 
-/* ===== ABOUT PAGE ===== */
-.about-grid {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 60px;
-  align-items: start;
+/* ===== PAGE CONTENT AREA ===== */
+.page-content {
+  background: transparent;
 }
 
-.about-copy {
-  grid-area: text;
-}
-
-.about-image {
-  grid-area: image;
-}
-
-.about-grid {
-  grid-template-areas: "text image";
-}
 /* ===== FOOTER ===== */
 footer {
   text-align: center;
@@ -137,15 +134,13 @@ footer {
   font-size: 14px;
   color: #666;
   border-top: 1px solid #eee;
+  background: #ffffff;
 }
 
-/* Mobile fix */
+/* ===== MOBILE ===== */
 @media (max-width: 900px) {
-  .about-grid {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "image"
-      "text";
+  nav {
+    display: none;
   }
 }
 </style>
@@ -166,17 +161,17 @@ footer {
       <a href="about.html">About</a>
 
       <div class="dropdown">
-        <a>Insights ▾</a>
+        <a class="dropbtn">Insights ▾</a>
         <div class="dropdown-content">
-          <a href="#">AI & Future of Work</a>
-          <a href="#">B2B & SaaS</a>
-          <a href="#">Digital Marketing & SEO</a>
+          <a href="ai-future-of-work.html">AI & Future of Work</a>
+          <a href="b2b-saas.html">B2B & SaaS</a>
+          <a href="digital-marketing-seo.html">Digital Marketing & SEO</a>
         </div>
       </div>
 
-      <a href="#">Copywriting</a>
-      <a href="#">How I Work</a>
-      <a href="#">Contact</a>
+      <a href="copywriting.html">Copywriting</a>
+      <a href="how-i-work.html">How I Work</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
