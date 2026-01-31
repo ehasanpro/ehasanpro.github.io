@@ -114,26 +114,22 @@ nav a:hover {
 /* ===== ABOUT PAGE ===== */
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1.4fr;
+  grid-template-columns: 1.4fr 1fr;
   gap: 60px;
   align-items: start;
 }
 
-.about-image img {
-  width: 100%;
-  border-radius: 4px;
+.about-copy {
+  grid-area: text;
 }
 
-.about-copy h1 {
-  font-size: 42px;
-  margin-bottom: 20px;
+.about-image {
+  grid-area: image;
 }
 
-.about-copy p {
-  margin-bottom: 18px;
-  font-size: 17px;
+.about-grid {
+  grid-template-areas: "text image";
 }
-
 /* ===== FOOTER ===== */
 footer {
   text-align: center;
@@ -143,14 +139,13 @@ footer {
   border-top: 1px solid #eee;
 }
 
-/* ===== MOBILE ===== */
+/* Mobile fix */
 @media (max-width: 900px) {
   .about-grid {
     grid-template-columns: 1fr;
-  }
-
-  nav {
-    display: none;
+    grid-template-areas:
+      "image"
+      "text";
   }
 }
 </style>
