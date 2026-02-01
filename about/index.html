@@ -1,1 +1,329 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Thought Leadership Writer for B2B SaaS & AI Brands</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== BASE ===== */
+body {
+  font-family: Georgia, serif;
+  background: #f1f1f1;
+  color: #111;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1180px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* ===== HEADER ===== */
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+}
+
+header .container {
+  padding: 14px 20px;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===== LOGO ===== */
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1;
+}
+
+.logo img {
+  height: 100px;
+  width: auto;
+}
+
+.tagline {
+  font-size: 16px;
+  color: #060048;
+  margin-top: 2px;
+  letter-spacing: 1px;
+}
+
+/* ===== NAV ===== */
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  margin-left: 22px;
+  font-size: 16px;
+  font-weight: 550;
+}
+
+nav a:hover {
+  color: #060048;
+}
+
+/* ===== DROPDOWN ===== */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background: #ffffff;
+  min-width: 240px;
+  border: 1px solid #eee;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  z-index: 100;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 16px;
+  font-size: 15px;
+}
+
+.dropdown-content a:hover {
+  background: #f5f5f5;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ===== MAIN ===== */
+main {
+  min-height: 70vh;
+}
+/* ===== ABOUT PAGE LAYOUT ===== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr; /* text left, image right */
+  gap: 60px;
+  align-items: start;
+}
+
+.about-text h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.about-text h3 {
+  margin: 30px 0 10px;
+}
+
+.about-text p {
+  margin-bottom: 16px;
+}
+
+.about-text ul {
+  margin: 16px 0 24px;
+  padding-left: 18px;
+}
+
+.about-text li {
+  margin-bottom: 10px;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 360px;
+  border-radius: 6px;
+}
+.about-image {
+  text-align: right;
+}
+
+/* ===== MOBILE FIX ===== */
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image {
+    order: -1; /* image goes top on mobile */
+    margin-bottom: 30px;
+  }
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 14px;
+  color: #666;
+  background: #ffffff;
+  border-top: 1px solid #eee;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 900px) {
+  nav {
+    display: none;
+  }
+}
+  .post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.post-card {
+  background: #fff;
+  padding: 22px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+
+.post-category {
+  font-size: 13px;
+  color: #060048;
+  margin-bottom: 6px;
+}
+
+.post-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="container header-flex">
+    <div class="logo">
+      <img src="assets/ehasanpro-logo.png" alt="EhasanPro Logo">
+      <span class="tagline">Thought Leadership Writer for B2B SaaS & AI Brands</span>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="/about">About</a>
+
+      <!-- INSIGHTS -->
+      <div class="dropdown">
+        <!-- 🔥 MAIN INSIGHTS PAGE -->
+        <a href="insights.html" class="dropbtn">Insights ▾</a>
+
+        <!-- CATEGORY PAGES -->
+        <div class="dropdown-content">
+          <a href="ai-future-of-work.html">AI & Future of Work</a>
+          <a href="b2b-saas.html">B2B & SaaS</a>
+          <a href="digital-marketing-seo.html">Digital Marketing & SEO</a>
+        </div>
+      </div>
+
+      <a href="/copywriting">Copywriting</a>
+      <a href="/how-i-work">How I Work</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+<!-- ===================================================
+     🔽 PAGE-SPECIFIC CONTENT STARTS HERE 🔽
+=================================================== -->
+
+<section class="about-section">
+  <div class="container about-grid">
+
+    <!-- LEFT: TEXT -->
+    <div class="about-text">
+      <h1>About Mohammad Enamul Hasan</h1>
+
+      <p>
+        I’m Mohammad Enamul Hasan, an MCP-certified professional with a deep passion
+        for writing and knowledge-sharing. For years, I’ve been closely connected
+        to the world of ideas, frameworks, and storytelling—though much of my work
+        has remained unpublished until now.
+      </p>
+
+      <p>
+        This site marks the beginning of a new chapter: a space where my thoughts,
+        strategies, and insights finally meet the world.
+      </p>
+
+      <p>
+        My journey blends technology, business, and communication. With a background
+        in systems and certification in Microsoft technologies, I understand how
+        digital transformation shapes the way we work. At the same time, my
+        long-standing love for writing allows me to translate complex concepts into
+        clear, actionable narratives.
+      </p>
+
+      <h3>My Core Focus Areas</h3>
+      <ul>
+        <li><strong>AI & the Future of Work</strong> — how AI is reshaping careers and skills</li>
+        <li><strong>B2B & SaaS Growth</strong> — strategies to scale and compete</li>
+        <li><strong>Digital Marketing & SEO</strong> — visibility, authority, and trust</li>
+      </ul>
+
+      <p>
+        My mission is simple yet ambitious: to empower professionals and businesses
+        with insights that inspire action. Whether you’re a recruiter looking for
+        thought leadership, a client seeking strategy, or a curious reader, this
+        site is built to deliver clarity, credibility, and value.
+      </p>
+
+      <p>
+        I believe that ideas only matter when they’re shared. That’s why I publish
+        consistently—here and across platforms like LinkedIn and Medium—to spark
+        conversations and build meaningful connections.
+      </p>
+
+      <p class="about-cta">
+        👉 If you’re ready to explore the future of work, discover SaaS growth
+        strategies, or unlock the power of digital marketing — you’re in the right
+        place.
+      </p>
+    </div>
+
+    <!-- RIGHT: IMAGE -->
+    <div class="about-image">
+      <img src="assets/author-image.png" alt="Mohammad Enamul Hasan">
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ===================================================
+     🔼 PAGE-SPECIFIC CONTENT ENDS HERE 🔼
+=================================================== -->
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  © 2026 EhasanPro — All Rights Reserved
+</footer>
+
+</body>
+</html>
