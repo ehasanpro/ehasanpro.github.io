@@ -119,6 +119,56 @@ nav a:hover {
 main {
   min-height: 70vh;
 }
+/* ===== ABOUT PAGE LAYOUT ===== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr; /* text left, image right */
+  gap: 60px;
+  align-items: start;
+}
+
+.about-text h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.about-text h3 {
+  margin: 30px 0 10px;
+}
+
+.about-text p {
+  margin-bottom: 16px;
+}
+
+.about-text ul {
+  margin: 16px 0 24px;
+  padding-left: 18px;
+}
+
+.about-text li {
+  margin-bottom: 10px;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 360px;
+  border-radius: 6px;
+}
+.about-image {
+  text-align: right;
+}
+
+/* ===== MOBILE FIX ===== */
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image {
+    order: -1; /* image goes top on mobile */
+    margin-bottom: 30px;
+  }
+}
 
 /* ===== FOOTER ===== */
 footer {
