@@ -36,8 +36,10 @@ a {
 header {
   background: #ffffff;
   border-bottom: 1px solid #eee;
-  position: relative; /* 🔥 REQUIRED */
-  z-index: 1000;
+}
+
+header .container {
+  padding: 14px 20px;
 }
 
 .header-flex {
@@ -47,18 +49,28 @@ header {
 }
 
 /* ===== LOGO ===== */
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1;
+}
+
 .logo img {
   height: 100px;
+  width: auto;
   display: block;
 }
 
 .tagline {
   font-size: 16px;
   color: #060048;
+  margin-top: 0;
+  line-height: 1.6;
   letter-spacing: 1px;
 }
 
-/* ===== NAV (DESKTOP) ===== */
+/* ===== NAV ===== */
 nav {
   display: flex;
   align-items: center;
@@ -70,17 +82,17 @@ nav a {
   font-weight: 550;
 }
 
-/* ===== MOBILE MENU ICON ===== */
-.mobile-menu {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
+nav a:hover {
   color: #060048;
 }
 
-/* ===== DROPDOWN (DESKTOP ONLY) ===== */
+/* ===== DROPDOWN ===== */
 .dropdown {
   position: relative;
+}
+
+.dropbtn {
+  cursor: pointer;
 }
 
 .dropdown-content {
@@ -88,9 +100,21 @@ nav a {
   position: absolute;
   top: 30px;
   left: 0;
-  background: #fff;
-  min-width: 220px;
+  background: #ffffff;
+  min-width: 240px;
   border: 1px solid #eee;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  z-index: 100;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 16px;
+  font-size: 15px;
+}
+
+.dropdown-content a:hover {
+  background: #f5f5f5;
 }
 
 .dropdown:hover .dropdown-content {
@@ -102,6 +126,7 @@ nav a {
   padding: 20px 0;
 }
 
+/* 🔥 CORE LAYOUT */
 .two-col {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
@@ -109,9 +134,52 @@ nav a {
   align-items: center;
 }
 
+.copy h1 {
+  font-size: 52px;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.copy h2 {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+.copy p {
+  margin-bottom: 14px;
+}
+
+.lead {
+  font-size: 18px;
+}
+
+.proof {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 28px;
+}
+
 .visual img {
   width: 100%;
   border-radius: 4px;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  font-size: 15px;
+  margin-right: 12px;
+}
+
+.primary {
+  background: #111;
+  color: #fff;
+}
+
+.secondary {
+  border: 1px solid #111;
+  color: #111;
 }
 
 /* ===== CTA ===== */
@@ -125,40 +193,75 @@ footer {
   padding: 30px;
   font-size: 14px;
   color: #666;
+  border-top: 1px solid #eee;
 }
 
-/* =====================================================
-   🔥 MOBILE FIX (FINAL & CLEAN)
-===================================================== */
+/* ===== MOBILE MENU ===== */
+.mobile-menu {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* ===== MOBILE (🔥 FINAL FIX) ===== */
 @media (max-width: 900px) {
 
-  /* Layout */
+  /* One column */
   .two-col {
     grid-template-columns: 1fr;
     gap: 24px;
   }
 
-  .two-col .copy { order: 1; }
-  .two-col .visual { order: 2; }
+  /* 🔥 Always TEXT first, IMAGE second */
+  .two-col .copy {
+    order: 1;
+  }
 
+  .two-col .visual {
+    order: 2;
+  }
+
+  /* Typography */
+  .copy h1 {
+    font-size: 34px;
+  }
+
+  .copy h2 {
+    font-size: 26px;
+  }
+
+  /* Reduce spacing */
   .container {
     padding: 24px 16px;
   }
 
-  /* Hide desktop nav */
-  nav {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: #060048; /* 🔥 LOGO COLOR */
-    flex-direction: column;
-    padding: 20px;
+  section {
+    margin-bottom: 24px;
   }
 
-  nav.show {
-    display: flex;
+  /* Navigation */
+  nav {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+}
+
+/* ===== MOBILE NAV OVERLAY ===== */
+@media (max-width: 900px) {
+
+  nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #060048; /* 🔥 logo color */
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    display: none;
   }
 
   nav a {
@@ -167,62 +270,252 @@ footer {
     font-size: 18px;
   }
 
-  /* Disable hover dropdown on mobile */
-  .dropdown-content {
-    display: none !important;
-  }
-
-  .mobile-menu {
-    display: block;
+  nav.show {
+    display: flex;
   }
 }
+
+
 </style>
 </head>
 
 <body>
 
+<!-- ===== HEADER ===== -->
 <header>
   <div class="container header-flex">
     <div class="logo">
       <img src="/assets/ehasanpro-logo.png" alt="EhasanPro Logo">
       <span class="tagline">Thought Leadership Writer for B2B SaaS & AI Brands</span>
     </div>
+<div class="mobile-menu" onclick="toggleMenu()">☰</div>
 
-    <div class="mobile-menu" onclick="toggleMenu()">☰</div>
+    <nav>
+  <a href="/">Home</a>
+  <a href="/about">About</a>
 
-    <nav id="mainNav">
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/insights">Insights</a>
-      <a href="/copywriting">Copywriting</a>
-      <a href="/how-i-work">How I Work</a>
-      <a href="/contact">Contact</a>
-    </nav>
+  <div class="dropdown">
+    <a href="/insights" class="dropbtn">Insights ▾</a>
+    <div class="dropdown-content">
+      <a href="/ai-future-of-work">AI & Future of Work</a>
+      <a href="/b2b-saas">B2B & SaaS</a>
+      <a href="/digital-marketing-seo">Digital Marketing & SEO</a>
+    </div>
+  </div>
+
+  <a href="/copywriting">Copywriting</a>
+  <a href="/how-i-work">How I Work</a>
+  <a href="/contact">Contact</a>
+</nav>
+
+   
   </div>
 </header>
 
-<!-- ===== HERO ===== -->
+
+<!-- ==Section=== HERO ===== -->
 <section class="section">
   <div class="container two-col">
     <div class="copy">
-      <h1>Thought Leadership That Decision-Makers Trust.</h1>
-      <p>I help B2B SaaS and AI companies build authority-driven content.</p>
+      <h1>Thought Leadership That Decision-Makers Trust. And AI Systems Cite.
+</h1>
+      <p class="lead">
+        I help B2B SaaS and AI companies publish authority-building content that earns credibility, drives visibility in the AI search era, and positions leaders as the obvious choice in their category.
+
+      </p>
+      <p class="proof">
+        Former CTO-level technologist · AI & Search-driven content · Built for authority, not fluff
+      </p>
+      <a class="btn primary" href="#">View My Work</a>
+      <a class="btn secondary" href="#">Book a Strategy Call</a>
     </div>
+
     <div class="visual">
-      <img src="/assets/hero-image.jpg" alt="">
+      <img src="/assets/hero-image.jpg" alt="AI strategy workspace">
     </div>
   </div>
 </section>
 
+<!-- ===Section-2== WHAT YOU DO ===== -->
+<section class="section">
+  <div class="container two-col">
+    <div class="visual">
+      <img src="/assets/section-image-2.jpg" alt="AI framework">
+    </div>
+
+    <div class="copy">
+      <h2>I Turn Complex AI & SaaS Ideas Into Authority-Building Content</h2>
+      <p>
+        AI doesn’t need more content.
+It needs clear thinking, real experience, and credible narratives.
+
+      </p>
+      <p>
+       I work with B2B SaaS companies and AI-focused teams to translate complex ideas—AI strategy, future of work, digital transformation—into content 
+        that decision-makers trust and AI systems cite.
+
+      </p>
+      <p class="muted">
+        This isn’t generic AI output.
+It’s experience-driven thought leadership designed to compound authority over time.
+
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===Section-3== WHY ME ===== -->
+<section class="section">
+  <div class="container two-col">
+    <div class="copy">
+      <h2>Why Executives Choose This Approach
+</h2>
+      <ul>
+        <li><strong>🧠 Technical Depth You Can't Fake
+</strong> - 15+ years in IT including CTO-level roles. I understand what I write about—because I've built it.
+</li>
+        <li><strong>📊 Research-Backed, Zero Fluff
+</strong> - Every piece uses data, frameworks, and credible sources. Designed to be cited by AI systems and trusted by buyers.
+</li>
+        <li><strong>🎯 Written for Decision-Makers</strong>
+        - Content that speaks to founders, VPs, and executives—not just algorithms. Clear thinking. Executive tone.
+</li>
+     
+ <li><strong>🚀 Built for AI Search Visibility</strong>
+        - Optimized for Google AI Overviews, Perplexity, ChatGPT, and the platforms where your buyers actually research solutions.
+</li>
+        
+      </ul>
+    </div>
+    <div class="visual">
+      <img src="/assets/section-image-3.jpg" alt="Authority content">
+    </div>
+  </div>
+</section>
+
+<!-- ==Section-4=== SERVICES ===== -->
+<section class="section">
+  <div class="container two-col">
+    <div class="visual">
+      <img src="/assets/section-image-4.jpg" alt="Services">
+    </div>
+
+    <div class="copy">
+      <h2>What We Build Together</h2>
+      <ul>
+        <li><strong>Long-form thought leadership articles</strong> In-depth articles on AI strategy, digital transformation, and the future of work—designed to establish category authority.
+</li>
+        <li><strong>Research-Driven Industry Analysis</strong> Data-backed frameworks, trend reports, and strategic narratives that position you as the expert.</li>
+        <li><strong>AI-Era Content Optimization</strong>  Content structured for both human decision-makers and AI citation engines (GEO + SEO).</li>
+        <li><strong>Executive LinkedIn Ghostwriting</strong> Founder and C-suite thought leadership that builds personal brands and drives warm inbound.</li>
+        <li><strong>Strategic Content Consulting</strong> Content audits, positioning strategy, and authority-building roadmaps.</li>
+        <strong>Every piece is designed to educate, persuade, and compound over time.</strong>
+      </ul>
+    </div>
+  </div>
+</section>
+
+  
+<!-- ===== SECTION 5 : OUTCOMES ===== -->
+<section class="section">
+  <div class="container two-col">
+
+    <div class="copy">
+      <h2>Content That Keeps Working After You Publish It</h2>
+
+      <p><strong>Traffic is temporary.</strong><br>
+      Rankings fluctuate.<br>
+      <strong>Authority compounds.</strong></p>
+
+      <ul>
+        <li>
+          <strong>Earn trust before the first sales call</strong> —  
+          Buyers arrive pre-sold on your expertise
+        </li>
+
+        <li>
+          <strong>Get cited by AI systems</strong> —  
+          Appear in AI Overviews, Perplexity, and ChatGPT results
+        </li>
+
+        <li>
+          <strong>Attract quality inbound, not just volume</strong> —  
+          Decision-makers, not tire-kickers
+        </li>
+
+        <li>
+          <strong>Own a category position</strong> —  
+          Become the obvious choice in crowded SaaS and AI markets
+        </li>
+      </ul>
+    </div>
+
+    <!-- IMAGE RIGHT -->
+    <div class="visual">
+      <img src="/assets/section-image-5.jpg" alt="Authority-driven content outcomes">
+    </div>
+
+  </div>
+</section>
+
+  <!-- Section-6===== Ideal Client ===== -->
+<section class="section">
+  <div class="container two-col">
+    <div class="visual">
+      <img src="/assets/section-image-6.jpg" alt="Services">
+    </div>
+
+    <div class="copy">
+      <h2>Who This Is For</h2>
+      <ul>
+        <strong>Target Clients</strong> 
+
+        <li><strong>B2B SaaS founders and leadership teams</strong> looking to establish category authority</li>
+        <li><strong>AI startups and scale-ups </strong> that need credible narratives, not hype</li>
+        <li><strong>Consultants and professional services firms</strong> building thought leadership</li>
+        <li><strong>Executives and founders</strong> developing personal brands that drive business</li>
+        <strong>❌ Not for: High-volume content farms, SEO-only strategies, or brands chasing vanity metrics</strong>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ===== FINAL CTA ===== -->
+<section class="section cta">
+  <div class="container two-col">
+
+      <div class="copy">
+      <h2>Ready to Build Real Authority?</h2>
+      <p>
+        If you want content decision-makers trust — and AI platforms recognize —
+        let’s talk.
+      </p>
+      <a class="btn primary" href="contact.html">
+        Request a Free Content Review
+      </a>
+    </div>
+
+     <div class="visual">
+      <img src="/assets/section-image-7.jpg" alt="Strategy call">
+    </div>
+  </div>
+</section>
+
+
 <footer>
   © 2026 EhasanPro — All Rights Reserved
 </footer>
-
 <script>
 function toggleMenu() {
-  document.getElementById("mainNav").classList.toggle("show");
+  document.querySelector("nav").classList.toggle("show");
 }
 </script>
 
 </body>
 </html>
+
+
+
+
