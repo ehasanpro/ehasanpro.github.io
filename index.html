@@ -249,6 +249,31 @@ footer {
   }
 }
 
+/* ===== MOBILE NAV OVERLAY ===== */
+@media (max-width: 900px) {
+
+  nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #060048; /* 🔥 logo color */
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    display: none;
+  }
+
+  nav a {
+    color: #fff;
+    margin: 12px 0;
+    font-size: 18px;
+  }
+
+  nav.show {
+    display: flex;
+  }
+}
 
 
 </style>
@@ -482,6 +507,11 @@ It’s experience-driven thought leadership designed to compound authority over 
 <footer>
   © 2026 EhasanPro — All Rights Reserved
 </footer>
+<script>
+function toggleMenu() {
+  document.querySelector("nav").classList.toggle("show");
+}
+</script>
 
 </body>
 </html>
