@@ -39,7 +39,7 @@ header {
 }
 
 header .container {
-  padding: 14px 20px; /* header height control */
+  padding: 14px 20px;
 }
 
 .header-flex {
@@ -57,7 +57,7 @@ header .container {
 }
 
 .logo img {
-  height: 100px;          /* 🔥 REAL LOGO SIZE CONTROL */
+  height: 100px;
   width: auto;
   display: block;
 }
@@ -65,12 +65,12 @@ header .container {
 .tagline {
   font-size: 16px;
   color: #060048;
-  margin-top: 0px;
-  line-height: 2;
+  margin-top: 0;
+  line-height: 1.6;
   letter-spacing: 1px;
 }
 
-/* ===== NAVIGATION ===== */
+/* ===== NAV ===== */
 nav {
   display: flex;
   align-items: center;
@@ -80,7 +80,6 @@ nav a {
   margin-left: 22px;
   font-size: 16px;
   font-weight: 550;
-  transition: color 0.2s ease;
 }
 
 nav a:hover {
@@ -90,7 +89,6 @@ nav a:hover {
 /* ===== DROPDOWN ===== */
 .dropdown {
   position: relative;
-  display: inline-block;
 }
 
 .dropbtn {
@@ -128,6 +126,7 @@ nav a:hover {
   padding: 20px 0;
 }
 
+/* 🔥 CORE LAYOUT */
 .two-col {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
@@ -183,19 +182,6 @@ nav a:hover {
   color: #111;
 }
 
-/* ===== LISTS ===== */
-ul {
-  padding-left: 18px;
-}
-
-li {
-  margin-bottom: 14px;
-}
-
-.muted {
-  color: #555;
-}
-
 /* ===== CTA ===== */
 .cta {
   background: #f5f5f5;
@@ -210,29 +196,50 @@ footer {
   border-top: 1px solid #eee;
 }
 
-/* ===== MOBILE ===== */
+/* ===== MOBILE MENU ===== */
+.mobile-menu {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* ===== MOBILE (🔥 FINAL FIX) ===== */
 @media (max-width: 900px) {
 
-  /* 1️⃣ One column for all two-col sections */
+  /* One column */
   .two-col {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
 
-  /* 2️⃣ Always show TEXT first, IMAGE second */
+  /* 🔥 Always TEXT first, IMAGE second */
   .two-col .copy {
-    grid-row: 1;
+    order: 1;
   }
 
   .two-col .visual {
-    grid-row: 2;
+    order: 2;
   }
 
-  /* 3️⃣ Typography */
+  /* Typography */
   .copy h1 {
-    font-size: 38px;
+    font-size: 34px;
   }
 
-  /* 4️⃣ Mobile navigation */
+  .copy h2 {
+    font-size: 26px;
+  }
+
+  /* Reduce spacing */
+  .container {
+    padding: 24px 16px;
+  }
+
+  section {
+    margin-bottom: 24px;
+  }
+
+  /* Navigation */
   nav {
     display: none;
   }
@@ -241,12 +248,7 @@ footer {
     display: block;
   }
 }
-/* ===== MOBILE MENU ===== */
-.mobile-menu {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-}
+
 
 
 </style>
