@@ -36,10 +36,8 @@ a {
 header {
   background: #ffffff;
   border-bottom: 1px solid #eee;
-}
-
-header .container {
-  padding: 14px 20px;
+  position: relative; /* 🔥 REQUIRED */
+  z-index: 1000;
 }
 
 .header-flex {
@@ -51,55 +49,55 @@ header .container {
 /* ===== LOGO ===== */
 .logo img {
   height: 100px;
+  display: block;
 }
 
-/* ===== NAV ===== */
+.tagline {
+  font-size: 16px;
+  color: #060048;
+  letter-spacing: 1px;
+}
+
+/* ===== NAV (DESKTOP) ===== */
 nav {
   display: flex;
   align-items: center;
-  gap: 22px;
 }
 
-nav a,
-.dropbtn {
+nav a {
+  margin-left: 22px;
   font-size: 16px;
   font-weight: 550;
-  cursor: pointer;
 }
 
-/* ===== DROPDOWN (SMART) ===== */
+/* ===== MOBILE MENU ICON ===== */
+.mobile-menu {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #060048;
+}
+
+/* ===== DROPDOWN (DESKTOP ONLY) ===== */
 .dropdown {
   position: relative;
-}
-
-.dropbtn {
-  background: none;
-  border: none;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 32px;
+  top: 30px;
   left: 0;
   background: #fff;
   min-width: 220px;
   border: 1px solid #eee;
-  box-shadow: 0 8px 20px rgba(0,0,0,.08);
-  z-index: 999;
 }
 
-.dropdown-content a {
-  display: block;
-  padding: 10px 16px;
-  font-size: 15px;
-}
-
-.dropdown.open .dropdown-content {
+.dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* ===== LAYOUT ===== */
+/* ===== SECTIONS ===== */
 .section {
   padding: 20px 0;
 }
@@ -111,50 +109,30 @@ nav a,
   align-items: center;
 }
 
-.copy h1 {
-  font-size: 52px;
-  margin-bottom: 20px;
-}
-
-.copy h2 {
-  font-size: 36px;
-  margin-bottom: 16px;
-}
-
-.copy p {
-  margin-bottom: 14px;
-}
-
 .visual img {
   width: 100%;
   border-radius: 4px;
 }
 
-/* ===== BUTTONS ===== */
-.btn {
-  padding: 12px 22px;
-  font-size: 15px;
+/* ===== CTA ===== */
+.cta {
+  background: #f5f5f5;
 }
 
-.primary {
-  background: #111;
-  color: #fff;
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 14px;
+  color: #666;
 }
 
-.secondary {
-  border: 1px solid #111;
-}
-
-/* ===== MOBILE MENU ICON ===== */
-.mobile-menu {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-}
-
-/* ===== MOBILE ===== */
+/* =====================================================
+   🔥 MOBILE FIX (FINAL & CLEAN)
+===================================================== */
 @media (max-width: 900px) {
 
+  /* Layout */
   .two-col {
     grid-template-columns: 1fr;
     gap: 24px;
@@ -163,38 +141,35 @@ nav a,
   .two-col .copy { order: 1; }
   .two-col .visual { order: 2; }
 
+  .container {
+    padding: 24px 16px;
+  }
+
+  /* Hide desktop nav */
   nav {
     display: none;
     position: absolute;
     top: 100%;
-    right: 0;
-    background: #060048;
+    left: 0;
     width: 100%;
+    background: #060048; /* 🔥 LOGO COLOR */
     flex-direction: column;
     padding: 20px;
-  }
-
-  nav a,
-  .dropbtn {
-    color: #fff;
-    margin: 10px 0;
-    text-align: left;
   }
 
   nav.show {
     display: flex;
   }
 
-  .dropdown-content {
-    position: static;
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    padding-left: 14px;
+  nav a {
+    color: #fff;
+    margin: 12px 0;
+    font-size: 18px;
   }
 
-  .dropdown-content a {
-    color: #fff;
+  /* Disable hover dropdown on mobile */
+  .dropdown-content {
+    display: none !important;
   }
 
   .mobile-menu {
@@ -206,11 +181,11 @@ nav a,
 
 <body>
 
-<!-- ===== HEADER ===== -->
 <header>
   <div class="container header-flex">
     <div class="logo">
-      <img src="/assets/ehasanpro-logo.png" alt="EhasanPro">
+      <img src="/assets/ehasanpro-logo.png" alt="EhasanPro Logo">
+      <span class="tagline">Thought Leadership Writer for B2B SaaS & AI Brands</span>
     </div>
 
     <div class="mobile-menu" onclick="toggleMenu()">☰</div>
@@ -218,18 +193,7 @@ nav a,
     <nav id="mainNav">
       <a href="/">Home</a>
       <a href="/about">About</a>
-
-      <div class="dropdown">
-        <button class="dropbtn" onclick="toggleDropdown(event)">
-          Insights ▾
-        </button>
-        <div class="dropdown-content">
-          <a href="/ai-future-of-work">AI & Future of Work</a>
-          <a href="/b2b-saas">B2B & SaaS</a>
-          <a href="/digital-marketing-seo">Digital Marketing & SEO</a>
-        </div>
-      </div>
-
+      <a href="/insights">Insights</a>
       <a href="/copywriting">Copywriting</a>
       <a href="/how-i-work">How I Work</a>
       <a href="/contact">Contact</a>
@@ -241,13 +205,8 @@ nav a,
 <section class="section">
   <div class="container two-col">
     <div class="copy">
-      <h1>Thought Leadership That Decision-Makers Trust. And AI Systems Cite.</h1>
-      <p>
-        I help B2B SaaS and AI companies publish authority-building content
-        that earns credibility and visibility.
-      </p>
-      <a class="btn primary" href="#">View My Work</a>
-      <a class="btn secondary" href="#">Book a Strategy Call</a>
+      <h1>Thought Leadership That Decision-Makers Trust.</h1>
+      <p>I help B2B SaaS and AI companies build authority-driven content.</p>
     </div>
     <div class="visual">
       <img src="/assets/hero-image.jpg" alt="">
@@ -263,15 +222,6 @@ nav a,
 function toggleMenu() {
   document.getElementById("mainNav").classList.toggle("show");
 }
-
-function toggleDropdown(e) {
-  e.stopPropagation();
-  document.querySelector(".dropdown").classList.toggle("open");
-}
-
-document.addEventListener("click", function () {
-  document.querySelector(".dropdown").classList.remove("open");
-});
 </script>
 
 </body>
