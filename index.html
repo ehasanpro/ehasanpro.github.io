@@ -36,8 +36,11 @@ a {
 header {
   background: #ffffff;
   border-bottom: 1px solid #eee;
-  position: relative; /* 🔥 REQUIRED */
-  z-index: 1000;
+  position: relative;
+}
+
+header .container {
+  padding: 14px 20px;
 }
 
 .header-flex {
@@ -48,17 +51,17 @@ header {
 
 /* ===== LOGO ===== */
 .logo img {
-  height: 106px;
+  height: 90px;
   display: block;
 }
 
 .tagline {
-  font-size: 14px;
+  font-size: 15px;
   color: #060048;
   letter-spacing: 1px;
 }
 
-/* ===== NAV (DESKTOP) ===== */
+/* ===== NAV ===== */
 nav {
   display: flex;
   align-items: center;
@@ -70,15 +73,7 @@ nav a {
   font-weight: 550;
 }
 
-/* ===== MOBILE MENU ICON ===== */
-.mobile-menu {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-  color: #060048;
-}
-
-/* ===== DROPDOWN (DESKTOP ONLY) ===== */
+/* ===== DROPDOWN (DESKTOP) ===== */
 .dropdown {
   position: relative;
 }
@@ -86,11 +81,19 @@ nav a {
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 30px;
+  top: 32px;
   left: 0;
   background: #fff;
   min-width: 220px;
   border: 1px solid #eee;
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+  z-index: 999;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 16px;
+  font-size: 15px;
 }
 
 .dropdown:hover .dropdown-content {
@@ -98,9 +101,7 @@ nav a {
 }
 
 /* ===== SECTIONS ===== */
-.section {
-  padding: 20px 0;
-}
+.section { padding: 20px 0; }
 
 .two-col {
   display: grid;
@@ -109,56 +110,52 @@ nav a {
   align-items: center;
 }
 
+.copy h1 { font-size: 52px; margin-bottom: 20px; }
+.copy h2 { font-size: 36px; margin-bottom: 16px; }
+.copy p { margin-bottom: 14px; }
+
 .visual img {
   width: 100%;
   border-radius: 4px;
 }
 
-/* ===== CTA ===== */
-.cta {
-  background: #f5f5f5;
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  margin-right: 12px;
 }
 
-/* ===== FOOTER ===== */
-footer {
-  text-align: center;
-  padding: 30px;
-  font-size: 14px;
-  color: #666;
+.primary { background:#111;color:#fff; }
+.secondary { border:1px solid #111; }
+
+/* ===== MOBILE MENU ICON ===== */
+.mobile-menu {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
 }
 
-/* =====================================================
-   🔥 MOBILE FIX (FINAL & CLEAN)
-===================================================== */
-@media (max-width: 900px) {
+/* ===== MOBILE ===== */
+@media (max-width:900px){
 
-  /* Layout */
   .two-col {
     grid-template-columns: 1fr;
     gap: 24px;
   }
 
-  .two-col .copy { order: 1; }
-  .two-col .visual { order: 2; }
+  .copy h1 { font-size: 34px; }
+  .copy h2 { font-size: 26px; }
 
-  .container {
-    padding: 24px 16px;
-  }
-
-  /* Hide desktop nav */
   nav {
     display: none;
     position: absolute;
     top: 100%;
-    left: 0;
+    right: 0;
     width: 100%;
-    background: #060048; /* 🔥 LOGO COLOR */
+    background: #060048;
     flex-direction: column;
     padding: 20px;
-  }
-
-  nav.show {
-    display: flex;
   }
 
   nav a {
@@ -167,12 +164,29 @@ footer {
     font-size: 18px;
   }
 
-  /* Disable hover dropdown on mobile */
+  nav.show { display: flex; }
+
+  .mobile-menu { display: block; }
+
+  /* 🔥 MOBILE DROPDOWN */
   .dropdown-content {
-    display: none !important;
+    position: static;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding-left: 12px;
   }
 
-  .mobile-menu {
+  .dropdown-content a {
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: none;
+  }
+
+  .dropdown-content.show {
     display: block;
   }
 }
@@ -184,7 +198,7 @@ footer {
 <header>
   <div class="container header-flex">
     <div class="logo">
-      <img src="/assets/ehasanpro-logo.png" alt="EhasanPro Logo">
+      <img src="/assets/ehasanpro-logo.png" alt="Logo">
       <span class="tagline">Thought Leadership Writer for B2B SaaS & AI Brands</span>
     </div>
 
@@ -193,7 +207,16 @@ footer {
     <nav id="mainNav">
       <a href="/">Home</a>
       <a href="/about">About</a>
-      <a href="/insights">Insights</a>
+
+      <div class="dropdown">
+        <a href="javascript:void(0)" onclick="toggleDropdown()">Insights ▾</a>
+        <div class="dropdown-content" id="insightsMenu">
+          <a href="/ai-future-of-work">AI & Future of Work</a>
+          <a href="/b2b-saas">B2B & SaaS</a>
+          <a href="/digital-marketing-seo">Digital Marketing & SEO</a>
+        </div>
+      </div>
+
       <a href="/copywriting">Copywriting</a>
       <a href="/how-i-work">How I Work</a>
       <a href="/contact">Contact</a>
@@ -201,26 +224,17 @@ footer {
   </div>
 </header>
 
-<!-- ===== HERO ===== -->
-<section class="section">
-  <div class="container two-col">
-    <div class="copy">
-      <h1>Thought Leadership That Decision-Makers Trust.</h1>
-      <p>I help B2B SaaS and AI companies build authority-driven content.</p>
-    </div>
-    <div class="visual">
-      <img src="/assets/hero-image.jpg" alt="">
-    </div>
-  </div>
-</section>
-
-<footer>
-  © 2026 EhasanPro — All Rights Reserved
+<footer style="text-align:center;padding:30px;font-size:14px;color:#666;">
+© 2026 EhasanPro — All Rights Reserved
 </footer>
 
 <script>
-function toggleMenu() {
+function toggleMenu(){
   document.getElementById("mainNav").classList.toggle("show");
+}
+
+function toggleDropdown(){
+  document.getElementById("insightsMenu").classList.toggle("show");
 }
 </script>
 
