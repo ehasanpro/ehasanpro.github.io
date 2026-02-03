@@ -36,6 +36,8 @@ a {
 header {
   background: #ffffff;
   border-bottom: 1px solid #eee;
+  position: relative;
+  z-index: 1000;
 }
 
 header .container {
@@ -52,25 +54,21 @@ header .container {
 .logo {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   line-height: 1;
 }
 
 .logo img {
   height: 100px;
-  width: auto;
-  display: block;
 }
 
 .tagline {
   font-size: 16px;
   color: #060048;
-  margin-top: 0;
-  line-height: 1.6;
+  margin-top: 2px;
   letter-spacing: 1px;
 }
 
-/* ===== NAV ===== */
+/* ===== DESKTOP NAV ===== */
 nav {
   display: flex;
   align-items: center;
@@ -80,37 +78,34 @@ nav a {
   margin-left: 22px;
   font-size: 16px;
   font-weight: 550;
+  color: #111;
 }
 
 nav a:hover {
   color: #060048;
 }
 
-/* ===== DROPDOWN ===== */
+/* ===== DESKTOP DROPDOWN ===== */
 .dropdown {
   position: relative;
-}
-
-.dropbtn {
-  cursor: pointer;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 30px;
+  top: 32px;
   left: 0;
   background: #ffffff;
   min-width: 240px;
   border: 1px solid #eee;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  z-index: 100;
 }
 
 .dropdown-content a {
   display: block;
   padding: 10px 16px;
   font-size: 15px;
+  color: #111;
 }
 
 .dropdown-content a:hover {
@@ -121,12 +116,18 @@ nav a:hover {
   display: block;
 }
 
+/* ===== MOBILE MENU ICON ===== */
+.mobile-menu {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
 /* ===== SECTIONS ===== */
 .section {
   padding: 20px 0;
 }
 
-/* 🔥 CORE LAYOUT */
 .two-col {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
@@ -136,7 +137,6 @@ nav a:hover {
 
 .copy h1 {
   font-size: 52px;
-  line-height: 1.15;
   margin-bottom: 20px;
 }
 
@@ -145,18 +145,8 @@ nav a:hover {
   margin-bottom: 16px;
 }
 
-.copy p {
-  margin-bottom: 14px;
-}
-
 .lead {
   font-size: 18px;
-}
-
-.proof {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 28px;
 }
 
 .visual img {
@@ -166,9 +156,8 @@ nav a:hover {
 
 /* ===== BUTTONS ===== */
 .btn {
-  display: inline-block;
   padding: 12px 22px;
-  font-size: 15px;
+  display: inline-block;
   margin-right: 12px;
 }
 
@@ -179,12 +168,6 @@ nav a:hover {
 
 .secondary {
   border: 1px solid #111;
-  color: #111;
-}
-
-/* ===== CTA ===== */
-.cta {
-  background: #f5f5f5;
 }
 
 /* ===== FOOTER ===== */
@@ -193,164 +176,123 @@ footer {
   padding: 30px;
   font-size: 14px;
   color: #666;
-  border-top: 1px solid #eee;
 }
 
-/* ===== MOBILE MENU ===== */
-.mobile-menu {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-}
+/* ================================================= */
+/* ================= MOBILE FIXES ================== */
+/* ================================================= */
 
-/* ===== MOBILE (🔥 FINAL FIX) ===== */
 @media (max-width: 900px) {
 
-  /* One column */
+  /* layout */
   .two-col {
     grid-template-columns: 1fr;
     gap: 24px;
   }
 
-  /* 🔥 Always TEXT first, IMAGE second */
-  .two-col .copy {
-    order: 1;
+  .copy h1 { font-size: 34px; }
+  .copy h2 { font-size: 26px; }
+
+  /* logo */
+  .logo img { height: 72px; }
+
+  .tagline {
+    font-size: 14px;
+    margin-top: 0;
+    line-height: 1.2;
   }
 
-  .two-col .visual {
-    order: 2;
-  }
-
-  /* Typography */
-  .copy h1 {
-    font-size: 34px;
-  }
-
-  .copy h2 {
-    font-size: 26px;
-  }
-
-  /* Reduce spacing */
-  .container {
-    padding: 24px 16px;
-  }
-
-  section {
-    margin-bottom: 24px;
-  }
-
-  /* Navigation */
+  /* nav base */
   nav {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    background: #060048;
+    flex-direction: column;
+    padding: 24px 20px;
     display: none;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  nav a {
+    color: #ffffff;
+    font-size: 20px;
+    margin: 14px 0;
   }
 
   .mobile-menu {
     display: block;
   }
-}
 
-/* ===== MOBILE NAV OVERLAY ===== */
-@media (max-width: 900px) {
-
-  nav {
-    position: fixed;
-    top: 64px; /* header height */
-    left: 0;
-    width: 100%;
-    background: #060048;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 24px 20px;
-    display: none;
-    z-index: 999;
-  }
-}
-
-
- nav a {
-  color: #ffffff;
-  margin: 14px 0;
-  font-size: 20px;
-  font-weight: 500;
-}
-
-
-  nav.show {
-    display: flex;
-  }
-}
-@media (max-width: 900px) {
-
+  /* MOBILE DROPDOWN */
   .dropdown-content {
     position: static;
-    background: #0a0a6a;
+    background: #0b0b5a;
     border: none;
     box-shadow: none;
-    width: 100%;
     margin-top: 10px;
   }
 
   .dropdown-content a {
     color: #ffffff;
-    font-size: 16px;
     padding: 10px 0;
   }
 
   .dropdown-content a:hover {
-    background: rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.1);
   }
 }
-
-  @media (max-width: 900px) {
-
-  .logo img {
-    height: 72px;
-  }
-
-  .tagline {
-    font-size: 14px;
-    margin-top: -2px;
-    line-height: 1.2;
-    letter-spacing: 0.5px;
-  }
-}
-
-
 </style>
 </head>
 
 <body>
 
-<!-- ===== HEADER ===== -->
 <header>
   <div class="container header-flex">
     <div class="logo">
       <img src="/assets/ehasanpro-logo.png" alt="EhasanPro Logo">
       <span class="tagline">Thought Leadership Writer for B2B SaaS & AI Brands</span>
     </div>
-<div class="mobile-menu" onclick="toggleMenu()">☰</div>
+
+    <div class="mobile-menu" onclick="toggleMenu()">☰</div>
 
     <nav>
-  <a href="/">Home</a>
-  <a href="/about">About</a>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
 
-  <div class="dropdown">
-    <a href="/insights" class="dropbtn">Insights ▾</a>
-    <div class="dropdown-content">
-      <a href="/ai-future-of-work">AI & Future of Work</a>
-      <a href="/b2b-saas">B2B & SaaS</a>
-      <a href="/digital-marketing-seo">Digital Marketing & SEO</a>
-    </div>
-  </div>
+      <div class="dropdown">
+        <a href="/insights">Insights ▾</a>
+        <div class="dropdown-content">
+          <a href="/ai-future-of-work">AI & Future of Work</a>
+          <a href="/b2b-saas">B2B & SaaS</a>
+          <a href="/digital-marketing-seo">Digital Marketing & SEO</a>
+        </div>
+      </div>
 
-  <a href="/copywriting">Copywriting</a>
-  <a href="/how-i-work">How I Work</a>
-  <a href="/contact">Contact</a>
-</nav>
-
-   
+      <a href="/copywriting">Copywriting</a>
+      <a href="/how-i-work">How I Work</a>
+      <a href="/contact">Contact</a>
+    </nav>
   </div>
 </header>
+
+<footer>
+  © 2026 EhasanPro — All Rights Reserved
+</footer>
+
+<script>
+function toggleMenu() {
+  document.querySelector("nav").classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
+
 
 
 <!-- ==Section=== HERO ===== -->
