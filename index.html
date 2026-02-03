@@ -253,16 +253,19 @@ footer {
 @media (max-width: 900px) {
 
   nav {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: #060048; /* 🔥 logo color */
+    position: fixed;
+    top: 64px; /* header height */
+    left: 0;
     width: 100%;
+    background: #060048;
     flex-direction: column;
     align-items: flex-start;
-    padding: 20px;
+    padding: 24px 20px;
     display: none;
+    z-index: 999;
   }
+}
+
 
   nav a {
     color: #fff;
