@@ -1,685 +1,449 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Thought Leadership Writer for B2B SaaS & AI Brands</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ehasan Pro - Strategic Copywriter & Content Strategist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<style>
-/* ===== RESET ===== */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #f59e0b;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f9fafb;
+            --white: #ffffff;
+        }
 
-/* ===== BASE ===== */
-body {
-  font-family: Georgia, serif;
-  background: #f1f1f1;
-  color: #111;
-  line-height: 1.6;
-}
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
+        /* Header & Navigation */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-.container {
-  max-width: 1180px;
-  margin: auto;
-  padding: 40px 20px;
-}
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-/* ===== HEADER ===== */
-header {
-  background: #ffffff;
-  border-bottom: 1px solid #eee;
-  position: relative;
-}
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
 
-header .container {
-  padding: 14px 20px;
-}
+        .logo-container img {
+            height: 50px;
+            width: auto;
+        }
 
-.header-flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
 
-/* ===== LOGO ===== */
-.logo {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  line-height: 1;
-}
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
 
-.logo img {
-  /* 🎨 CUSTOMIZE: Desktop logo height */
-  height: 100px;
-  width: auto;
-  display: block;
-}
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
 
-.tagline {
-  /* 🎨 CUSTOMIZE: Tagline font size */
-  font-size: 16px;
-  /* 🎨 CUSTOMIZE: Tagline color */
-  color: #060048;
-  /* 🔥 CHANGE 2: Minimal gap between logo and tagline */
-  margin-top: 2px;
-  line-height: 1.6;
-  letter-spacing: 1px;
-}
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
 
-/* ===== NAV ===== */
-nav {
-  display: flex;
-  align-items: center;
-}
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
 
-nav a {
-  margin-left: 22px;
-  font-size: 16px;
-  font-weight: 550;
-}
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
 
-nav a:hover {
-  color: #060048;
-}
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-dark);
+            transition: 0.3s;
+        }
 
-/* ===== DROPDOWN ===== */
-.dropdown {
-  position: relative;
-}
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            padding: 6rem 2rem;
+            text-align: center;
+        }
 
-.dropbtn {
-  cursor: pointer;
-}
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 30px;
-  left: 0;
-  background: #ffffff;
-  min-width: 240px;
-  border: 1px solid #eee;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  z-index: 100;
-}
+        .tagline {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+        }
 
-.dropdown-content a {
-  display: block;
-  padding: 10px 16px;
-  font-size: 15px;
-}
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
 
-.dropdown-content a:hover {
-  background: #f5f5f5;
-}
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
+        .cta-button {
+            display: inline-block;
+            background: var(--accent-color);
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+        }
 
-/* ===== SECTIONS ===== */
-.section {
-  padding: 20px 0;
-}
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+        }
 
-/* 🔥 CORE LAYOUT */
-.two-col {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
+        /* Services Section */
+        .services {
+            padding: 5rem 2rem;
+            background: var(--bg-light);
+        }
 
-.copy h1 {
-  font-size: 52px;
-  line-height: 1.15;
-  margin-bottom: 20px;
-}
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--text-dark);
+        }
 
-.copy h2 {
-  font-size: 36px;
-  margin-bottom: 16px;
-}
+        .services-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
 
-.copy p {
-  margin-bottom: 14px;
-}
+        .service-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-.lead {
-  font-size: 18px;
-}
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
 
-.proof {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 28px;
-}
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
 
-.visual img {
-  width: 100%;
-  border-radius: 4px;
-}
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
 
-/* ===== BUTTONS ===== */
-.btn {
-  display: inline-block;
-  padding: 12px 22px;
-  font-size: 15px;
-  margin-right: 12px;
-}
+        .service-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
 
-.primary {
-  background: #111;
-  color: #fff;
-}
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 3rem 2rem 1.5rem;
+        }
 
-.secondary {
-  border: 1px solid #111;
-  color: #111;
-}
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
 
-/* ===== CTA ===== */
-.cta {
-  background: #f5f5f5;
-}
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
 
-/* ===== FOOTER ===== */
-footer {
-  text-align: center;
-  padding: 30px;
-  font-size: 14px;
-  color: #666;
-  border-top: 1px solid #eee;
-}
+        .footer-section ul {
+            list-style: none;
+        }
 
-/* ===== MOBILE MENU ===== */
-.mobile-menu {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-}
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
 
-/* ===== MOBILE (🔥 FINAL FIX) ===== */
-@media (max-width: 900px) {
+        .footer-section a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
 
-  /* One column */
-  .two-col {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
+        .footer-section a:hover {
+            opacity: 1;
+            color: var(--accent-color);
+        }
 
-  /* 🔥 Always TEXT first, IMAGE second */
-  .two-col .copy {
-    order: 1;
-  }
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
 
-  .two-col .visual {
-    order: 2;
-  }
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s ease;
+        }
 
-  /* Typography */
-  .copy h1 {
-    font-size: 34px;
-  }
+        .social-links a:hover {
+            background: var(--accent-color);
+        }
 
-  .copy h2 {
-    font-size: 26px;
-  }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            opacity: 0.7;
+        }
 
-  /* Reduce spacing */
-  .container {
-    padding: 24px 16px;
-  }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background: var(--white);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0,0,0,0.1);
+                padding: 2rem 0;
+                gap: 1rem;
+            }
 
-  section {
-    margin-bottom: 24px;
-  }
+            .nav-menu.active {
+                left: 0;
+            }
 
-  /* 🔥 CHANGE 2: Mobile logo & tagline minimal gap */
-  .logo img {
-    /* 🎨 CUSTOMIZE: Mobile logo height */
-    height: 140px;
-  }
+            .menu-toggle {
+                display: flex;
+            }
 
-  .tagline {
-    /* 🎨 CUSTOMIZE: Mobile tagline gap (currently 2px = minimal) */
-    margin-top: 2px;
-    /* 🎨 CUSTOMIZE: Mobile tagline font size */
-    font-size: 14px;
-  }
+            .hero h1 {
+                font-size: 2rem;
+            }
 
-  /* Navigation */
-  nav {
-    display: none;
-  }
+            .tagline {
+                font-size: 1rem;
+            }
 
-  .mobile-menu {
-    display: block;
-  }
-}
+            .hero p {
+                font-size: 1rem;
+            }
 
-/* ===== 🔥 MOBILE NAV OVERLAY (COLORFUL & LARGE) ===== */
-@media (max-width: 900px) {
+            .section-title {
+                font-size: 2rem;
+            }
 
-  nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100vh;
-    
-    /* 🎨 CUSTOMIZE: Mobile menu background - Gradient colorful */
-    /* 🔥 CHANGE 1: Colorful gradient background */
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-    
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
-    /* 🎨 CUSTOMIZE: Menu padding */
-    padding: 60px 40px;
-    
-    display: none;
-    z-index: 9999;
-    overflow-y: auto;
-  }
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
 
-  nav a {
-    /* 🎨 CUSTOMIZE: Menu link text color */
-    color: #ffffff;
-    
-    /* 🎨 CUSTOMIZE: Menu link spacing (gap between links) */
-    /* 🔥 CHANGE 1: Larger spacing */
-    margin: 20px 0;
-    
-    /* 🎨 CUSTOMIZE: Menu link font size */
-    /* 🔥 CHANGE 1: Much larger font */
-    font-size: 28px;
-    
-    /* 🎨 CUSTOMIZE: Menu link font weight */
-    font-weight: 700;
-    
-    width: 100%;
-    text-align: center;
-    
-    /* 🎨 CUSTOMIZE: Menu link padding */
-    padding: 16px 0;
-    
-    /* 🎨 CUSTOMIZE: Menu link border color */
-    border-bottom: 2px solid rgba(255,255,255,0.2);
-    
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-
-  nav a:hover {
-    /* 🎨 CUSTOMIZE: Menu link hover color */
-    color: #ffd700;
-    
-    /* 🎨 CUSTOMIZE: Menu link hover background */
-    background: rgba(255,255,255,0.1);
-    
-    transform: scale(1.05);
-  }
-
-  nav.show {
-    display: flex;
-  }
-
-  /* 🔥 CHANGE 1: Colorful dropdown styling */
-  .dropdown-content {
-    position: static;
-    
-    /* 🎨 CUSTOMIZE: Dropdown background color */
-    background: rgba(255,255,255,0.15);
-    
-    /* 🎨 CUSTOMIZE: Dropdown border */
-    border: 2px solid rgba(255,255,255,0.3);
-    
-    /* 🎨 CUSTOMIZE: Dropdown spacing */
-    margin-top: 12px;
-    margin-left: 0;
-    
-    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-    border-radius: 12px;
-    overflow: hidden;
-  }
-
-  .dropdown-content a {
-    /* 🎨 CUSTOMIZE: Dropdown link color */
-    color: #fff;
-    
-    /* 🎨 CUSTOMIZE: Dropdown link font size */
-    font-size: 22px;
-    
-    /* 🎨 CUSTOMIZE: Dropdown link padding */
-    padding: 14px 20px;
-    
-    /* 🎨 CUSTOMIZE: Dropdown link border */
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-    
-    text-transform: none;
-    letter-spacing: 1px;
-  }
-
-  .dropdown-content a:last-child {
-    border-bottom: none;
-  }
-
-  .dropdown-content a:hover {
-    /* 🎨 CUSTOMIZE: Dropdown link hover background */
-    background: rgba(255,215,0,0.3);
-    
-    /* 🎨 CUSTOMIZE: Dropdown link hover color */
-    color: #ffd700;
-  }
-
-  /* Show dropdown content on mobile when menu is open */
-  nav.show .dropdown-content {
-    display: block;
-  }
-
-  /* 🔥 Close button styling */
-  .mobile-menu.active {
-    position: fixed;
-    
-    /* 🎨 CUSTOMIZE: Close button position */
-    top: 30px;
-    right: 30px;
-    
-    z-index: 10000;
-    
-    /* 🎨 CUSTOMIZE: Close button color */
-    color: #fff;
-    
-    /* 🎨 CUSTOMIZE: Close button size */
-    font-size: 42px;
-    
-    /* 🎨 CUSTOMIZE: Close button background */
-    background: rgba(0,0,0,0.3);
-    
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-  }
-
-  .mobile-menu.active:hover {
-    /* 🎨 CUSTOMIZE: Close button hover effect */
-    background: rgba(255,215,0,0.4);
-    transform: rotate(90deg);
-  }
-}
-
-
-</style>
+            .social-links {
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
-
 <body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="/assets/ehasanpro-logo.png" alt="Ehasan Pro Logo">
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
 
-<!-- ===== HEADER ===== -->
-<header>
-  <div class="container header-flex">
-    <div class="logo">
-      <img src="/assets/ehasanpro-logo.png" alt="EhasanPro Logo">
-      <span class="tagline">Thought Leadership Writer for B2B SaaS & AI Brands</span>
-    </div>
-<div class="mobile-menu" onclick="toggleMenu()">☰</div>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="tagline">Words That Convert. Stories That Sell.</p>
+            <h1>Strategic Copywriter for Growth-Focused Brands</h1>
+            <p>Transform your message into revenue with conversion-driven copy that resonates with your audience and drives results.</p>
+            <a href="#contact" class="cta-button">Let's Create Impact Together</a>
+        </div>
+    </section>
 
-    <nav>
-  <a href="/">Home</a>
-  <a href="/about">About</a>
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2 class="section-title">What I Do Best</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">📝</div>
+                <h3>Thought Leadership Content</h3>
+                <p>Position yourself as an industry authority with compelling blog posts and articles that educate, inspire, and build trust with your audience.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">✉️</div>
+                <h3>Email Copywriting</h3>
+                <p>Craft email campaigns that get opened, read, and clicked. From welcome sequences to promotional emails that convert subscribers into customers.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">💼</div>
+                <h3>LinkedIn Ghostwriting</h3>
+                <p>Build your personal brand on LinkedIn with engaging posts that spark conversations, attract opportunities, and establish your expertise.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🚀</div>
+                <h3>Landing & Sales Pages</h3>
+                <p>High-converting landing pages and sales copy that turn visitors into buyers through persuasive messaging and strategic psychology.</p>
+            </div>
+        </div>
+    </section>
 
-  <div class="dropdown">
-    <a href="/insights" class="dropbtn">Insights ▾</a>
-    <div class="dropdown-content">
-      <a href="/ai-future-of-work">AI & Future of Work</a>
-      <a href="/b2b-saas">B2B & SaaS</a>
-      <a href="/digital-marketing-seo">Digital Marketing & SEO</a>
-    </div>
-  </div>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Ehasan Pro</h4>
+                <p>Strategic copywriter helping brands and entrepreneurs communicate their value and convert their audience.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn">in</a>
+                    <a href="#" aria-label="Twitter">𝕏</a>
+                    <a href="#" aria-label="Email">@</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#services">Thought Leadership</a></li>
+                    <li><a href="#services">Email Copywriting</a></li>
+                    <li><a href="#services">LinkedIn Ghostwriting</a></li>
+                    <li><a href="#services">Landing Pages</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Get In Touch</h4>
+                <ul>
+                    <li><a href="#contact">Contact Form</a></li>
+                    <li><a href="mailto:hello@ehasanpro.com">hello@ehasanpro.com</a></li>
+                    <li><a href="#contact">Book a Call</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ehasan Pro. All rights reserved. | Crafted with purpose.</p>
+        </div>
+    </footer>
 
-  <a href="/copywriting">Copywriting</a>
-  <a href="/how-i-work">How I Work</a>
-  <a href="/contact">Contact</a>
-</nav>
+    <!-- Mobile Menu Script -->
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
 
-   
-  </div>
-</header>
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
 
-
-<!-- ==Section=== HERO ===== -->
-<section class="section">
-  <div class="container two-col">
-    <div class="copy">
-      <h1>Thought Leadership That Decision-Makers Trust. And AI Systems Cite.
-</h1>
-      <p class="lead">
-        I help B2B SaaS and AI companies publish authority-building content that earns credibility, drives visibility in the AI search era, and positions leaders as the obvious choice in their category.
-
-      </p>
-      <p class="proof">
-        Former CTO-level technologist · AI & Search-driven content · Built for authority, not fluff
-      </p>
-      <a class="btn primary" href="#">View My Work</a>
-      <a class="btn secondary" href="#">Book a Strategy Call</a>
-    </div>
-
-    <div class="visual">
-      <img src="/assets/hero-image.jpg" alt="AI strategy workspace">
-    </div>
-  </div>
-</section>
-
-<!-- ===Section-2== WHAT YOU DO ===== -->
-<section class="section">
-  <div class="container two-col">
-    <div class="visual">
-      <img src="/assets/section-image-2.jpg" alt="AI framework">
-    </div>
-
-    <div class="copy">
-      <h2>I Turn Complex AI & SaaS Ideas Into Authority-Building Content</h2>
-      <p>
-        AI doesn't need more content.
-It needs clear thinking, real experience, and credible narratives.
-
-      </p>
-      <p>
-       I work with B2B SaaS companies and AI-focused teams to translate complex ideas—AI strategy, future of work, digital transformation—into content 
-        that decision-makers trust and AI systems cite.
-
-      </p>
-      <p class="muted">
-        This isn't generic AI output.
-It's experience-driven thought leadership designed to compound authority over time.
-
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- ===Section-3== WHY ME ===== -->
-<section class="section">
-  <div class="container two-col">
-    <div class="copy">
-      <h2>Why Executives Choose This Approach
-</h2>
-      <ul>
-        <li><strong>🧠 Technical Depth You Can't Fake
-</strong> - 15+ years in IT including CTO-level roles. I understand what I write about—because I've built it.
-</li>
-        <li><strong>📊 Research-Backed, Zero Fluff
-</strong> - Every piece uses data, frameworks, and credible sources. Designed to be cited by AI systems and trusted by buyers.
-</li>
-        <li><strong>🎯 Written for Decision-Makers</strong>
-        - Content that speaks to founders, VPs, and executives—not just algorithms. Clear thinking. Executive tone.
-</li>
-     
- <li><strong>🚀 Built for AI Search Visibility</strong>
-        - Optimized for Google AI Overviews, Perplexity, ChatGPT, and the platforms where your buyers actually research solutions.
-</li>
-        
-      </ul>
-    </div>
-    <div class="visual">
-      <img src="/assets/section-image-3.jpg" alt="Authority content">
-    </div>
-  </div>
-</section>
-
-<!-- ==Section-4=== SERVICES ===== -->
-<section class="section">
-  <div class="container two-col">
-    <div class="visual">
-      <img src="/assets/section-image-4.jpg" alt="Services">
-    </div>
-
-    <div class="copy">
-      <h2>What We Build Together</h2>
-      <ul>
-        <li><strong>Long-form thought leadership articles</strong> In-depth articles on AI strategy, digital transformation, and the future of work—designed to establish category authority.
-</li>
-        <li><strong>Research-Driven Industry Analysis</strong> Data-backed frameworks, trend reports, and strategic narratives that position you as the expert.</li>
-        <li><strong>AI-Era Content Optimization</strong>  Content structured for both human decision-makers and AI citation engines (GEO + SEO).</li>
-        <li><strong>Executive LinkedIn Ghostwriting</strong> Founder and C-suite thought leadership that builds personal brands and drives warm inbound.</li>
-        <li><strong>Strategic Content Consulting</strong> Content audits, positioning strategy, and authority-building roadmaps.</li>
-        <strong>Every piece is designed to educate, persuade, and compound over time.</strong>
-      </ul>
-    </div>
-  </div>
-</section>
-
-  
-<!-- ===== SECTION 5 : OUTCOMES ===== -->
-<section class="section">
-  <div class="container two-col">
-
-    <div class="copy">
-      <h2>Content That Keeps Working After You Publish It</h2>
-
-      <p><strong>Traffic is temporary.</strong><br>
-      Rankings fluctuate.<br>
-      <strong>Authority compounds.</strong></p>
-
-      <ul>
-        <li>
-          <strong>Earn trust before the first sales call</strong> —  
-          Buyers arrive pre-sold on your expertise
-        </li>
-
-        <li>
-          <strong>Get cited by AI systems</strong> —  
-          Appear in AI Overviews, Perplexity, and ChatGPT results
-        </li>
-
-        <li>
-          <strong>Attract quality inbound, not just volume</strong> —  
-          Decision-makers, not tire-kickers
-        </li>
-
-        <li>
-          <strong>Own a category position</strong> —  
-          Become the obvious choice in crowded SaaS and AI markets
-        </li>
-      </ul>
-    </div>
-
-    <!-- IMAGE RIGHT -->
-    <div class="visual">
-      <img src="/assets/section-image-5.jpg" alt="Authority-driven content outcomes">
-    </div>
-
-  </div>
-</section>
-
-  <!-- Section-6===== Ideal Client ===== -->
-<section class="section">
-  <div class="container two-col">
-    <div class="visual">
-      <img src="/assets/section-image-6.jpg" alt="Services">
-    </div>
-
-    <div class="copy">
-      <h2>Who This Is For</h2>
-      <ul>
-        <strong>Target Clients</strong> 
-
-        <li><strong>B2B SaaS founders and leadership teams</strong> looking to establish category authority</li>
-        <li><strong>AI startups and scale-ups </strong> that need credible narratives, not hype</li>
-        <li><strong>Consultants and professional services firms</strong> building thought leadership</li>
-        <li><strong>Executives and founders</strong> developing personal brands that drive business</li>
-        <strong>❌ Not for: High-volume content farms, SEO-only strategies, or brands chasing vanity metrics</strong>
-      </ul>
-    </div>
-  </div>
-</section>
-
-
-
-<!-- ===== FINAL CTA ===== -->
-<section class="section cta">
-  <div class="container two-col">
-
-      <div class="copy">
-      <h2>Ready to Build Real Authority?</h2>
-      <p>
-        If you want content decision-makers trust — and AI platforms recognize —
-        let's talk.
-      </p>
-      <a class="btn primary" href="contact.html">
-        Request a Free Content Review
-      </a>
-    </div>
-
-     <div class="visual">
-      <img src="/assets/section-image-7.jpg" alt="Strategy call">
-    </div>
-  </div>
-</section>
-
-
-<footer>
-  © 2026 EhasanPro — All Rights Reserved
-</footer>
-<script>
-function toggleMenu() {
-  const nav = document.querySelector("nav");
-  const menuIcon = document.querySelector(".mobile-menu");
-  
-  nav.classList.toggle("show");
-  menuIcon.classList.toggle("active");
-  
-  // Toggle between hamburger and X
-  if (nav.classList.contains("show")) {
-    menuIcon.innerHTML = "✕";
-  } else {
-    menuIcon.innerHTML = "☰";
-  }
-  
-  // Prevent body scroll when menu is open
-  if (nav.classList.contains("show")) {
-    document.body.style.overflow = "hidden";
-  } else {
-    document.body.style.overflow = "";
-  }
-}
-</script>
-
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
