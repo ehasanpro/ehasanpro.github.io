@@ -37,7 +37,6 @@ header {
   background: #ffffff;
   border-bottom: 1px solid #eee;
   position: relative;
-  z-index: 1000;
 }
 
 header .container {
@@ -54,21 +53,25 @@ header .container {
 .logo {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   line-height: 1;
 }
 
 .logo img {
   height: 100px;
+  width: auto;
+  display: block;
 }
 
 .tagline {
   font-size: 16px;
   color: #060048;
-  margin-top: 2px;
+  margin-top: 0;
+  line-height: 1.6;
   letter-spacing: 1px;
 }
 
-/* ===== DESKTOP NAV ===== */
+/* ===== NAV ===== */
 nav {
   display: flex;
   align-items: center;
@@ -78,34 +81,37 @@ nav a {
   margin-left: 22px;
   font-size: 16px;
   font-weight: 550;
-  color: #111;
 }
 
 nav a:hover {
   color: #060048;
 }
 
-/* ===== DESKTOP DROPDOWN ===== */
+/* ===== DROPDOWN ===== */
 .dropdown {
   position: relative;
+}
+
+.dropbtn {
+  cursor: pointer;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 32px;
+  top: 30px;
   left: 0;
   background: #ffffff;
   min-width: 240px;
   border: 1px solid #eee;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  z-index: 100;
 }
 
 .dropdown-content a {
   display: block;
   padding: 10px 16px;
   font-size: 15px;
-  color: #111;
 }
 
 .dropdown-content a:hover {
@@ -116,18 +122,12 @@ nav a:hover {
   display: block;
 }
 
-/* ===== MOBILE MENU ICON ===== */
-.mobile-menu {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-}
-
 /* ===== SECTIONS ===== */
 .section {
   padding: 20px 0;
 }
 
+/* 🔥 CORE LAYOUT */
 .two-col {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
@@ -137,6 +137,7 @@ nav a:hover {
 
 .copy h1 {
   font-size: 52px;
+  line-height: 1.15;
   margin-bottom: 20px;
 }
 
@@ -145,8 +146,18 @@ nav a:hover {
   margin-bottom: 16px;
 }
 
+.copy p {
+  margin-bottom: 14px;
+}
+
 .lead {
   font-size: 18px;
+}
+
+.proof {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 28px;
 }
 
 .visual img {
@@ -156,8 +167,9 @@ nav a:hover {
 
 /* ===== BUTTONS ===== */
 .btn {
-  padding: 12px 22px;
   display: inline-block;
+  padding: 12px 22px;
+  font-size: 15px;
   margin-right: 12px;
 }
 
@@ -168,6 +180,12 @@ nav a:hover {
 
 .secondary {
   border: 1px solid #111;
+  color: #111;
+}
+
+/* ===== CTA ===== */
+.cta {
+  background: #f5f5f5;
 }
 
 /* ===== FOOTER ===== */
@@ -176,123 +194,185 @@ footer {
   padding: 30px;
   font-size: 14px;
   color: #666;
+  border-top: 1px solid #eee;
 }
 
-/* ================================================= */
-/* ================= MOBILE FIXES ================== */
-/* ================================================= */
+/* ===== MOBILE MENU ===== */
+.mobile-menu {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
 
+/* ===== MOBILE (🔥 FINAL FIX) ===== */
 @media (max-width: 900px) {
 
-  /* layout */
+  /* One column */
   .two-col {
     grid-template-columns: 1fr;
     gap: 24px;
   }
 
-  .copy h1 { font-size: 34px; }
-  .copy h2 { font-size: 26px; }
-
-  /* logo */
-  .logo img { height: 72px; }
-
-  .tagline {
-    font-size: 14px;
-    margin-top: 0;
-    line-height: 1.2;
+  /* 🔥 Always TEXT first, IMAGE second */
+  .two-col .copy {
+    order: 1;
   }
 
-  /* nav base */
+  .two-col .visual {
+    order: 2;
+  }
+
+  /* Typography */
+  .copy h1 {
+    font-size: 34px;
+  }
+
+  .copy h2 {
+    font-size: 26px;
+  }
+
+  /* Reduce spacing */
+  .container {
+    padding: 24px 16px;
+  }
+
+  section {
+    margin-bottom: 24px;
+  }
+
+  /* 🔥 EDIT 4: Larger logo & minimal gap with tagline */
+  .logo img {
+    height: 140px;
+  }
+
+  .tagline {
+    margin-top: 4px;
+    font-size: 14px;
+  }
+
+  /* Navigation */
+  nav {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+}
+
+/* ===== MOBILE NAV OVERLAY (🔥 FIXED) ===== */
+@media (max-width: 900px) {
+
+  /* 🔥 EDIT 1: Fixed positioning to prevent scroll issues */
   nav {
     position: fixed;
-    top: 64px;
+    top: 0;
     left: 0;
+    right: 0;
+    background: #1a1a52; /* 🔥 EDIT 3: Darker background */
     width: 100%;
-    background: #060048;
+    height: 100vh;
     flex-direction: column;
-    padding: 24px 20px;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px 30px;
     display: none;
+    z-index: 9999;
+    overflow-y: auto;
+  }
+
+  nav a {
+    color: #fff;
+    margin: 16px 0; /* 🔥 EDIT 3: Larger spacing */
+    font-size: 22px; /* 🔥 EDIT 3: Larger font */
+    font-weight: 600;
+    width: 100%;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  nav a:hover {
+    color: #ffd700;
   }
 
   nav.show {
     display: flex;
   }
 
-  nav a {
-    color: #ffffff;
-    font-size: 20px;
-    margin: 14px 0;
-  }
-
-  .mobile-menu {
-    display: block;
-  }
-
-  /* MOBILE DROPDOWN */
+  /* 🔥 EDIT 2: Mobile dropdown styling with visible contrast */
   .dropdown-content {
     position: static;
-    background: #0b0b5a;
-    border: none;
+    background: rgba(255,255,255,0.1); /* 🔥 Semi-transparent light background */
+    border: 1px solid rgba(255,255,255,0.2);
+    margin-top: 8px;
+    margin-left: 20px;
     box-shadow: none;
-    margin-top: 10px;
   }
 
   .dropdown-content a {
-    color: #ffffff;
-    padding: 10px 0;
+    color: #ffd700; /* 🔥 Gold color for contrast */
+    font-size: 18px;
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
   }
 
   .dropdown-content a:hover {
-    background: rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+  }
+
+  /* Show dropdown content on mobile when menu is open */
+  nav.show .dropdown-content {
+    display: block;
+  }
+
+  /* Close button for mobile menu */
+  .mobile-menu.active {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+    color: #fff;
+    font-size: 32px;
   }
 }
+
+
 </style>
 </head>
 
 <body>
 
+<!-- ===== HEADER ===== -->
 <header>
   <div class="container header-flex">
     <div class="logo">
       <img src="/assets/ehasanpro-logo.png" alt="EhasanPro Logo">
       <span class="tagline">Thought Leadership Writer for B2B SaaS & AI Brands</span>
     </div>
-
-    <div class="mobile-menu" onclick="toggleMenu()">☰</div>
+<div class="mobile-menu" onclick="toggleMenu()">☰</div>
 
     <nav>
-      <a href="/">Home</a>
-      <a href="/about">About</a>
+  <a href="/">Home</a>
+  <a href="/about">About</a>
 
-      <div class="dropdown">
-        <a href="/insights">Insights ▾</a>
-        <div class="dropdown-content">
-          <a href="/ai-future-of-work">AI & Future of Work</a>
-          <a href="/b2b-saas">B2B & SaaS</a>
-          <a href="/digital-marketing-seo">Digital Marketing & SEO</a>
-        </div>
-      </div>
+  <div class="dropdown">
+    <a href="/insights" class="dropbtn">Insights ▾</a>
+    <div class="dropdown-content">
+      <a href="/ai-future-of-work">AI & Future of Work</a>
+      <a href="/b2b-saas">B2B & SaaS</a>
+      <a href="/digital-marketing-seo">Digital Marketing & SEO</a>
+    </div>
+  </div>
 
-      <a href="/copywriting">Copywriting</a>
-      <a href="/how-i-work">How I Work</a>
-      <a href="/contact">Contact</a>
-    </nav>
+  <a href="/copywriting">Copywriting</a>
+  <a href="/how-i-work">How I Work</a>
+  <a href="/contact">Contact</a>
+</nav>
+
+   
   </div>
 </header>
-
-<footer>
-  © 2026 EhasanPro — All Rights Reserved
-</footer>
-
-<script>
-function toggleMenu() {
-  document.querySelector("nav").classList.toggle("show");
-}
-</script>
-
-</body>
-</html>
-
 
 
 <!-- ==Section=== HERO ===== -->
@@ -328,7 +408,7 @@ function toggleMenu() {
     <div class="copy">
       <h2>I Turn Complex AI & SaaS Ideas Into Authority-Building Content</h2>
       <p>
-        AI doesn’t need more content.
+        AI doesn't need more content.
 It needs clear thinking, real experience, and credible narratives.
 
       </p>
@@ -338,8 +418,8 @@ It needs clear thinking, real experience, and credible narratives.
 
       </p>
       <p class="muted">
-        This isn’t generic AI output.
-It’s experience-driven thought leadership designed to compound authority over time.
+        This isn't generic AI output.
+It's experience-driven thought leadership designed to compound authority over time.
 
       </p>
     </div>
@@ -472,7 +552,7 @@ It’s experience-driven thought leadership designed to compound authority over 
       <h2>Ready to Build Real Authority?</h2>
       <p>
         If you want content decision-makers trust — and AI platforms recognize —
-        let’s talk.
+        let's talk.
       </p>
       <a class="btn primary" href="contact.html">
         Request a Free Content Review
@@ -491,13 +571,27 @@ It’s experience-driven thought leadership designed to compound authority over 
 </footer>
 <script>
 function toggleMenu() {
-  document.querySelector("nav").classList.toggle("show");
+  const nav = document.querySelector("nav");
+  const menuIcon = document.querySelector(".mobile-menu");
+  
+  nav.classList.toggle("show");
+  menuIcon.classList.toggle("active");
+  
+  // Toggle between hamburger and X
+  if (nav.classList.contains("show")) {
+    menuIcon.innerHTML = "✕";
+  } else {
+    menuIcon.innerHTML = "☰";
+  }
+  
+  // Prevent body scroll when menu is open
+  if (nav.classList.contains("show")) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "";
+  }
 }
 </script>
 
 </body>
 </html>
-
-
-
-
