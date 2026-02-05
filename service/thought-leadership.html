@@ -1,1 +1,1096 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thought Leadership Writing Services | Ehasan Pro</title>
+    <meta name="description" content="Position yourself as an industry authority with strategic thought leadership content. Expert blog posts and articles that build trust and attract opportunities.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #f59e0b;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f9fafb;
+            --white: #ffffff;
+            --service-color: #8b5cf6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-container img {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-dark);
+            transition: 0.3s;
+        }
+
+        /* Service Hero */
+        .service-hero {
+            background: linear-gradient(135deg, var(--service-color) 0%, #6d28d9 100%);
+            color: var(--white);
+            padding: 5rem 2rem 4rem;
+        }
+
+        .service-hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            line-height: 1.8;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: var(--accent-color);
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            background: transparent;
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            border: 2px solid var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--service-color);
+        }
+
+        .hero-visual {
+            background: rgba(255,255,255,0.1);
+            padding: 3rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .stat-box {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            opacity: 0.9;
+        }
+
+        /* Main Content */
+        .content-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Benefits Grid */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .benefit-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--service-color);
+        }
+
+        .benefit-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* Process Section */
+        .process-section {
+            background: var(--bg-light);
+            padding: 4rem 2rem;
+        }
+
+        .process-timeline {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .process-step {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .process-step::before {
+            content: '';
+            position: absolute;
+            left: 2.5rem;
+            top: 5rem;
+            width: 2px;
+            height: calc(100% + 1rem);
+            background: var(--service-color);
+            opacity: 0.3;
+        }
+
+        .process-step:last-child::before {
+            display: none;
+        }
+
+        .step-number {
+            width: 5rem;
+            height: 5rem;
+            background: var(--service-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .step-duration {
+            color: var(--service-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .step-content p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .step-deliverables {
+            background: var(--white);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        .step-deliverables h4 {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .step-deliverables ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .step-deliverables li {
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-light);
+            margin-bottom: 0.3rem;
+        }
+
+        .step-deliverables li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--service-color);
+            font-weight: bold;
+        }
+
+        /* Packages Section */
+        .packages-section {
+            background: var(--white);
+            padding: 4rem 2rem;
+        }
+
+        .packages-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .package-card {
+            background: var(--white);
+            border: 2px solid var(--bg-light);
+            border-radius: 15px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .package-card.featured {
+            border-color: var(--service-color);
+            box-shadow: 0 8px 30px rgba(139, 92, 246, 0.2);
+            transform: scale(1.05);
+        }
+
+        .package-badge {
+            position: absolute;
+            top: -15px;
+            right: 2rem;
+            background: var(--accent-color);
+            color: var(--white);
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        .package-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .package-card .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--service-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .package-card .price-note {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        .package-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+
+        .package-features li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--bg-light);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .package-features li::before {
+            content: '✓';
+            color: var(--service-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .package-cta {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background: var(--service-color);
+            color: var(--white);
+            padding: 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .package-cta:hover {
+            background: #6d28d9;
+            transform: translateY(-2px);
+        }
+
+        /* Examples Section */
+        .examples-section {
+            background: var(--bg-light);
+            padding: 4rem 2rem;
+        }
+
+        .examples-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .example-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .example-preview {
+            background: linear-gradient(135deg, var(--service-color) 0%, #6d28d9 100%);
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .example-content {
+            padding: 2rem;
+        }
+
+        .example-content h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-dark);
+        }
+
+        .example-meta {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .example-content p {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .example-link {
+            color: var(--service-color);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .example-link::after {
+            content: ' →';
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border: 2px solid var(--bg-light);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .faq-item h4 {
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .faq-item p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* CTA Section */
+        .final-cta {
+            background: linear-gradient(135deg, var(--service-color) 0%, #6d28d9 100%);
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .final-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 3rem 2rem 1.5rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            opacity: 1;
+            color: var(--accent-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--accent-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            opacity: 0.7;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background: var(--white);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0,0,0,0.1);
+                padding: 2rem 0;
+                gap: 1rem;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .service-hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .package-card.featured {
+                transform: scale(1);
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav>
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="/assets/ehasanpro-logo.png" alt="Ehasan Pro Logo">
+                </a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Service Hero -->
+    <section class="service-hero">
+        <div class="service-hero-content">
+            <div class="hero-text">
+                <h1>Thought Leadership Writing</h1>
+                <p>Position yourself as an industry authority with strategic content that educates, inspires, and builds trust with your audience. Turn expertise into influence.</p>
+                <div class="hero-cta">
+                    <a href="#packages" class="btn-primary">View Packages</a>
+                    <a href="contact.html" class="btn-secondary">Book a Call</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Articles Published</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">50K+</div>
+                        <div class="stat-label">Monthly Readers</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Client Satisfaction</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">3x</div>
+                        <div class="stat-label">Engagement Increase</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="content-section">
+        <div class="section-header">
+            <h2>Why Thought Leadership Matters</h2>
+            <p>Establish credibility, attract opportunities, and build a loyal following with strategic content</p>
+        </div>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">🎯</div>
+                <h3>Build Authority</h3>
+                <p>Position yourself as a go-to expert in your industry. Thought leadership content demonstrates your expertise and builds trust with your audience.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">📈</div>
+                <h3>Generate Leads</h3>
+                <p>Quality content attracts qualified leads who are already convinced of your expertise before reaching out to you.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🤝</div>
+                <h3>Attract Opportunities</h3>
+                <p>Speaking engagements, partnerships, media features, and high-value clients find you through your published insights.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">💡</div>
+                <h3>Shape Conversations</h3>
+                <p>Influence industry discussions and trends. Your ideas become reference points for others in your field.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🔗</div>
+                <h3>Build Network</h3>
+                <p>Connect with other industry leaders and decision-makers who engage with your content and ideas.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">⚡</div>
+                <h3>Compound Results</h3>
+                <p>Each piece of content continues working for you, building authority and generating leads months and years after publication.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="section-header">
+            <h2>How I Create Thought Leadership Content</h2>
+            <p>A strategic, research-driven process that transforms your expertise into compelling content</p>
+        </div>
+        <div class="process-timeline">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Discovery & Research</h3>
+                    <div class="step-duration">Days 1-2</div>
+                    <p>I dive deep into your expertise, target audience, and industry landscape. This includes competitor analysis, audience research, and understanding your unique perspective.</p>
+                    <div class="step-deliverables">
+                        <h4>Deliverables:</h4>
+                        <ul>
+                            <li>Content strategy document</li>
+                            <li>Target audience profile</li>
+                            <li>Competitor content analysis</li>
+                            <li>Topic ideation (10-15 ideas)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Topic Development</h3>
+                    <div class="step-duration">Days 3-4</div>
+                    <p>Together, we select topics that align with your goals and audience interests. I research each topic thoroughly, gathering data, examples, and unique angles.</p>
+                    <div class="step-deliverables">
+                        <h4>Deliverables:</h4>
+                        <ul>
+                            <li>Detailed outline for each article</li>
+                            <li>Key arguments and data points</li>
+                            <li>SEO keyword research</li>
+                            <li>Content calendar (optional)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Writing & Structuring</h3>
+                    <div class="step-duration">Days 5-8</div>
+                    <p>I craft compelling, well-structured articles that showcase your expertise, engage readers, and drive action. Each piece is optimized for both human readers and search engines.</p>
+                    <div class="step-deliverables">
+                        <h4>Deliverables:</h4>
+                        <ul>
+                            <li>Complete first draft</li>
+                            <li>SEO-optimized headlines</li>
+                            <li>Meta descriptions</li>
+                            <li>Internal linking suggestions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Review & Refinement</h3>
+                    <div class="step-duration">Days 9-10</div>
+                    <p>You review the content and provide feedback. I refine the piece based on your input, ensuring it perfectly captures your voice and expertise.</p>
+                    <div class="step-deliverables">
+                        <h4>Deliverables:</h4>
+                        <ul>
+                            <li>Revised draft incorporating feedback</li>
+                            <li>Final proofread version</li>
+                            <li>Multiple format options (blog, LinkedIn, Medium)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <h3>Final Delivery & Support</h3>
+                    <div class="step-duration">Day 11-12</div>
+                    <p>I deliver the polished article along with publishing guidance, promotional strategies, and performance tracking recommendations.</p>
+                    <div class="step-deliverables">
+                        <h4>Deliverables:</h4>
+                        <ul>
+                            <li>Final article (multiple formats)</li>
+                            <li>Social media snippets</li>
+                            <li>Publishing best practices guide</li>
+                            <li>Performance metrics to track</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section class="packages-section" id="packages">
+        <div class="section-header">
+            <h2>Thought Leadership Packages</h2>
+            <p>Choose the package that fits your content needs and growth goals</p>
+        </div>
+        <div class="packages-grid">
+            <!-- Starter Package -->
+            <div class="package-card">
+                <h3>Starter</h3>
+                <div class="price">$400</div>
+                <div class="price-note">per article</div>
+                <ul class="package-features">
+                    <li>1,000-1,500 word article</li>
+                    <li>Topic research & development</li>
+                    <li>SEO optimization</li>
+                    <li>1 round of revisions</li>
+                    <li>Meta description</li>
+                    <li>5-7 day turnaround</li>
+                </ul>
+                <a href="contact.html" class="package-cta">Get Started</a>
+            </div>
+
+            <!-- Professional Package -->
+            <div class="package-card featured">
+                <span class="package-badge">MOST POPULAR</span>
+                <h3>Professional</h3>
+                <div class="price">$650</div>
+                <div class="price-note">per article</div>
+                <ul class="package-features">
+                    <li>2,000-2,500 word deep-dive article</li>
+                    <li>In-depth research & data analysis</li>
+                    <li>SEO optimization + keyword strategy</li>
+                    <li>2 rounds of revisions</li>
+                    <li>Meta description + social snippets</li>
+                    <li>Internal linking suggestions</li>
+                    <li>7-10 day turnaround</li>
+                </ul>
+                <a href="contact.html" class="package-cta">Get Started</a>
+            </div>
+
+            <!-- Premium Package -->
+            <div class="package-card">
+                <h3>Premium</h3>
+                <div class="price">$1,200</div>
+                <div class="price-note">per article</div>
+                <ul class="package-features">
+                    <li>3,000+ word authoritative piece</li>
+                    <li>Original research & expert interviews</li>
+                    <li>Complete SEO strategy</li>
+                    <li>Unlimited revisions</li>
+                    <li>Multi-platform optimization</li>
+                    <li>Social media content pack</li>
+                    <li>Email newsletter version</li>
+                    <li>10-14 day turnaround</li>
+                </ul>
+                <a href="contact.html" class="package-cta">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Examples Section -->
+    <section class="examples-section">
+        <div class="section-header">
+            <h2>Sample Work</h2>
+            <p>Examples of thought leadership content that drives engagement and builds authority</p>
+        </div>
+        <div class="examples-grid">
+            <div class="example-card">
+                <div class="example-preview">📊</div>
+                <div class="example-content">
+                    <h4>The Future of B2B Marketing: Data-Driven Insights</h4>
+                    <div class="example-meta">SaaS Marketing • 2,400 words • 15K views</div>
+                    <p>Comprehensive analysis of emerging B2B marketing trends backed by research from 500+ companies. Featured in 3 industry newsletters.</p>
+                    <a href="#" class="example-link">View Sample</a>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="example-preview">🤖</div>
+                <div class="example-content">
+                    <h4>AI in Content Creation: What Copywriters Need to Know</h4>
+                    <div class="example-meta">Digital Marketing • 2,100 words • 22K views</div>
+                    <p>Thought-provoking piece on the intersection of AI and copywriting. Shared by industry influencers on LinkedIn.</p>
+                    <a href="#" class="example-link">View Sample</a>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="example-preview">💼</div>
+                <div class="example-content">
+                    <h4>Building Remote Teams That Actually Work</h4>
+                    <div class="example-meta">Leadership • 1,800 words • 18K views</div>
+                    <p>Practical framework for remote team management with real examples. Generated 50+ inbound leads for client.</p>
+                    <a href="#" class="example-link">View Sample</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="section-header">
+            <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-item">
+            <h4>How do you ensure the content reflects my expertise and voice?</h4>
+            <p>I start every project with a detailed discovery call to understand your perspective, experiences, and communication style. I also review your existing content and incorporate your feedback through revision rounds to ensure the final piece authentically represents your voice.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>What topics work best for thought leadership?</h4>
+            <p>The best topics combine your unique expertise with your audience's pressing questions. I help identify topics where you have contrarian insights, practical frameworks, or data-driven perspectives that stand out from generic industry content.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>How long does it take to see results?</h4>
+            <p>Thought leadership is a long-term strategy. You may see immediate engagement on individual pieces, but building authority typically takes 3-6 months of consistent publishing. The compound effect means each piece continues generating value over time.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>Can you help with content distribution?</h4>
+            <p>Yes! I provide social media snippets, email newsletter versions, and publishing guidance. For ongoing clients, I can develop complete distribution strategies to maximize reach and engagement.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>Do you offer monthly retainers?</h4>
+            <p>Absolutely. Monthly retainers include discounted per-article rates, priority scheduling, and strategic content planning. Contact me to discuss a custom package based on your publishing frequency.</p>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <h2>Ready to Build Your Authority?</h2>
+        <p>Let's create thought leadership content that positions you as the expert your audience already knows you are.</p>
+        <div class="hero-cta" style="justify-content: center;">
+            <a href="contact.html" class="btn-primary">Start Your Project</a>
+            <a href="portfolio.html" class="btn-secondary">View More Examples</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Ehasan Pro</h4>
+                <p>Strategic copywriter helping brands and entrepreneurs communicate their value and convert their audience.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn">in</a>
+                    <a href="#" aria-label="Twitter">𝕏</a>
+                    <a href="#" aria-label="Email">@</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="service-thought-leadership.html">Thought Leadership</a></li>
+                    <li><a href="service-email-copy.html">Email Copywriting</a></li>
+                    <li><a href="service-linkedin.html">LinkedIn Ghostwriting</a></li>
+                    <li><a href="service-landing-pages.html">Landing Pages</a></li>
+                    <li><a href="service-brand-messaging.html">Brand Messaging</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Get In Touch</h4>
+                <ul>
+                    <li><a href="mailto:hello@ehasanpro.com">hello@ehasanpro.com</a></li>
+                    <li><a href="contact.html">Book a Call</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ehasan Pro. All rights reserved. | Crafted with purpose.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
+
