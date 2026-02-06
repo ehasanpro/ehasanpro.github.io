@@ -1,557 +1,1136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Thought Leadership Writer for B2B SaaS & AI Brands</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Mohammad Enamul Hasan | Microsoft Certified Professional | Copywriter</title>
+    <meta name="description" content="MCP-certified professional transforming expertise into influence through strategic copywriting in AI, B2B SaaS, and Digital Marketing.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<style>
-/* ===== RESET ===== */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #f59e0b;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f9fafb;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-container img {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-dark);
+            transition: 0.3s;
+        }
+
+        /* Portfolio Hero */
+        .portfolio-hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            padding: 5rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .portfolio-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .portfolio-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.95;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: var(--white);
+            padding: 3rem 2rem;
+            margin-top: -3rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-box {
+            padding: 1rem;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-light);
+        }
+
+        /* Filter Section */
+        .filter-section {
+            max-width: 1200px;
+            margin: 4rem auto 3rem;
+            padding: 0 2rem;
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .filter-btn {
+            padding: 0.75rem 1.5rem;
+            background: var(--bg-light);
+            border: 2px solid transparent;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            color: var(--text-dark);
+        }
+
+        .filter-btn:hover {
+            background: var(--white);
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .filter-btn.active {
+            background: var(--primary-color);
+            color: var(--white);
+            border-color: var(--primary-color);
+        }
+
+        /* Portfolio Grid */
+        .portfolio-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 2rem 4rem;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .portfolio-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+
+        .portfolio-image {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            position: relative;
+        }
+
+        .portfolio-category {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: var(--accent-color);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .portfolio-content {
+            padding: 2rem;
+        }
+
+        .portfolio-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-dark);
+        }
+
+        .portfolio-meta {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .portfolio-content p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .portfolio-results {
+            background: var(--bg-light);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        .portfolio-results h4 {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .results-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .results-list li {
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .results-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .view-project {
+            display: inline-block;
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .view-project:hover {
+            color: var(--secondary-color);
+        }
+
+        .view-project::after {
+            content: ' →';
+        }
+
+        /* Case Studies Section */
+        .case-studies-section {
+            background: var(--bg-light);
+            padding: 5rem 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .case-studies-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            gap: 3rem;
+        }
+
+        .case-study {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .case-study-header {
+            padding: 3rem;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+        }
+
+        .case-study-header h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .case-study-meta {
+            display: flex;
+            gap: 2rem;
+            opacity: 0.95;
+        }
+
+        .case-study-body {
+            padding: 3rem;
+        }
+
+        .case-challenge,
+        .case-solution,
+        .case-results {
+            margin-bottom: 2.5rem;
+        }
+
+        .case-challenge h4,
+        .case-solution h4,
+        .case-results h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .case-challenge p,
+        .case-solution p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .results-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .metric-box {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-label {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .case-testimonial {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-color);
+            margin-top: 2rem;
+        }
+
+        .case-testimonial p {
+            font-style: italic;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .testimonial-stars {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-author-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .author-details h4 {
+            font-size: 1rem;
+            color: var(--text-dark);
+            margin-bottom: 0.25rem;
+        }
+
+        .author-details p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--accent-color);
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 3rem 2rem 1.5rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            opacity: 1;
+            color: var(--accent-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--accent-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            opacity: 0.7;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background: var(--white);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0,0,0,0.1);
+                padding: 2rem 0;
+                gap: 1rem;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .portfolio-hero h1 {
+                font-size: 2rem;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .filter-buttons {
+                justify-content: flex-start;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+        }
+      /* Hero tagline */
+.hero-tagline {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+    font-weight: 300;
 }
 
-/* ===== BASE ===== */
-body {
-  font-family: Georgia, serif;
-  background: #f1f1f1;
-  color: #111;
-  line-height: 1.6;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.container {
-  max-width: 1180px;
-  margin: auto;
-  padding: 40px 20px;
-}
-
-/* ===== HEADER ===== */
-header {
-  background: #ffffff;
-  border-bottom: 1px solid #eee;
-  position: relative;
-}
-
-header .container {
-  padding: 14px 20px;
-}
-
-.header-flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* ===== LOGO ===== */
-.logo {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  line-height: 1;
-}
-
-.logo img {
-  /* 🎨 CUSTOMIZE: Desktop logo height */
-  height: 100px;
-  width: auto;
-  display: block;
-}
-
-.tagline {
-  /* 🎨 CUSTOMIZE: Tagline font size */
-  font-size: 16px;
-  /* 🎨 CUSTOMIZE: Tagline color */
-  color: #060048;
-  /* 🔥 CHANGE 2: Minimal gap between logo and tagline */
-  margin-top: 2px;
-  line-height: 1.6;
-  letter-spacing: 1px;
-}
-
-/* ===== NAV ===== */
-nav {
-  display: flex;
-  align-items: center;
-}
-
-nav a {
-  margin-left: 22px;
-  font-size: 16px;
-  font-weight: 550;
-}
-
-nav a:hover {
-  color: #060048;
-}
-
-/* ===== DROPDOWN ===== */
-.dropdown {
-  position: relative;
-}
-
-.dropbtn {
-  cursor: pointer;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 30px;
-  left: 0;
-  background: #ffffff;
-  min-width: 240px;
-  border: 1px solid #eee;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  z-index: 100;
-}
-
-.dropdown-content a {
-  display: block;
-  padding: 10px 16px;
-  font-size: 15px;
-}
-
-.dropdown-content a:hover {
-  background: #f5f5f5;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* ===== SECTIONS ===== */
-.section {
-  padding: 20px 0;
-}
-
-/* 🔥 CORE LAYOUT */
-.two-col {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
-
-.copy h1 {
-  font-size: 52px;
-  line-height: 1.15;
-  margin-bottom: 20px;
-}
-
-.copy h2 {
-  font-size: 36px;
-  margin-bottom: 16px;
-}
-
-.copy p {
-  margin-bottom: 14px;
-}
-
-.lead {
-  font-size: 18px;
-}
-
-.proof {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 28px;
-}
-
-.visual img {
-  width: 100%;
-  border-radius: 4px;
-}
-
-/* ===== BUTTONS ===== */
-.btn {
-  display: inline-block;
-  padding: 12px 22px;
-  font-size: 15px;
-  margin-right: 12px;
-}
-
-.primary {
-  background: #111;
-  color: #fff;
-}
-
-.secondary {
-  border: 1px solid #111;
-  color: #111;
-}
-
-/* ===== CTA ===== */
-.cta {
-  background: #f5f5f5;
-}
-
-/* ===== FOOTER ===== */
-footer {
-  text-align: center;
-  padding: 30px;
-  font-size: 14px;
-  color: #666;
-  border-top: 1px solid #eee;
-}
-
-/* ===== MOBILE MENU ===== */
-.mobile-menu {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-}
-
-/* ===== MOBILE (🔥 FINAL FIX) ===== */
-@media (max-width: 900px) {
-
-  /* One column */
-  .two-col {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  /* 🔥 Always TEXT first, IMAGE second */
-  .two-col .copy {
-    order: 1;
-  }
-
-  .two-col .visual {
-    order: 2;
-  }
-
-  /* Typography */
-  .copy h1 {
-    font-size: 34px;
-  }
-
-  .copy h2 {
-    font-size: 26px;
-  }
-
-  /* Reduce spacing */
-  .container {
-    padding: 24px 16px;
-  }
-
-  section {
-    margin-bottom: 24px;
-  }
-
-  /* 🔥 CHANGE 2: Mobile logo & tagline minimal gap */
-  .logo img {
-    /* 🎨 CUSTOMIZE: Mobile logo height */
-    height: 140px;
-  }
-
-  .tagline {
-    /* 🎨 CUSTOMIZE: Mobile tagline gap (currently 2px = minimal) */
-    margin-top: 2px;
-    /* 🎨 CUSTOMIZE: Mobile tagline font size */
-    font-size: 14px;
-  }
-
-  /* Navigation */
-  nav {
-    display: none;
-  }
-
-  .mobile-menu {
-    display: block;
-  }
-}
-
-/* ===== 🔥 MOBILE NAV OVERLAY (COLORFUL & LARGE) ===== */
-@media (max-width: 900px) {
-
-  nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100vh;
-    
-    /* 🎨 CUSTOMIZE: Mobile menu background - Gradient colorful */
-    /* 🔥 CHANGE 1: Colorful gradient background */
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-    
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
-    /* 🎨 CUSTOMIZE: Menu padding */
-    padding: 60px 40px;
-    
-    display: none;
-    z-index: 9999;
-    overflow-y: auto;
-  }
-
-  nav a {
-    /* 🎨 CUSTOMIZE: Menu link text color */
-    color: #ffffff;
-    
-    /* 🎨 CUSTOMIZE: Menu link spacing (gap between links) */
-    /* 🔥 CHANGE 1: Larger spacing */
-    margin: 20px 0;
-    
-    /* 🎨 CUSTOMIZE: Menu link font size */
-    /* 🔥 CHANGE 1: Much larger font */
-    font-size: 28px;
-    
-    /* 🎨 CUSTOMIZE: Menu link font weight */
-    font-weight: 700;
-    
-    width: 100%;
-    text-align: center;
-    
-    /* 🎨 CUSTOMIZE: Menu link padding */
-    padding: 16px 0;
-    
-    /* 🎨 CUSTOMIZE: Menu link border color */
-    border-bottom: 2px solid rgba(255,255,255,0.2);
-    
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-
-  nav a:hover {
-    /* 🎨 CUSTOMIZE: Menu link hover color */
-    color: #ffd700;
-    
-    /* 🎨 CUSTOMIZE: Menu link hover background */
-    background: rgba(255,255,255,0.1);
-    
-    transform: scale(1.05);
-  }
-
-  nav.show {
+/* Credentials badges */
+.credentials {
     display: flex;
-  }
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
 
-  /* 🔥 CHANGE 1: Colorful dropdown styling */
-  .dropdown-content {
-    position: static;
-    
-    /* 🎨 CUSTOMIZE: Dropdown background color */
-    background: rgba(255,255,255,0.15);
-    
-    /* 🎨 CUSTOMIZE: Dropdown border */
-    border: 2px solid rgba(255,255,255,0.3);
-    
-    /* 🎨 CUSTOMIZE: Dropdown spacing */
-    margin-top: 12px;
-    margin-left: 0;
-    
-    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-    border-radius: 12px;
-    overflow: hidden;
-  }
+.credential-badge {
+    background: rgba(255,255,255,0.2);
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    font-weight: 600;
+}
 
-  .dropdown-content a {
-    /* 🎨 CUSTOMIZE: Dropdown link color */
-    color: #fff;
-    
-    /* 🎨 CUSTOMIZE: Dropdown link font size */
-    font-size: 22px;
-    
-    /* 🎨 CUSTOMIZE: Dropdown link padding */
-    padding: 14px 20px;
-    
-    /* 🎨 CUSTOMIZE: Dropdown link border */
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-    
-    text-transform: none;
-    letter-spacing: 1px;
-  }
+/* Author photo styling */
+.author-photo {
+    width: 350px;
+    height: 350px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    border: 5px solid rgba(255,255,255,0.2);
+}
 
-  .dropdown-content a:last-child {
-    border-bottom: none;
-  }
+/* Story content */
+.story-content {
+    font-size: 1.1rem;
+    line-height: 2;
+    color: var(--text-dark);
+}
 
-  .dropdown-content a:hover {
-    /* 🎨 CUSTOMIZE: Dropdown link hover background */
-    background: rgba(255,215,0,0.3);
-    
-    /* 🎨 CUSTOMIZE: Dropdown link hover color */
-    color: #ffd700;
-  }
+.story-content p {
+    margin-bottom: 1.5rem;
+}
 
-  /* Show dropdown content on mobile when menu is open */
-  nav.show .dropdown-content {
-    display: block;
-  }
+/* Highlight box */
+.highlight-box {
+    background: var(--bg-light);
+    border-left: 4px solid var(--primary-color);
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+}
 
-  /* 🔥 Close button styling */
-  .mobile-menu.active {
-    position: fixed;
-    
-    /* 🎨 CUSTOMIZE: Close button position */
-    top: 30px;
-    right: 30px;
-    
-    z-index: 10000;
-    
-    /* 🎨 CUSTOMIZE: Close button color */
-    color: #fff;
-    
-    /* 🎨 CUSTOMIZE: Close button size */
-    font-size: 42px;
-    
-    /* 🎨 CUSTOMIZE: Close button background */
-    background: rgba(0,0,0,0.3);
-    
-    width: 60px;
-    height: 60px;
+.highlight-box h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Expertise topics list */
+.expertise-topics {
+    list-style: none;
+    padding: 0;
+}
+
+.expertise-topics li {
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+}
+
+.expertise-topics li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Values section */
+.values-section {
+    max-width: 1200px;
+    margin: 5rem auto;
+    padding: 0 2rem;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.value-card {
+    text-align: center;
+    padding: 2rem;
+}
+
+.value-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Journey timeline */
+.journey-section {
+    background: var(--bg-light);
+    padding: 5rem 2rem;
+}
+
+.journey-item {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.journey-icon {
+    width: 4rem;
+    height: 4rem;
+    background: var(--primary-color);
+    color: var(--white);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease;
-  }
-
-  .mobile-menu.active:hover {
-    /* 🎨 CUSTOMIZE: Close button hover effect */
-    background: rgba(255,215,0,0.4);
-    transform: rotate(90deg);
-  }
+    font-size: 1.5rem;
+    flex-shrink: 0;
 }
 
+.journey-content-box {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    flex: 1;
+}
 
-</style>
+.journey-content-box h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.journey-content-box p {
+    color: var(--text-light);
+    line-height: 1.8;
+}
+    </style>
 </head>
-
 <body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav>
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="/assets/ehasanpro-logo.png" alt="Ehasan Pro Logo">
+                </a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
 
-<!-- ===== HEADER ===== -->
-<header>
-  <div class="container header-flex">
-    <div class="logo">
-      <img src="/assets/ehasanpro-logo.png" alt="EhasanPro Logo">
-      <span class="tagline">Thought Leadership Writer for B2B SaaS & AI Brands</span>
+    <!-- About Hero -->
+    <section class="about-hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1>Hi, I'm Mohammad Enamul Hasan</h1>
+            <p class="hero-tagline">Strategic Copywriter | MCP-Certified Professional | Thought Leader</p>
+            <p>I transform expertise into influence through strategic copywriting and thought leadership. For years, I've been deeply connected to the world of ideas, frameworks, and storytelling—now I'm sharing that knowledge to empower professionals and businesses worldwide.</p>
+            <div class="credentials">
+                <span class="credential-badge">MCP Certified</span>
+                <span class="credential-badge">500+ Articles</span>
+                <span class="credential-badge">50+ Clients</span>
+            </div>
+            <div class="hero-cta">
+                <a href="portfolio.html" class="btn-primary">View My Work</a>
+                <a href="contact.html" class="btn-secondary">Let's Connect</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="/assets/author-image.png" alt="Mohammad Enamul Hasan" class="author-photo">
+        </div>
     </div>
-<div class="mobile-menu" onclick="toggleMenu()">☰</div>
+</section>
 
-    <nav>
-  <a href="/">Home</a>
-  <a href="/about">About</a>
-
-  <div class="dropdown">
-    <a href="/insights" class="dropbtn">Insights ▾</a>
-    <div class="dropdown-content">
-      <a href="/ai-future-of-work">AI & Future of Work</a>
-      <a href="/b2b-saas">B2B & SaaS</a>
-      <a href="/digital-marketing-seo">Digital Marketing & SEO</a>
+    <!-- Stats-Section -->
+   <section class="stats-section">
+    <div class="stats-grid">
+        <div class="stat-box">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Articles Published</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">50K+</div>
+            <div class="stat-label">Monthly Readers</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">3</div>
+            <div class="stat-label">Core Niches</div>
+        </div>
     </div>
-  </div>
+</section>
 
-  <a href="/copywriting">Copywriting</a>
-  <a href="/how-i-work">How I Work</a>
-  <a href="/contact">Contact</a>
-</nav>
+   <!-- My Story Section -->
+   <section class="story-section">
+    <div class="section-header">
+        <h2>My Story</h2>
+        <p>From silent observer to published voice—my journey to thought leadership</p>
+    </div>
+    <div class="story-content">
+        <p>For years, I've been closely connected to the world of ideas, frameworks, and storytelling—though much of my work has remained unpublished until now. <strong>This site marks the beginning of a new chapter: a space where my thoughts, strategies, and insights finally meet the world.</strong></p>
 
-   
-  </div>
-</header>
+        <p>My journey blends technology, business, and communication in unique ways. With a background in systems and Microsoft-certified expertise, I understand how digital transformation shapes the way we work. At the same time, my long-standing passion for writing allows me to translate complex technical concepts into clear, actionable narratives that drive results.</p>
 
-<section class="about-section">
-  <div class="container about-grid">
+        <div class="highlight-box">
+            <h3>💡 My Mission</h3>
+            <p>To empower professionals and businesses with insights that inspire action. Whether you're a recruiter seeking thought leadership, a client searching for strategy, or a reader curious about the future—this site is designed to deliver clarity, credibility, and tangible value.</p>
+        </div>
 
-    <!-- LEFT: TEXT -->
-    <div class="about-text">
-      <h1>About Mohammad Enamul Hasan</h1>
+        <p>I believe that <strong>ideas only matter when they're shared.</strong> That's why I'm committed to publishing consistently—not just here, but also across platforms like LinkedIn and Medium—to spark conversations and build meaningful connections with fellow professionals and thought leaders.</p>
+    </div>
+</section>
 
-      <p>
-        I’m Mohammad Enamul Hasan, an Microsoft certified professional with a deep passion
-        for writing and knowledge-sharing. For years, I’ve been closely connected
-        to the world of ideas, frameworks, and storytelling—though much of my work
-        has remained unpublished until now.
-      </p>
+    <!-- Three Expertise Areas -->
+  <section class="expertise-section">
+    <div class="expertise-content">
+        <div class="section-header">
+            <h2>My Expertise</h2>
+            <p>Three powerful niches where technology meets strategy</p>
+        </div>
 
-      <p>
-        This site marks the beginning of a new chapter: a space where my thoughts,
-        strategies, and insights finally meet the world.
-      </p>
+        <div class="expertise-grid">
+            <!-- Card 1: AI -->
+            <div class="expertise-card">
+                <div class="expertise-icon">🤖</div>
+                <h3>AI & Future of Work</h3>
+                <p>Exploring how artificial intelligence is reshaping careers, skills, and opportunities in the modern workplace.</p>
+                <ul class="expertise-topics">
+                    <li>AI adoption strategies</li>
+                    <li>Workforce transformation</li>
+                    <li>Skill development roadmaps</li>
+                    <li>Automation vs. augmentation</li>
+                </ul>
+            </div>
 
-      <p>
-        My journey blends technology, business, and communication. With a background
-        in systems and certification in Microsoft technologies, I understand how
-        Digital transformation shapes the way we work. At the same time, my
-        long-standing love for writing allows me to translate complex concepts into
-        clear, actionable narratives.
-      </p>
+            <!-- Card 2: B2B SaaS -->
+            <div class="expertise-card">
+                <div class="expertise-icon">💼</div>
+                <h3>B2B & SaaS Growth</h3>
+                <p>Decoding strategies that help businesses scale, innovate, and thrive in increasingly competitive markets.</p>
+                <ul class="expertise-topics">
+                    <li>SaaS content marketing</li>
+                    <li>B2B positioning strategy</li>
+                    <li>Customer success frameworks</li>
+                    <li>Growth marketing tactics</li>
+                </ul>
+            </div>
 
-      <h3>My Core Focus Areas</h3>
-      <ul>
-        <li><strong>AI & the Future of Work</strong> — how AI is reshaping careers and skills</li>
-        <li><strong>B2B & SaaS Growth</strong> — strategies to scale and compete</li>
-        <li><strong>Digital Marketing & SEO</strong> — visibility, authority, and trust</li>
-      </ul>
+            <!-- Card 3: Digital Marketing -->
+            <div class="expertise-card">
+                <div class="expertise-icon">📊</div>
+                <h3>Digital Marketing & SEO</h3>
+                <p>Building visibility, authority, and client trust through strategic content in the digital age.</p>
+                <ul class="expertise-topics">
+                    <li>SEO-driven content strategy</li>
+                    <li>Thought leadership development</li>
+                    <li>Brand authority building</li>
+                    <li>Conversion optimization</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
 
-      <p>
-        My mission is simple yet ambitious: to empower professionals and businesses
-        with insights that inspire action. Whether you’re a recruiter looking for
-        thought leadership, a client seeking strategy, or a curious reader, this
-        site is built to deliver clarity, credibility, and value.
-      </p>
-
-      <p>
-        I believe that ideas only matter when they’re shared. That’s why I publish
-        consistently—here and across platforms like LinkedIn and Medium—to spark
-        conversations and build meaningful connections.
-      </p>
-
-      <p class="about-cta">
-        👉 If you’re ready to explore the future of work, discover SaaS growth
-        strategies, or unlock the power of digital marketing — you’re in the right
-        place.
-      </p>
+    <!--Core Values Section -->
+  <section class="values-section">
+    <div class="section-header">
+        <h2>What Drives Me</h2>
+        <p>The principles that guide every piece I write</p>
     </div>
 
-    <!-- RIGHT: IMAGE -->
-    <div class="about-image">
-      <img src="/assets/author-image.png" alt="Mohammad Enamul Hasan">
-    </div>
+    <div class="values-grid">
+        <div class="value-card">
+            <div class="value-icon">💡</div>
+            <h3>Clarity Over Complexity</h3>
+            <p>Complex ideas deserve simple explanations. I break down sophisticated concepts into actionable insights anyone can apply.</p>
+        </div>
 
-  </div>
+        <div class="value-card">
+            <div class="value-icon">🎯</div>
+            <h3>Action Over Theory</h3>
+            <p>Ideas mean nothing without execution. Every piece I create is designed to inspire concrete action and measurable results.</p>
+        </div>
+
+        <div class="value-card">
+            <div class="value-icon">🤝</div>
+            <h3>Value Over Volume</h3>
+            <p>Quality trumps quantity. I focus on creating deeply valuable content that serves my readers' real needs.</p>
+        </div>
+
+        <div class="value-card">
+            <div class="value-icon">🚀</div>
+            <h3>Growth Over Perfection</h3>
+            <p>Done is better than perfect. Consistent publishing and continuous improvement beat endless refinement.</p>
+        </div>
+    </div>
 </section>
 
 
+   <!-- 🚀 Journey Timeline -->
+  <section class="journey-section">
+    <div class="journey-content">
+        <div class="section-header">
+            <h2>My Journey</h2>
+            <p>How I got here—from technology professional to strategic copywriter</p>
+        </div>
 
-<footer>
-  © 2026 EhasanPro — All Rights Reserved
-</footer>
-<script>
-function toggleMenu() {
-  const nav = document.querySelector("nav");
-  const menuIcon = document.querySelector(".mobile-menu");
-  
-  nav.classList.toggle("show");
-  menuIcon.classList.toggle("active");
-  
-  // Toggle between hamburger and X
-  if (nav.classList.contains("show")) {
-    menuIcon.innerHTML = "✕";
-  } else {
-    menuIcon.innerHTML = "☰";
-  }
-  
-  // Prevent body scroll when menu is open
-  if (nav.classList.contains("show")) {
-    document.body.style.overflow = "hidden";
-  } else {
-    document.body.style.overflow = "";
-  }
-}
-</script>
+        <div class="journey-timeline">
+            <div class="journey-item">
+                <div class="journey-icon">💻</div>
+                <div class="journey-content-box">
+                    <h3>Technology Foundation</h3>
+                    <p>Built a strong technical foundation with Microsoft certification (MCP), understanding how digital systems transform business operations.</p>
+                </div>
+            </div>
 
+            <div class="journey-item">
+                <div class="journey-icon">✍️</div>
+                <div class="journey-content-box">
+                    <h3>Writing Discovery</h3>
+                    <p>Discovered my passion for translating complex technical concepts into clear narratives. Realized effective communication is as valuable as technical skill.</p>
+                </div>
+            </div>
+
+            <div class="journey-item">
+                <div class="journey-icon">📚</div>
+                <div class="journey-content-box">
+                    <h3>Knowledge Building</h3>
+                    <p>Spent years studying frameworks, strategies, and industry trends across AI, SaaS, and digital marketing.</p>
+                </div>
+            </div>
+
+            <div class="journey-item">
+                <div class="journey-icon">🎯</div>
+                <div class="journey-content-box">
+                    <h3>Strategic Positioning</h3>
+                    <p>Identified three powerful niches where technology meets business strategy.</p>
+                </div>
+            </div>
+
+            <div class="journey-item">
+                <div class="journey-icon">🚀</div>
+                <div class="journey-content-box">
+                    <h3>Public Launch</h3>
+                    <p>Committed to consistent publishing. This site represents years of insights finally reaching the world.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  
+    <!-- CTA Section -->
+   <section class="final-cta">
+    <h2>Ready to Explore the Future?</h2>
+    <p>Whether you're looking for thought leadership on AI, SaaS growth strategies, or digital marketing insights—you're in the right place. Let's connect, collaborate, and create impact together.</p>
+    <div class="hero-cta" style="justify-content: center;">
+        <a href="blog.html" class="btn-primary">Read My Articles</a>
+        <a href="contact.html" class="btn-secondary">Get In Touch</a>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Ehasan Pro</h4>
+                <p>Strategic copywriter helping brands and entrepreneurs communicate their value and convert their audience.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn">in</a>
+                    <a href="#" aria-label="Twitter">𝕏</a>
+                    <a href="#" aria-label="Email">@</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="service-thought-leadership.html">Thought Leadership</a></li>
+                    <li><a href="service-email-copy.html">Email Copywriting</a></li>
+                    <li><a href="service-linkedin.html">LinkedIn Ghostwriting</a></li>
+                    <li><a href="service-landing-pages.html">Landing Pages</a></li>
+                    <li><a href="service-brand-messaging.html">Brand Messaging</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Get In Touch</h4>
+                <ul>
+                    <li><a href="mailto:hello@ehasanpro.com">hello@ehasanpro.com</a></li>
+                    <li><a href="contact.html">Book a Call</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ehasan Pro. All rights reserved. | Crafted with purpose.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Portfolio Filter Function
+        function filterPortfolio(category) {
+            const cards = document.querySelectorAll('.portfolio-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            // Update active button
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Filter cards
+            cards.forEach(card => {
+                if (category === 'all') {
+                    card.style.display = 'block';
+                } else {
+                    if (card.dataset.category === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }
+            });
+        }
+    </script>
 </body>
 </html>
+
