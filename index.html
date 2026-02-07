@@ -441,6 +441,11 @@
 
         /* Responsive */
         @media (max-width: 768px) {
+             .benefits-grid,
+    .testimonials-grid,
+    .case-study-grid {
+        grid-template-columns: 1fr;
+    }
             .nav-menu {
                 position: fixed;
                 left: -100%;
@@ -493,6 +498,210 @@
                 justify-content: center;
             }
         }
+        /* Why Choose Section */
+.why-choose {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.benefit-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.benefit-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.benefit-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.benefit-card p {
+    color: var(--text-light);
+    line-height: 1.8;
+}
+        /* Testimonials Section */
+.testimonials-section {
+    background: var(--bg-light);
+    padding: 5rem 2rem;
+}
+
+.testimonials-grid {
+    max-width: 1200px;
+    margin: 3rem auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.testimonial-stars {
+    color: var(--accent-color);
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-text {
+    color: var(--text-dark);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.author-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.author-info h4 {
+    font-size: 1rem;
+    color: var(--text-dark);
+    margin-bottom: 0.25rem;
+}
+
+.author-info p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+ /* Case Studies Section */
+.case-studies {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+}
+
+.case-study-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.case-study-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.case-study-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.case-study-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 2rem;
+}
+
+.case-study-type {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-bottom: 0.5rem;
+}
+
+.case-study-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.case-study-meta {
+    opacity: 0.85;
+    font-size: 0.95rem;
+}
+
+.case-study-body {
+    padding: 2rem;
+}
+
+.case-study-section {
+    margin-bottom: 1.5rem;
+}
+
+.case-study-section h4 {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.case-study-section p {
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.case-results {
+    background: var(--bg-light);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.case-results ul {
+    list-style: none;
+    padding: 0;
+}
+
+.case-results li {
+    padding: 0.5rem 0;
+    color: var(--text-dark);
+}
+
+.case-study-cta {
+    display: inline-block;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+.case-study-cta:hover {
+    text-decoration: underline;
+}       
     </style>
 </head>
 <body>
@@ -663,6 +872,225 @@
                         <li>Messaging playbook for your team</li>
                     </ul>
                     <a href="service-brand-messaging.html" class="service-cta">Learn More →</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="why-choose">
+        <div class="section-header">
+            <h2>Why Businesses Choose Me</h2>
+            <p>Strategic copywriting backed by technology expertise and proven results</p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">🎓</div>
+                <h3>Technology + Communication</h3>
+                <p>Unique blend of MCP certification and strategic copywriting expertise. I understand both how systems work and how to communicate their value effectively.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">📊</div>
+                <h3>Measurable Outcomes</h3>
+                <p>Every project is focused on business results: more leads, higher conversions, increased revenue. I track metrics that matter to your bottom line.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">💡</div>
+                <h3>Deep Niche Knowledge</h3>
+                <p>Specialized in AI & Future of Work, B2B SaaS Growth, and Digital Marketing. I don't just write—I bring strategic insights from years of research.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">⚡</div>
+                <h3>Quality, On Time</h3>
+                <p>Professional work delivered when promised. I respect deadlines and communicate proactively throughout every project.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">🤝</div>
+                <h3>Your Vision, My Expertise</h3>
+                <p>I work closely with you to ensure the copy perfectly captures your brand voice and converts your specific audience.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">⭐</div>
+                <h3>500+ Successful Projects</h3>
+                <p>Consistent 5-star reviews, repeat clients, and measurable results across diverse industries from SaaS to consulting.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="section-header">
+            <h2>What Clients Say</h2>
+            <p>Real results from businesses I've helped grow</p>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"Ehasan's email sequences transformed our business. We went from 8% to 18% conversion rate in just 3 months. The ROI on this investment was incredible."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">SC</div>
+                    <div class="author-info">
+                        <h4>Sarah Chen</h4>
+                        <p>Head of Growth, ProjectFlow</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"The LinkedIn content Ehasan creates for me has generated 15+ qualified leads in 6 months. It's become our #1 source of inbound business."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">MR</div>
+                    <div class="author-info">
+                        <h4>Michael Roberts</h4>
+                        <p>Partner, Apex Consulting</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"Our landing page conversion rate doubled after working with Ehasan. The copy is clear, persuasive, and perfectly captures our value proposition."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">JD</div>
+                    <div class="author-info">
+                        <h4>Jessica Davis</h4>
+                        <p>CEO, TechStart Inc.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"Professional, responsive, and delivers exceptional quality. Ehasan understood our brand voice immediately and nailed it on the first draft."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">AL</div>
+                    <div class="author-info">
+                        <h4>Amanda Lee</h4>
+                        <p>Marketing Director, GrowthHub</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"The thought leadership articles have positioned me as an expert in my field. I've received multiple speaking opportunities since publishing them."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">SK</div>
+                    <div class="author-info">
+                        <h4>Dr. Sophia Kumar</h4>
+                        <p>AI Consultant & Researcher</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"Fast turnaround, excellent communication, and copy that actually converts. Ehasan is now our go-to copywriter for all projects."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">DM</div>
+                    <div class="author-info">
+                        <h4>David Martinez</h4>
+                        <p>VP Marketing, CloudBase</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section class="case-studies">
+        <div class="section-header">
+            <h2>Work That Drives Results</h2>
+            <p>Real projects, real outcomes, real revenue</p>
+        </div>
+
+        <div class="case-study-grid">
+            <article class="case-study-card">
+                <div class="case-study-header">
+                    <p class="case-study-type">Email Copywriting</p>
+                    <h3>SaaS Email Campaign</h3>
+                    <p class="case-study-meta">ProjectFlow | B2B SaaS</p>
+                </div>
+                <div class="case-study-body">
+                    <div class="case-study-section">
+                        <h4>Challenge</h4>
+                        <p>8% trial-to-paid conversion rate</p>
+                    </div>
+                    <div class="case-study-section">
+                        <h4>Solution</h4>
+                        <p>Strategic 5-email welcome sequence</p>
+                    </div>
+                    <div class="case-results">
+                        <h4>Results</h4>
+                        <ul>
+                            <li>✅ 18% conversion rate (125% increase)</li>
+                            <li>✅ 45% email open rate</li>
+                            <li>✅ $150K added MRR</li>
+                        </ul>
+                    </div>
+                    <a href="portfolio.html" class="case-study-cta">View Full Case Study →</a>
+                </div>
+            </article>
+
+            <article class="case-study-card">
+                <div class="case-study-header">
+                    <p class="case-study-type">LinkedIn Ghostwriting</p>
+                    <h3>LinkedIn Thought Leadership</h3>
+                    <p class="case-study-meta">Apex Consulting | Management Consulting</p>
+                </div>
+                <div class="case-study-body">
+                    <div class="case-study-section">
+                        <h4>Challenge</h4>
+                        <p>Minimal LinkedIn presence, missing opportunities</p>
+                    </div>
+                    <div class="case-study-section">
+                        <h4>Solution</h4>
+                        <p>6-month content strategy with 3 posts/week</p>
+                    </div>
+                    <div class="case-results">
+                        <h4>Results</h4>
+                        <ul>
+                            <li>✅ 750K+ impressions</li>
+                            <li>✅ 3,000+ new connections</li>
+                            <li>✅ 15+ qualified leads</li>
+                        </ul>
+                    </div>
+                    <a href="portfolio.html" class="case-study-cta">View Full Case Study →</a>
+                </div>
+            </article>
+
+            <article class="case-study-card">
+                <div class="case-study-header">
+                    <p class="case-study-type">Landing Page Copy</p>
+                    <h3>Course Sales Page</h3>
+                    <p class="case-study-meta">LearnFlow | Online Education</p>
+                </div>
+                <div class="case-study-body">
+                    <div class="case-study-section">
+                        <h4>Challenge</h4>
+                        <p>Generic sales page, low conversion</p>
+                    </div>
+                    <div class="case-study-section">
+                        <h4>Solution</h4>
+                        <p>3,500-word strategic sales page</p>
+                    </div>
+                    <div class="case-results">
+                        <h4>Results</h4>
+                        <ul>
+                            <li>✅ 12% conversion rate</li>
+                            <li>✅ $250K in launch revenue</li>
+                            <li>✅ 8-minute average time on page</li>
+                        </ul>
+                    </div>
+                    <a href="portfolio.html" class="case-study-cta">View Full Case Study →</a>
                 </div>
             </article>
         </div>
