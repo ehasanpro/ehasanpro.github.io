@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohammad Enamul Hasan - Strategic Copywriter | MCP-Certified Professional</title>
-    <meta name="description" content="Expert copywriting services including thought leadership, email campaigns, LinkedIn ghostwriting, landing pages, and brand messaging. Strategic copy that converts.">
+    <meta name="description" content="Transform your expertise into influence with strategic copywriting that drives results. MCP-certified professional specializing in thought leadership, email copy, and conversion-focused content.">
     <style>
         * {
             margin: 0;
@@ -55,8 +55,8 @@
         }
 
         .logo-container img {
-          height: 66px;
-          transform: scale(1.35);
+            height: 70px;
+            transform: scale(1.35);
         }
 
         .nav-menu {
@@ -106,54 +106,167 @@
             transition: 0.3s;
         }
 
-        /* Services Hero */
-        .services-hero {
+        /* Hero Section */
+        .hero {
             background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
             color: var(--white);
-            padding: 5rem 2rem 4rem;
+            padding: 6rem 2rem 5rem;
             text-align: center;
         }
 
-        .services-hero h1 {
-            font-size: 3rem;
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+            letter-spacing: 0.5px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-description {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--accent-color);
+            color: var(--white);
+            padding: 1.1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+        }
+
+        .cta-button-secondary {
+            background: transparent;
+            border: 2px solid var(--white);
+            box-shadow: none;
+        }
+
+        .cta-button-secondary:hover {
+            background: var(--white);
+            color: var(--primary-color);
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: var(--white);
+            padding: 3rem 2rem;
+            margin-top: -3rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .stat-icon {
+            font-size: 2.5rem;
             margin-bottom: 1rem;
         }
 
-        .services-hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto;
-            opacity: 0.95;
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
         }
 
-        /* Intro Section */
-        .intro-section {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
+        .stat-label {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-description {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 5rem 2rem;
+            background: var(--bg-light);
+        }
+
+        .section-header {
             text-align: center;
+            margin-bottom: 3rem;
         }
 
-        .intro-section h2 {
-            font-size: 2rem;
+        .section-header h2 {
+            font-size: 2.5rem;
             margin-bottom: 1rem;
             color: var(--text-dark);
         }
 
-        .intro-section p {
-            font-size: 1.1rem;
+        .section-header p {
+            font-size: 1.2rem;
             color: var(--text-light);
-            line-height: 1.8;
-        }
-
-        /* Services Grid */
-        .services-section {
-            max-width: 1200px;
+            max-width: 700px;
             margin: 0 auto;
-            padding: 2rem 2rem 5rem;
         }
 
         .services-grid {
+            max-width: 1200px;
+            margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2.5rem;
@@ -166,7 +279,6 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
-            position: relative;
         }
 
         .service-card:hover {
@@ -175,45 +287,36 @@
         }
 
         .service-header {
-            padding: 3rem 2rem 2rem;
+            padding: 2.5rem 2rem;
             background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
             color: var(--white);
             text-align: center;
         }
 
-        .service-card:nth-child(1) .service-header {
-            background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%); /* Purple */
-        }
-
         .service-card:nth-child(2) .service-header {
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%); /* Green */
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
         }
 
         .service-card:nth-child(3) .service-header {
-            background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); /* Blue */
+            background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
         }
 
         .service-card:nth-child(4) .service-header {
-            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); /* Red */
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
         }
 
         .service-card:nth-child(5) .service-header {
-            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); /* Orange */
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
         }
 
         .service-icon {
-            font-size: 4rem;
+            font-size: 3.5rem;
             margin-bottom: 1rem;
         }
 
         .service-header h3 {
-            font-size: 1.8rem;
+            font-size: 1.7rem;
             margin-bottom: 0.5rem;
-        }
-
-        .service-tagline {
-            opacity: 0.95;
-            font-size: 1rem;
         }
 
         .service-body {
@@ -223,22 +326,22 @@
         .service-description {
             color: var(--text-light);
             line-height: 1.8;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .service-features {
             list-style: none;
             padding: 0;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .service-features li {
-            padding: 0.75rem 0;
-            border-bottom: 1px solid var(--bg-light);
+            padding: 0.5rem 0;
             display: flex;
             align-items: center;
             gap: 0.75rem;
             color: var(--text-dark);
+            font-size: 0.95rem;
         }
 
         .service-features li::before {
@@ -246,26 +349,6 @@
             color: var(--primary-color);
             font-weight: bold;
             font-size: 1.2rem;
-        }
-
-        .price-range {
-            background: var(--bg-light);
-            padding: 1rem;
-            border-radius: 8px;
-            text-align: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .price-label {
-            font-size: 0.85rem;
-            color: var(--text-light);
-            margin-bottom: 0.5rem;
-        }
-
-        .price-amount {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
         }
 
         .service-cta {
@@ -284,211 +367,6 @@
         .service-cta:hover {
             background: var(--secondary-color);
             transform: translateY(-2px);
-        }
-
-        /* How It Works Section */
-        .how-it-works {
-            background: var(--bg-light);
-            padding: 5rem 2rem;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-header h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
-        }
-
-        .section-header p {
-            font-size: 1.2rem;
-            color: var(--text-light);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .steps-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .step-card {
-            background: var(--white);
-            padding: 2.5rem 2rem;
-            border-radius: 12px;
-            text-align: center;
-            position: relative;
-        }
-
-        .step-number {
-            width: 60px;
-            height: 60px;
-            background: var(--primary-color);
-            color: var(--white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin: 0 auto 1.5rem;
-        }
-
-        .step-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
-        }
-
-        .step-card p {
-            color: var(--text-light);
-            line-height: 1.8;
-        }
-
-        /* Why Choose Section */
-        .why-choose {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 5rem 2rem;
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .benefit-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-        }
-
-        .benefit-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .benefit-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-        }
-
-        .benefit-card p {
-            color: var(--text-light);
-            line-height: 1.8;
-        }
-
-        /* Industries Section */
-        .industries-section {
-            background: var(--bg-light);
-            padding: 5rem 2rem;
-        }
-
-        .industries-grid {
-            max-width: 1200px;
-            margin: 3rem auto 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .industry-tag {
-            background: var(--white);
-            padding: 1.5rem;
-            border-radius: 10px;
-            text-align: center;
-            font-weight: 600;
-            color: var(--text-dark);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-
-        /* FAQ Section */
-        .faq-section {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 5rem 2rem;
-        }
-
-        .faq-item {
-            background: var(--white);
-            border: 2px solid var(--bg-light);
-            border-radius: 12px;
-            padding: 2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .faq-item h4 {
-            font-size: 1.2rem;
-            color: var(--text-dark);
-            margin-bottom: 1rem;
-        }
-
-        .faq-item p {
-            color: var(--text-light);
-            line-height: 1.8;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: var(--white);
-            padding: 5rem 2rem;
-            text-align: center;
-        }
-
-        .cta-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .cta-section p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: var(--accent-color);
-            color: var(--white);
-            padding: 1rem 2.5rem;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
-        }
-
-        .cta-button-secondary {
-            background: transparent;
-            border: 2px solid var(--white);
-        }
-
-        .cta-button-secondary:hover {
-            background: var(--white);
-            color: var(--primary-color);
         }
 
         /* Footer */
@@ -585,12 +463,25 @@
                 display: flex;
             }
 
-            .services-hero h1 {
+            .hero h1 {
                 font-size: 2rem;
+            }
+
+            .hero-description {
+                font-size: 1.1rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
             }
 
             .services-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .trust-badges {
+                flex-direction: column;
+                gap: 1rem;
             }
 
             .footer-content {
@@ -600,10 +491,6 @@
 
             .social-links {
                 justify-content: center;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
             }
         }
     </style>
@@ -617,13 +504,13 @@
                     <img src="/assets/ehasanpro-logo.png" alt="Ehasan Pro Logo">
                 </a>
             </div>
-             <ul class="nav-menu" id="navMenu">
-                <li><a href="/">Home</a></li>
-                <li><a href="/service"class="active">Service</a></li>
-                <li><a href="/insights">Insights</a></li>
-                <li><a href="/portfolio">Portfolio</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="menu-toggle" id="menuToggle">
                 <span></span>
@@ -633,65 +520,76 @@
         </nav>
     </header>
 
-    <!-- Services Hero -->
-<section class="hero">
-    <div class="hero-content">
-        <p class="tagline">MCP-Certified Professional | Strategic Copywriter | Thought Leader</p>
-        <h1>Turn Your Expertise Into Influence With Words That Convert</h1>
-        <p class="hero-description">I help ambitious professionals and businesses build authority, generate leads, and scale revenue through strategic copywriting that drives measurable results.</p>
-        <div class="cta-buttons">
-            <a href="contact.html" class="cta-button">Start Your Project</a>
-            <a href="portfolio.html" class="cta-button cta-button-secondary">View My Work</a>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="tagline">MCP-Certified Professional | Strategic Copywriter | Thought Leader</p>
+            <h1>Turn Your Expertise Into Influence With Words That Convert</h1>
+            <p class="hero-description">I help ambitious professionals and businesses build authority, generate leads, and scale revenue through strategic copywriting that drives measurable results.</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="cta-button">Start Your Project</a>
+                <a href="portfolio.html" class="cta-button cta-button-secondary">View My Work</a>
+            </div>
+            <div class="trust-badges">
+                <span class="trust-badge">✓ 500+ Articles Published</span>
+                <span class="trust-badge">✓ 50K+ Readers</span>
+                <span class="trust-badge">✓ 98% Client Satisfaction</span>
+            </div>
         </div>
-        <div class="trust-badges">
-            <span class="trust-badge">✓ 500+ Articles Published</span>
-            <span class="trust-badge">✓ 50K+ Readers</span>
-            <span class="trust-badge">✓ 98% Client Satisfaction</span>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-icon">📝</div>
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Articles Published</div>
+                <p class="stat-description">Industry insights that position clients as thought leaders</p>
+            </div>
+            <div class="stat-box">
+                <div class="stat-icon">👥</div>
+                <div class="stat-number">50K+</div>
+                <div class="stat-label">Monthly Readers</div>
+                <p class="stat-description">Engaged audience across LinkedIn, Medium, and blogs</p>
+            </div>
+            <div class="stat-box">
+                <div class="stat-icon">💰</div>
+                <div class="stat-number">$10M+</div>
+                <div class="stat-label">Revenue Generated</div>
+                <p class="stat-description">Direct impact on client sales through strategic copy</p>
+            </div>
+            <div class="stat-box">
+                <div class="stat-icon">⭐</div>
+                <div class="stat-number">98%</div>
+                <div class="stat-label">Client Satisfaction</div>
+                <p class="stat-description">Projects delivered on time with exceptional results</p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-
-    <!-- Stats Section →
-
-  <!-- Add this right after hero, before services -->
-<section class="stats-section">
-    <div class="stats-grid">
-        <div class="stat-box">
-            <div class="stat-icon">📝</div>
-            <div class="stat-number">500+</div>
-            <div class="stat-label">Articles Published</div>
-            <p class="stat-description">Industry insights that position clients as thought leaders</p>
-        </div>
-        <!-- Repeat for other 3 stats -->
-    </div>
-</section>
-
-
-    <!-- Services Grid -->
+    <!-- Services Section -->
     <section class="services-section">
+        <div class="section-header">
+            <h2>How I Help You Win</h2>
+            <p>Strategic copywriting services designed to build authority, generate leads, and drive revenue</p>
+        </div>
+
         <div class="services-grid">
-            
             <!-- Service 1: Thought Leadership -->
             <article class="service-card" onclick="location.href='service-thought-leadership.html'">
                 <div class="service-header">
                     <div class="service-icon">📝</div>
                     <h3>Thought Leadership Writing</h3>
-                    <p class="service-tagline">Position yourself as an industry authority</p>
                 </div>
                 <div class="service-body">
-                    <p class="service-description">Establish credibility and build trust with compelling blog posts and articles that educate, inspire, and position you as a go-to expert in your field.</p>
+                    <p class="service-description">Position yourself as the go-to authority in your industry. I craft compelling articles and blog posts that showcase your expertise, build trust, and attract high-value opportunities.</p>
                     <ul class="service-features">
-                        <li>Blog posts & articles</li>
-                        <li>Industry insights & analysis</li>
-                        <li>Expert opinion pieces</li>
-                        <li>Guest post opportunities</li>
-                        <li>SEO optimization</li>
+                        <li>Establish credibility in your niche</li>
+                        <li>Generate inbound leads organically</li>
+                        <li>Build a loyal, engaged audience</li>
+                        <li>Improve SEO and organic visibility</li>
                     </ul>
-                    <div class="price-range">
-                        <div class="price-label">Starting from</div>
-                        <div class="price-amount">$400/article</div>
-                    </div>
                     <a href="service-thought-leadership.html" class="service-cta">Learn More →</a>
                 </div>
             </article>
@@ -701,21 +599,15 @@
                 <div class="service-header">
                     <div class="service-icon">✉️</div>
                     <h3>Email Copywriting</h3>
-                    <p class="service-tagline">Emails that get opened, read, and clicked</p>
                 </div>
                 <div class="service-body">
-                    <p class="service-description">Strategic email campaigns that nurture leads and convert subscribers into customers. From welcome sequences to promotional campaigns that drive revenue.</p>
+                    <p class="service-description">Transform subscribers into customers with email campaigns that get opened, read, and clicked. From welcome sequences to sales campaigns that convert cold leads into paying clients.</p>
                     <ul class="service-features">
-                        <li>Welcome sequences</li>
-                        <li>Nurture campaigns</li>
-                        <li>Promotional emails</li>
-                        <li>Re-engagement series</li>
-                        <li>Subject line optimization</li>
+                        <li>42% average open rate (vs 21% industry avg)</li>
+                        <li>8.5% click-through rate (vs 2.6% industry avg)</li>
+                        <li>Automated revenue while you sleep</li>
+                        <li>Build relationships that last</li>
                     </ul>
-                    <div class="price-range">
-                        <div class="price-label">Starting from</div>
-                        <div class="price-amount">$250/email</div>
-                    </div>
                     <a href="service-email-copy.html" class="service-cta">Learn More →</a>
                 </div>
             </article>
@@ -725,207 +617,54 @@
                 <div class="service-header">
                     <div class="service-icon">💼</div>
                     <h3>LinkedIn Ghostwriting</h3>
-                    <p class="service-tagline">Build your personal brand on LinkedIn</p>
                 </div>
                 <div class="service-body">
-                    <p class="service-description">Consistent, engaging LinkedIn content that positions you as a thought leader, attracts opportunities, and grows your professional network organically.</p>
+                    <p class="service-description">Build your personal brand without the time investment. Consistent, engaging LinkedIn content that positions you as a thought leader, attracts opportunities, and grows your network organically.</p>
                     <ul class="service-features">
-                        <li>2-5 posts per week</li>
-                        <li>Personal brand strategy</li>
-                        <li>Engagement optimization</li>
-                        <li>Multiple content formats</li>
-                        <li>Performance tracking</li>
+                        <li>2-5 posts per week on autopilot</li>
+                        <li>Attract ideal clients and partners</li>
+                        <li>Speaking and media opportunities</li>
+                        <li>Authority in your industry</li>
                     </ul>
-                    <div class="price-range">
-                        <div class="price-label">Starting from</div>
-                        <div class="price-amount">$600/month</div>
-                    </div>
                     <a href="service-linkedin.html" class="service-cta">Learn More →</a>
                 </div>
             </article>
 
-            <!-- Service 4: Landing Pages -->
+            <!-- Service 4: Landing & Sales Pages -->
             <article class="service-card" onclick="location.href='service-landing-pages.html'">
                 <div class="service-header">
                     <div class="service-icon">🚀</div>
                     <h3>Landing & Sales Pages</h3>
-                    <p class="service-tagline">High-converting copy that drives action</p>
                 </div>
                 <div class="service-body">
-                    <p class="service-description">Persuasive landing pages and sales copy that turn visitors into buyers through strategic messaging and psychological principles that drive conversions.</p>
+                    <p class="service-description">High-converting copy that turns visitors into buyers. Strategic landing pages and sales copy built on proven frameworks and psychological principles that drive action.</p>
                     <ul class="service-features">
-                        <li>Product landing pages</li>
-                        <li>Long-form sales pages</li>
-                        <li>Lead magnet pages</li>
-                        <li>Webinar registration</li>
-                        <li>Conversion optimization</li>
+                        <li>18%+ average conversion rate</li>
+                        <li>Persuasive copy that sells 24/7</li>
+                        <li>Professional, conversion-optimized messaging</li>
+                        <li>A/B test ready variations</li>
                     </ul>
-                    <div class="price-range">
-                        <div class="price-label">Starting from</div>
-                        <div class="price-amount">$800/page</div>
-                    </div>
                     <a href="service-landing-pages.html" class="service-cta">Learn More →</a>
                 </div>
             </article>
 
-            <!-- Service 5: Brand Messaging -->
+            <!-- Service 5: Website & Brand Messaging -->
             <article class="service-card" onclick="location.href='service-brand-messaging.html'">
                 <div class="service-header">
                     <div class="service-icon">🎨</div>
                     <h3>Website & Brand Messaging</h3>
-                    <p class="service-tagline">Clear messaging that converts visitors</p>
                 </div>
                 <div class="service-body">
-                    <p class="service-description">Complete website copy and brand messaging that clearly communicates your value, differentiates you from competitors, and turns visitors into customers.</p>
+                    <p class="service-description">Clear, compelling website copy that communicates your value instantly. Complete brand messaging that differentiates you from competitors and turns visitors into customers.</p>
                     <ul class="service-features">
-                        <li>Complete website copy</li>
-                        <li>Brand messaging framework</li>
-                        <li>Value proposition development</li>
-                        <li>Voice & tone guidelines</li>
-                        <li>Messaging playbook</li>
+                        <li>Crystal-clear value proposition</li>
+                        <li>Consistent brand voice across all pages</li>
+                        <li>Lower bounce rates, higher conversions</li>
+                        <li>Messaging playbook for your team</li>
                     </ul>
-                    <div class="price-range">
-                        <div class="price-label">Starting from</div>
-                        <div class="price-amount">$2,000/project</div>
-                    </div>
                     <a href="service-brand-messaging.html" class="service-cta">Learn More →</a>
                 </div>
             </article>
-
-        </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section class="how-it-works">
-        <div class="section-header">
-            <h2>How It Works</h2>
-            <p>My proven process for delivering high-quality copy that drives results</p>
-        </div>
-        <div class="steps-grid">
-            <div class="step-card">
-                <div class="step-number">1</div>
-                <h3>Discovery Call</h3>
-                <p>We discuss your goals, audience, and project requirements to ensure perfect alignment.</p>
-            </div>
-            <div class="step-card">
-                <div class="step-number">2</div>
-                <h3>Research & Strategy</h3>
-                <p>I dive deep into your industry, competitors, and audience to develop a strategic approach.</p>
-            </div>
-            <div class="step-card">
-                <div class="step-number">3</div>
-                <h3>Copywriting</h3>
-                <p>I craft compelling, conversion-focused copy based on proven frameworks and best practices.</p>
-            </div>
-            <div class="step-card">
-                <div class="step-number">4</div>
-                <h3>Revisions & Delivery</h3>
-                <p>You review the copy, provide feedback, and I refine until it's perfect.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Section -->
-    <section class="why-choose">
-        <div class="section-header">
-            <h2>Why Choose Me</h2>
-            <p>What makes my copywriting services different</p>
-        </div>
-        <div class="benefits-grid">
-            <div class="benefit-card">
-                <div class="benefit-icon">🎯</div>
-                <h3>Strategic Approach</h3>
-                <p>Every word is chosen with your business goals and target audience in mind. I don't just write—I strategize.</p>
-            </div>
-            <div class="benefit-card">
-                <div class="benefit-icon">📊</div>
-                <h3>Results-Driven</h3>
-                <p>My focus is on measurable outcomes: more leads, higher conversions, and increased revenue for your business.</p>
-            </div>
-            <div class="benefit-card">
-                <div class="benefit-icon">⚡</div>
-                <h3>Fast Turnaround</h3>
-                <p>Quality work delivered on time. I respect deadlines and communicate proactively throughout the project.</p>
-            </div>
-            <div class="benefit-card">
-                <div class="benefit-icon">🤝</div>
-                <h3>Collaborative Process</h3>
-                <p>Your feedback shapes the final product. I work closely with you to ensure the copy perfectly captures your vision.</p>
-            </div>
-            <div class="benefit-card">
-                <div class="benefit-icon">✍️</div>
-                <h3>Industry Expertise</h3>
-                <p>Deep experience across multiple industries including SaaS, B2B, e-commerce, coaching, and professional services.</p>
-            </div>
-            <div class="benefit-card">
-                <div class="benefit-icon">💡</div>
-                <h3>Clear Communication</h3>
-                <p>No jargon, no confusion. I keep you informed at every stage and explain my strategic decisions clearly.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Industries Section -->
-    <section class="industries-section">
-        <div class="section-header">
-            <h2>Industries I Serve</h2>
-            <p>Proven experience across diverse sectors</p>
-        </div>
-        <div class="industries-grid">
-            <div class="industry-tag">💻 SaaS & Technology</div>
-            <div class="industry-tag">🏢 B2B Services</div>
-            <div class="industry-tag">🛍️ E-commerce</div>
-            <div class="industry-tag">📚 Online Education</div>
-            <div class="industry-tag">💼 Consulting</div>
-            <div class="industry-tag">🎯 Marketing Agencies</div>
-            <div class="industry-tag">💰 Financial Services</div>
-            <div class="industry-tag">🏥 Healthcare</div>
-            <div class="industry-tag">🎓 Professional Services</div>
-            <div class="industry-tag">🚀 Startups</div>
-            <div class="industry-tag">📱 Mobile Apps</div>
-            <div class="industry-tag">🎨 Creative Services</div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="section-header">
-            <h2>Frequently Asked Questions</h2>
-        </div>
-
-        <div class="faq-item">
-            <h4>How do I know which service I need?</h4>
-            <p>Not sure? Book a free 15-minute consultation call and we'll discuss your goals, challenges, and which service (or combination of services) would be most effective for your business.</p>
-        </div>
-
-        <div class="faq-item">
-            <h4>What's your typical turnaround time?</h4>
-            <p>It varies by service: single emails take 3-5 days, articles 7-10 days, landing pages 10-14 days, and complete websites 2-4 weeks. Rush delivery is available for an additional fee.</p>
-        </div>
-
-        <div class="faq-item">
-            <h4>Do you offer package deals or retainers?</h4>
-            <p>Yes! Monthly retainers offer discounted rates and priority scheduling. Common packages include ongoing blog content, regular email campaigns, or consistent LinkedIn ghostwriting. Contact me for custom pricing.</p>
-        </div>
-
-        <div class="faq-item">
-            <h4>How many revisions are included?</h4>
-            <p>Most services include 2-3 rounds of revisions. My goal is to get it right the first time, but I'm committed to refining until you're completely satisfied with the final product.</p>
-        </div>
-
-        <div class="faq-item">
-            <h4>Can you write for technical or specialized industries?</h4>
-            <p>Absolutely. I have experience writing for SaaS, fintech, healthcare, and other technical fields. I invest time in research to ensure accuracy and credibility in your specific industry.</p>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <h2>Ready to Elevate Your Copy?</h2>
-        <p>Let's discuss your project and create a copy that drives real results for your business.</p>
-        <div class="cta-buttons">
-            <a href="contact.html" class="cta-button">Get Started Today</a>
-            <a href="portfolio.html" class="cta-button cta-button-secondary">View My Work</a>
         </div>
     </section>
 
@@ -933,11 +672,12 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h4>Ehasan Pro</h4>
+                <h4>Mohammad Enamul Hasan</h4>
                 <p>Strategic copywriter helping brands and entrepreneurs communicate their value and convert their audience.</p>
                 <div class="social-links">
                     <a href="#" aria-label="LinkedIn">in</a>
                     <a href="#" aria-label="Twitter">𝕏</a>
+                    <a href="#" aria-label="Medium">M</a>
                     <a href="#" aria-label="Email">@</a>
                 </div>
             </div>
@@ -964,12 +704,12 @@
                 <h4>Get In Touch</h4>
                 <ul>
                     <li><a href="mailto:hello@ehasanpro.com">hello@ehasanpro.com</a></li>
-                    <li><a href="contact.html">Book a Call</a></li>
+                    <li><a href="contact.html">Contact Form</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Ehasan Pro. All rights reserved. | Crafted with purpose.</p>
+            <p>&copy; 2026 Mohammad Enamul Hasan. All rights reserved.</p>
         </div>
     </footer>
 
@@ -990,7 +730,3 @@
     </script>
 </body>
 </html>
-
-
-
-
