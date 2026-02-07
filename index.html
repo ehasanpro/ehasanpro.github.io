@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ehasan Pro - Strategic Copywriter & Content Strategist</title>
+ 
     <style>
         * {
             margin: 0;
@@ -91,7 +92,6 @@
             width: 100%;
         }
 
-        /* Mobile Menu Toggle */
         .menu-toggle {
             display: none;
             flex-direction: column;
@@ -106,36 +106,362 @@
             transition: 0.3s;
         }
 
-        /* Hero Section */
-        .hero {
+        /* Services Hero */
+        .services-hero {
             background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
             color: var(--white);
-            padding: 6rem 2rem;
+            padding: 5rem 2rem 4rem;
             text-align: center;
         }
 
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
+        .services-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
         }
 
-        .tagline {
+        .services-hero p {
             font-size: 1.2rem;
-            font-weight: 300;
-            margin-bottom: 1rem;
+            max-width: 700px;
+            margin: 0 auto;
             opacity: 0.95;
         }
 
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
+        /* Intro Section */
+        .intro-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            text-align: center;
         }
 
-        .hero p {
+        .intro-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .intro-section p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* Services Grid */
+        .services-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 2rem 5rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+        }
+
+        .service-header {
+            padding: 3rem 2rem 2rem;
+            background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .service-card:nth-child(1) .service-header {
+            background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%); /* Purple */
+        }
+
+        .service-card:nth-child(2) .service-header {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%); /* Green */
+        }
+
+        .service-card:nth-child(3) .service-header {
+            background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); /* Blue */
+        }
+
+        .service-card:nth-child(4) .service-header {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); /* Red */
+        }
+
+        .service-card:nth-child(5) .service-header {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); /* Orange */
+        }
+
+        .service-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-header h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-tagline {
+            opacity: 0.95;
+            font-size: 1rem;
+        }
+
+        .service-body {
+            padding: 2rem;
+        }
+
+        .service-description {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .service-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+
+        .service-features li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--bg-light);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--text-dark);
+        }
+
+        .service-features li::before {
+            content: '✓';
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .price-range {
+            background: var(--bg-light);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .price-label {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .price-amount {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .service-cta {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .service-cta:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        /* How It Works Section */
+        .how-it-works {
+            background: var(--bg-light);
+            padding: 5rem 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .steps-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .step-card {
+            background: var(--white);
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1.5rem;
+        }
+
+        .step-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .step-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* Why Choose Section */
+        .why-choose {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .benefit-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* Industries Section */
+        .industries-section {
+            background: var(--bg-light);
+            padding: 5rem 2rem;
+        }
+
+        .industries-grid {
+            max-width: 1200px;
+            margin: 3rem auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .industry-tag {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-dark);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border: 2px solid var(--bg-light);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .faq-item h4 {
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .faq-item p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
             font-size: 1.2rem;
             margin-bottom: 2rem;
-            opacity: 0.9;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .cta-button {
@@ -155,54 +481,14 @@
             box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
         }
 
-        /* Services Section */
-        .services {
-            padding: 5rem 2rem;
-            background: var(--bg-light);
+        .cta-button-secondary {
+            background: transparent;
+            border: 2px solid var(--white);
         }
 
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: var(--text-dark);
-        }
-
-        .services-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .service-card {
+        .cta-button-secondary:hover {
             background: var(--white);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
-
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .service-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
             color: var(--primary-color);
-        }
-
-        .service-card p {
-            color: var(--text-light);
-            line-height: 1.8;
         }
 
         /* Footer */
@@ -275,7 +561,7 @@
             opacity: 0.7;
         }
 
-        /* Responsive Design */
+        /* Responsive */
         @media (max-width: 768px) {
             .nav-menu {
                 position: fixed;
@@ -299,20 +585,12 @@
                 display: flex;
             }
 
-            .hero h1 {
+            .services-hero h1 {
                 font-size: 2rem;
             }
 
-            .tagline {
-                font-size: 1rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
+            .services-grid {
+                grid-template-columns: 1fr;
             }
 
             .footer-content {
@@ -323,6 +601,10 @@
             .social-links {
                 justify-content: center;
             }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -331,9 +613,11 @@
     <header>
         <nav>
             <div class="logo-container">
-                <img src="/assets/ehasanpro-logo.png" alt="Ehasan Pro Logo">
+                <a href="index.html">
+                    <img src="/assets/ehasanpro-logo.png" alt="Ehasan Pro Logo">
+                </a>
             </div>
-            <ul class="nav-menu" id="navMenu">
+             <ul class="nav-menu" id="navMenu">
                 <li><a href="/"class="active">Home</a></li>
                 <li><a href="/service">Service</a></li>
                 <li><a href="/insights">Insights</a></li>
@@ -386,6 +670,8 @@
         </div>
     </section>
 
+
+
     <!-- Footer -->
     <footer>
         <div class="footer-content">
@@ -399,29 +685,29 @@
                 </div>
             </div>
             <div class="footer-section">
-                <h4>Quick Links</h4>
+                <h4>Services</h4>
                 <ul>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="service-thought-leadership.html">Thought Leadership</a></li>
+                    <li><a href="service-email-copy.html">Email Copywriting</a></li>
+                    <li><a href="service-linkedin.html">LinkedIn Ghostwriting</a></li>
+                    <li><a href="service-landing-pages.html">Landing Pages</a></li>
+                    <li><a href="service-brand-messaging.html">Brand Messaging</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>Services</h4>
+                <h4>Resources</h4>
                 <ul>
-                    <li><a href="#services">Thought Leadership</a></li>
-                    <li><a href="#services">Email Copywriting</a></li>
-                    <li><a href="#services">LinkedIn Ghostwriting</a></li>
-                    <li><a href="#services">Landing Pages</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h4>Get In Touch</h4>
                 <ul>
-                    <li><a href="#contact">Contact Form</a></li>
                     <li><a href="mailto:hello@ehasanpro.com">hello@ehasanpro.com</a></li>
-                    <li><a href="#contact">Book a Call</a></li>
+                    <li><a href="contact.html">Book a Call</a></li>
                 </ul>
             </div>
         </div>
@@ -430,7 +716,7 @@
         </div>
     </footer>
 
-    <!-- Mobile Menu Script -->
+    <!-- JavaScript -->
     <script>
         const menuToggle = document.getElementById('menuToggle');
         const navMenu = document.getElementById('navMenu');
@@ -439,7 +725,6 @@
             navMenu.classList.toggle('active');
         });
 
-        // Close menu when clicking on a link
         document.querySelectorAll('.nav-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
