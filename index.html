@@ -441,6 +441,13 @@
 
         /* Responsive */
         @media (max-width: 768px) {
+             .expertise-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .final-cta h2 {
+        font-size: 2rem;
+    }
              .benefits-grid,
     .testimonials-grid,
     .case-study-grid {
@@ -701,7 +708,128 @@
 
 .case-study-cta:hover {
     text-decoration: underline;
-}       
+}
+        /* Expertise Section */
+.expertise-section {
+    background: var(--bg-light);
+    padding: 5rem 2rem;
+}
+
+.expertise-grid {
+    max-width: 1200px;
+    margin: 3rem auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.expertise-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.expertise-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.expertise-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.expertise-card h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.expertise-card p {
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.expertise-topics {
+    list-style: none;
+    padding: 0;
+}
+
+.expertise-topics li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+.expertise-topics li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+        /* FAQ Section */
+.faq-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+}
+
+.faq-item {
+    background: var(--white);
+    border: 2px solid var(--bg-light);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.faq-question {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.faq-answer {
+    color: var(--text-light);
+    line-height: 1.8;
+}
+        /* Final CTA Section */
+.final-cta {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: var(--white);
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.final-cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.final-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.final-cta .cta-buttons {
+    margin-bottom: 0;
+}
     </style>
 </head>
 <body>
@@ -1093,6 +1221,95 @@
                     <a href="portfolio.html" class="case-study-cta">View Full Case Study →</a>
                 </div>
             </article>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section class="expertise-section">
+        <div class="section-header">
+            <h2>My Areas of Expertise</h2>
+            <p>Strategic insights at the intersection of technology and business</p>
+        </div>
+
+        <div class="expertise-grid">
+            <div class="expertise-card">
+                <div class="expertise-icon">🤖</div>
+                <h3>AI & Future of Work</h3>
+                <p>How artificial intelligence is reshaping careers, skills, and opportunities. I help professionals and businesses navigate AI transformation with clarity and confidence.</p>
+                <ul class="expertise-topics">
+                    <li>AI adoption strategies</li>
+                    <li>Workforce transformation</li>
+                    <li>Future skills development</li>
+                    <li>Automation impact analysis</li>
+                </ul>
+            </div>
+
+            <div class="expertise-card">
+                <div class="expertise-icon">💼</div>
+                <h3>B2B & SaaS Growth</h3>
+                <p>Decoding strategies that help software companies scale, innovate, and dominate their markets. From positioning to conversion optimization.</p>
+                <ul class="expertise-topics">
+                    <li>SaaS content marketing</li>
+                    <li>B2B positioning strategy</li>
+                    <li>Product-led growth</li>
+                    <li>Customer success narratives</li>
+                </ul>
+            </div>
+
+            <div class="expertise-card">
+                <div class="expertise-icon">📊</div>
+                <h3>Digital Marketing & SEO</h3>
+                <p>Building visibility, authority, and client trust in the digital age. Strategic content that ranks, engages, and converts.</p>
+                <ul class="expertise-topics">
+                    <li>SEO-driven content</li>
+                    <li>Thought leadership development</li>
+                    <li>Brand authority building</li>
+                    <li>Conversion copywriting</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="section-header">
+            <h2>Common Questions</h2>
+            <p>Everything you need to know about working with me</p>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">How do you charge for your services?</div>
+            <div class="faq-answer">Pricing varies by service: articles start at $400, email sequences at $800, landing pages at $1,500, and complete websites at $4,000. Monthly retainers offer discounted rates for ongoing work.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">What's your typical turnaround time?</div>
+            <div class="faq-answer">Single articles take 7-10 days, email sequences 10-14 days, landing pages 2-3 weeks, and complete websites 4-6 weeks. Rush delivery available for urgent projects.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Do you offer monthly retainers?</div>
+            <div class="faq-answer">Yes! Monthly retainers are ideal for ongoing content needs like blog posts, emails, or LinkedIn ghostwriting. Retainers come with discounted rates and priority scheduling.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">How many revisions are included?</div>
+            <div class="faq-answer">Most services include 2-3 rounds of revisions. My goal is to deliver exceptional work from the start, but I'm committed to refining until you're 100% satisfied.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">What if I'm not sure which service I need?</div>
+            <div class="faq-answer">Book a free 15-minute consultation. We'll discuss your goals, and I'll recommend the best approach for your specific situation.</div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <h2>Ready to Transform Your Message?</h2>
+        <p>Let's discuss your project and create copy that drives real results for your business.</p>
+        <div class="cta-buttons">
+            <a href="contact.html" class="cta-button">Start Your Project Today</a>
+            <a href="portfolio.html" class="cta-button cta-button-secondary">View Portfolio</a>
         </div>
     </section>
 
