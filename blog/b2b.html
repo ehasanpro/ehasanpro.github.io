@@ -214,14 +214,29 @@
         }
 
         .article-thumbnail {
-            background: linear-gradient(135deg, var(--category-color) 0%, #0284c7 100%);
-            height: 220px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-        }
+    height: 200px;
+    background: var(--bg-light);
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    position: relative;
+    overflow: hidden;
+}
 
+.article-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* If you want full image visible without cropping */
+.article-thumbnail.contain img {
+    object-fit: contain;
+    background: var(--white);
+}
         .article-body {
             padding: 1.5rem;
         }
