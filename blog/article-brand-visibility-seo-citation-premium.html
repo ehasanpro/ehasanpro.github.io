@@ -696,14 +696,20 @@
             }
 
             .article-image,
-            .article-image-placeholder {
-                height: 250px;
-                font-size: 4rem;
-            }
+    .article-image-placeholder {
+        max-height: 400px;
+        height: auto;
+    }
 
-            .article-image img {
-                max-height: 300px;
-            }
+           .article-image img {
+        object-fit: contain;  /* ← CHANGE from 'cover' to 'contain' */
+        object-position: center;
+        max-height: 400px;
+        width: 100%;
+        height: auto;
+        background: var(--white);  /* White background for letterboxing */
+    }
+}
 
             .visual-placeholder {
                 height: 250px;
