@@ -424,7 +424,15 @@
             justify-content: center;
             font-size: 3rem;
             flex-shrink: 0;
+            overflow: hidden;
         }
+     .author-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
 
         .author-info h4 {
             font-size: 1.3rem;
@@ -1294,14 +1302,16 @@
 
         <!-- Author Bio -->
         <div class="author-bio">
-            <div class="author-avatar">👤</div>
+            <div class="author-avatar">
+             <img src="/assets/author-image.png" alt="Mohammad Enamul Hasan">
+            </div>
             <div class="author-info">
                 <h4>About Mohammad Enamul Hasan</h4>
                 <p>Strategic copywriter and Microsoft Certified Professional specializing in AI-driven content strategies, B2B SaaS growth, and conversion-focused copywriting. Helping brands build authority and turn readers into customers through strategic, results-driven content.</p>
                 <div class="author-social">
                     <a href="https://www.linkedin.com/in/ehasanpro/">LinkedIn →</a>
                     <a href="https://x.com/EhasanPro">Twitter →</a>
-                    <a href="contact.html">Work With Me →</a>
+                    <a href="/contact">Work With Me →</a>
                 </div>
             </div>
         </div>
