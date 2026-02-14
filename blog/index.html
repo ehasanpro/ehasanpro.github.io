@@ -194,6 +194,12 @@
             color: var(--text-dark);
         }
 
+        /* Add this NEW rule to prevent underline on hover/active */
+.filter-btn:hover,
+.filter-btn:active,
+.filter-btn:focus {
+    text-decoration: none !important;
+}
         .filter-btn:hover {
             background: var(--white);
             border-color: var(--primary-color);
@@ -523,6 +529,20 @@
                 gap: 1rem;
             }
 
+            /* Category Tabs Mobile Fix */
+    .category-tabs {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        justify-content: center;
+        padding: 1rem;
+    }
+    
+    .filter-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+        flex: 0 0 auto;
+        white-space: nowrap;
+    }
        
             .nav-menu.active {
                 left: 0;
