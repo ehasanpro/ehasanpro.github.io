@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://ehasanpro.github.io/sitemap.xml
+
+# Disallow admin/private directories if any
+Disallow: /assets/private/
