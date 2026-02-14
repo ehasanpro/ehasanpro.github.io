@@ -1,1 +1,1168 @@
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Copywriting Services | Ehasan Pro</title>
+    <meta name="description" content="Email campaigns that get opened, read, and clicked. Expert email copywriting that turns subscribers into customers and drives consistent revenue.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #f59e0b;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f9fafb;
+            --white: #ffffff;
+            --service-color: #10b981;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-container img {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-dark);
+            transition: 0.3s;
+        }
+
+        /* Service Hero */
+        .service-hero {
+            background: linear-gradient(135deg, var(--service-color) 0%, #059669 100%);
+            color: var(--white);
+            padding: 5rem 2rem 4rem;
+        }
+
+        .service-hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            line-height: 1.8;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: var(--accent-color);
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            background: transparent;
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            border: 2px solid var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--service-color);
+        }
+
+        .hero-visual {
+            background: rgba(255,255,255,0.1);
+            padding: 3rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .stat-box {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            opacity: 0.9;
+        }
+
+        /* Main Content */
+        .content-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Benefits Grid */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .benefit-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--service-color);
+        }
+
+        .benefit-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* Process Section */
+        .process-section {
+            background: var(--bg-light);
+            padding: 4rem 2rem;
+        }
+
+        .process-timeline {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .process-step {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .process-step::before {
+            content: '';
+            position: absolute;
+            left: 2.5rem;
+            top: 5rem;
+            width: 2px;
+            height: calc(100% + 1rem);
+            background: var(--service-color);
+            opacity: 0.3;
+        }
+
+        .process-step:last-child::before {
+            display: none;
+        }
+
+        .step-number {
+            width: 5rem;
+            height: 5rem;
+            background: var(--service-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .step-duration {
+            color: var(--service-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .step-content p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .step-deliverables {
+            background: var(--white);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        .step-deliverables h4 {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .step-deliverables ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .step-deliverables li {
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-light);
+            margin-bottom: 0.3rem;
+        }
+
+        .step-deliverables li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--service-color);
+            font-weight: bold;
+        }
+
+        /* Packages Section */
+        .packages-section {
+            background: var(--white);
+            padding: 4rem 2rem;
+        }
+
+        .packages-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .package-card {
+            background: var(--white);
+            border: 2px solid var(--bg-light);
+            border-radius: 15px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .package-card.featured {
+            border-color: var(--service-color);
+            box-shadow: 0 8px 30px rgba(16, 185, 129, 0.2);
+            transform: scale(1.05);
+        }
+
+        .package-badge {
+            position: absolute;
+            top: -15px;
+            right: 2rem;
+            background: var(--accent-color);
+            color: var(--white);
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        .package-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .package-card .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--service-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .package-card .price-note {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        .package-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+
+        .package-features li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--bg-light);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .package-features li::before {
+            content: '✓';
+            color: var(--service-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .package-cta {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background: var(--service-color);
+            color: var(--white);
+            padding: 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .package-cta:hover {
+            background: #059669;
+            transform: translateY(-2px);
+        }
+
+        /* Email Types Section */
+        .email-types {
+            background: var(--bg-light);
+            padding: 4rem 2rem;
+        }
+
+        .types-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .type-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .type-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .type-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--service-color);
+        }
+
+        .type-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* Examples Section */
+        .examples-section {
+            padding: 4rem 2rem;
+        }
+
+        .examples-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .example-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .example-preview {
+            background: linear-gradient(135deg, var(--service-color) 0%, #059669 100%);
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .example-content {
+            padding: 2rem;
+        }
+
+        .example-content h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-dark);
+        }
+
+        .example-meta {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .example-content p {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .example-link {
+            color: var(--service-color);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .example-link::after {
+            content: ' →';
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border: 2px solid var(--bg-light);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .faq-item h4 {
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .faq-item p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* CTA Section */
+        .final-cta {
+            background: linear-gradient(135deg, var(--service-color) 0%, #059669 100%);
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .final-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 3rem 2rem 1.5rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            opacity: 1;
+            color: var(--accent-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--accent-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            opacity: 0.7;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background: var(--white);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0,0,0,0.1);
+                padding: 2rem 0;
+                gap: 1rem;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .service-hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .package-card.featured {
+                transform: scale(1);
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav>
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="/assets/ehasanpro-logo.png" alt="Ehasan Pro Logo">
+                </a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/work">Work</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Service Hero -->
+    <section class="service-hero">
+        <div class="service-hero-content">
+            <div class="hero-text">
+                <h1>Email Copywriting</h1>
+                <p>Emails that subscribers actually want to open. Strategic email copy that builds relationships, nurtures leads, and drives consistent revenue for your business.</p>
+                <div class="hero-cta">
+                    <a href="#packages" class="btn-primary">View Packages</a>
+                    <a href="contact.html" class="btn-secondary">Book a Call</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-number">42%</div>
+                        <div class="stat-label">Avg. Open Rate</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">8.5%</div>
+                        <div class="stat-label">Avg. Click Rate</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">300+</div>
+                        <div class="stat-label">Email Campaigns</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">$2.5M</div>
+                        <div class="stat-label">Revenue Generated</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="content-section">
+        <div class="section-header">
+            <h2>Why Email Marketing Still Works</h2>
+            <p>Email delivers the highest ROI of any marketing channel—when done right</p>
+        </div>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">📧</div>
+                <h3>High Open Rates</h3>
+                <p>Compelling subject lines and preview text that make subscribers eager to click. Consistently outperform industry benchmarks with strategic copywriting.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">💬</div>
+                <h3>Engage Readers</h3>
+                <p>Content that resonates with your audience's needs and desires. Keep subscribers reading from subject line to call-to-action with value-packed emails.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🎯</div>
+                <h3>Drive Action</h3>
+                <p>Strategic CTAs that convert readers into customers. Clear, compelling calls-to-action that get clicks and drive measurable business results.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🤝</div>
+                <h3>Build Relationships</h3>
+                <p>Nurture sequences that turn cold leads into warm prospects. Automated emails that feel personal and build trust over time.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">💰</div>
+                <h3>Increase Revenue</h3>
+                <p>Promotional emails that sell without being pushy. Consistent revenue generation from your email list through strategic campaign planning.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">⚡</div>
+                <h3>Save Time</h3>
+                <p>Automated sequences that work 24/7. Set it up once, generate leads and sales on autopilot while you focus on growing your business.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="section-header">
+            <h2>My Email Copywriting Process</h2>
+            <p>A proven system that turns email lists into revenue streams</p>
+        </div>
+        <div class="process-timeline">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Audience Analysis</h3>
+                    <div class="step-duration">Day 1</div>
+                    <p>I analyze your subscriber base, customer journey, and email performance data. Understanding what motivates your audience to open, read, and click is the foundation of effective email copy.</p>
+                    <div class="step-deliverables">
+                        <h4>Deliverables:</h4>
+                        <ul>
+                            <li>Audience segmentation strategy</li>
+                            <li>Customer journey mapping</li>
+                            <li>Email performance audit (if applicable)</li>
+                            <li>Competitor email analysis</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Campaign Strategy</h3>
+                    <div class="step-duration">Days 2-3</div>
+                    <p>I develop a comprehensive email strategy aligned with your business goals. Planning email flows, frequency, key messaging, and conversion pathways to maximize results.</p>
+                    <div class="step-deliverables">
+                        <h4>Deliverables:</h4>
+                        <ul>
+                            <li>Email campaign roadmap</li>
+                            <li>Segmentation plan</li>
+                            <li>Subject line formulas</li>
+                            <li>Conversion funnel strategy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Email Copywriting</h3>
+                    <div class="step-duration">Days 4-6</div>
+                    <p>I craft compelling email copy that speaks directly to your audience's needs. Each email is optimized for opens, engagement, and conversions with proven copywriting frameworks.</p>
+                    <div class="step-deliverables">
+                        <h4>Deliverables:</h4>
+                        <ul>
+                            <li>Subject lines (3 options per email)</li>
+                            <li>Preview text optimization</li>
+                            <li>Email body copy</li>
+                            <li>Multiple CTA variations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>A/B Test Planning</h3>
+                    <div class="step-duration">Day 7</div>
+                    <p>I provide A/B testing recommendations to continuously improve performance. Test subject lines, CTAs, and email content variations for maximum results and ongoing optimization.</p>
+                    <div class="step-deliverables">
+                        <h4>Deliverables:</h4>
+                        <ul>
+                            <li>A/B test recommendations</li>
+                            <li>Alternative subject line options</li>
+                            <li>CTA variations to test</li>
+                            <li>Testing timeline and priorities</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <h3>Implementation Support</h3>
+                    <div class="step-duration">Days 8-10</div>
+                    <p>I help you set up the emails in your ESP, provide optimization tips, and establish tracking metrics for ongoing success. Full support until your campaign is live.</p>
+                    <div class="step-deliverables">
+                        <h4>Deliverables:</h4>
+                        <ul>
+                            <li>ESP setup guidance</li>
+                            <li>Automation workflow diagram</li>
+                            <li>Performance tracking dashboard recommendations</li>
+                            <li>Optimization checklist for future campaigns</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section class="packages-section" id="packages">
+        <div class="section-header">
+            <h2>Email Copywriting Packages</h2>
+            <p>From single emails to complete automation sequences</p>
+        </div>
+        <div class="packages-grid">
+            <!-- Single Email Package -->
+            <div class="package-card">
+                <h3>Single Email</h3>
+                <div class="price">$250</div>
+                <div class="price-note">per email</div>
+                <ul class="package-features">
+                    <li>1 promotional or broadcast email</li>
+                    <li>3 subject line options</li>
+                    <li>Preview text optimization</li>
+                    <li>1 round of revisions</li>
+                    <li>CTA optimization</li>
+                    <li>3-5 day turnaround</li>
+                </ul>
+                <a href="contact.html" class="package-cta">Get Started</a>
+            </div>
+
+            <!-- Email Sequence Package -->
+            <div class="package-card featured">
+                <span class="package-badge">MOST POPULAR</span>
+                <h3>Email Sequence</h3>
+                <div class="price">$800</div>
+                <div class="price-note">3-5 email sequence</div>
+                <ul class="package-features">
+                    <li>3-5 email nurture sequence</li>
+                    <li>Subject lines for each email</li>
+                    <li>Strategic email flow planning</li>
+                    <li>2 rounds of revisions</li>
+                    <li>Automation setup recommendations</li>
+                    <li>Segmentation strategy</li>
+                    <li>7-10 day turnaround</li>
+                </ul>
+                <a href="contact.html" class="package-cta">Get Started</a>
+            </div>
+
+            <!-- Complete Campaign Package -->
+            <div class="package-card">
+                <h3>Complete Campaign</h3>
+                <div class="price">$1,500</div>
+                <div class="price-note">10+ email automation</div>
+                <ul class="package-features">
+                    <li>10+ email automation sequence</li>
+                    <li>Complete campaign strategy</li>
+                    <li>Multiple segmentation paths</li>
+                    <li>A/B testing recommendations</li>
+                    <li>Unlimited revisions</li>
+                    <li>ESP setup support</li>
+                    <li>Performance tracking setup</li>
+                    <li>14-21 day turnaround</li>
+                </ul>
+                <a href="contact.html" class="package-cta">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Email Types Section -->
+    <section class="email-types">
+        <div class="section-header">
+            <h2>Email Campaign Types I Write</h2>
+            <p>From welcome sequences to win-back campaigns—I've got you covered</p>
+        </div>
+        <div class="types-grid">
+            <div class="type-card">
+                <h4>✨ Welcome Sequences</h4>
+                <p>Make a great first impression. Onboard new subscribers and turn them into engaged followers from day one with strategic welcome emails.</p>
+            </div>
+            <div class="type-card">
+                <h4>🌱 Nurture Campaigns</h4>
+                <p>Build trust over time. Educational email series that position you as the obvious choice when subscribers are ready to buy.</p>
+            </div>
+            <div class="type-card">
+                <h4>💸 Promotional Emails</h4>
+                <p>Sell without being salesy. Promotional campaigns that convert subscribers into customers while maintaining goodwill and brand trust.</p>
+            </div>
+            <div class="type-card">
+                <h4>🔄 Re-engagement Campaigns</h4>
+                <p>Win back inactive subscribers. Strategic sequences that reignite interest and reduce list churn with compelling offers.</p>
+            </div>
+            <div class="type-card">
+                <h4>📰 Newsletter Content</h4>
+                <p>Keep subscribers engaged. Regular newsletters that provide value and keep your brand top-of-mind without overwhelming inboxes.</p>
+            </div>
+            <div class="type-card">
+                <h4>🚀 Product Launch Sequences</h4>
+                <p>Build anticipation and drive sales. Multi-email campaigns that create excitement and convert at launch with proven frameworks.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Examples Section -->
+    <section class="examples-section">
+        <div class="section-header">
+            <h2>Sample Email Campaigns</h2>
+            <p>Examples of emails that drive opens, clicks, and conversions</p>
+        </div>
+        <div class="examples-grid">
+            <div class="example-card">
+                <div class="example-preview">📧</div>
+                <div class="example-content">
+                    <h4>SaaS Welcome Sequence (5 Emails)</h4>
+                    <div class="example-meta">B2B SaaS • 5 emails • 18% trial-to-paid conversion</div>
+                    <p>Complete onboarding sequence that educated new trial users, drove feature adoption, and converted them to paying customers.</p>
+                    <a href="#" class="example-link">View Sequence</a>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="example-preview">💰</div>
+                <div class="example-content">
+                    <h4>E-commerce Abandoned Cart Series</h4>
+                    <div class="example-meta">E-commerce • 3 emails • 28% recovery rate</div>
+                    <p>Strategic cart abandonment sequence that recovered lost revenue through timed reminders and compelling offers.</p>
+                    <a href="#" class="example-link">View Sequence</a>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="example-preview">🎯</div>
+                <div class="example-content">
+                    <h4>Course Launch Campaign (10 Emails)</h4>
+                    <div class="example-meta">Online Education • 10 emails • $150K in sales</div>
+                    <p>Complete product launch sequence building anticipation through pre-launch content and converting at launch.</p>
+                    <a href="#" class="example-link">View Sequence</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="section-header">
+            <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-item">
+            <h4>What email service providers (ESPs) do you work with?</h4>
+            <p>I work with all major ESPs including Mailchimp, ConvertKit, ActiveCampaign, HubSpot, Klaviyo, MailerLite, and more. I provide copy that's ready to paste into any platform, plus setup guidance specific to your ESP.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>Do you write subject lines?</h4>
+            <p>Absolutely! Each email includes 3 subject line options tested against proven formulas. Subject lines are crucial for open rates, so I put significant effort into creating compelling, click-worthy options that avoid spam filters.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>Can you help with email design/templates?</h4>
+            <p>I focus on copywriting, but I provide clear formatting guidance and can recommend where images, buttons, and CTAs should go. I can also connect you with email designers if you need template design services.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>How do you measure email success?</h4>
+            <p>I track open rates, click-through rates, conversion rates, and revenue per email. I provide recommendations for what metrics to monitor in your ESP and how to continuously improve performance through data-driven optimization.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>Do you offer monthly retainers?</h4>
+            <p>Yes! Monthly retainers are perfect for ongoing email needs like newsletters, promotional campaigns, and seasonal sequences. You get discounted per-email rates, priority scheduling, and consistent communication. Contact me for custom retainer packages.</p>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <h2>Ready to Turn Your Email List Into Revenue?</h2>
+        <p>Let's create email campaigns that your subscribers actually look forward to receiving.</p>
+        <div class="hero-cta" style="justify-content: center;">
+            <a href="contact.html" class="btn-primary">Start Your Campaign</a>
+            <a href="portfolio.html" class="btn-secondary">View Email Samples</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Ehasan Pro</h4>
+                <p>Strategic copywriter helping brands and entrepreneurs communicate their value and convert their audience.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn">in</a>
+                    <a href="#" aria-label="Twitter">𝕏</a>
+                    <a href="#" aria-label="Email">@</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="service-thought-leadership.html">Thought Leadership</a></li>
+                    <li><a href="service-email-copy.html">Email Copywriting</a></li>
+                    <li><a href="service-linkedin.html">LinkedIn Ghostwriting</a></li>
+                    <li><a href="service-landing-pages.html">Landing Pages</a></li>
+                    <li><a href="service-brand-messaging.html">Brand Messaging</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Get In Touch</h4>
+                <ul>
+                    <li><a href="mailto:hello@ehasanpro.com">hello@ehasanpro.com</a></li>
+                    <li><a href="contact.html">Book a Call</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ehasan Pro. All rights reserved. | Crafted with purpose.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
+
