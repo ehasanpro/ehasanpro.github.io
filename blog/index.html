@@ -564,27 +564,31 @@
                 flex-direction: column;
             }
 
-   .category-filters {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-        justify-content: flex-start;
-        gap: 1rem;  /* Increased from 0.75rem */
-        padding: 1rem 1.5rem;  /* Added horizontal padding */
-    }
+  .category-filters {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    justify-content: flex-start;
+    gap: 1rem;  /* Increased gap */
+    padding: 1.5rem 1rem;  /* More padding top/bottom and sides */
+    margin-bottom: 1rem;  /* Space below */
+}
 
     .category-filters::-webkit-scrollbar {
         display: none;
     }
 
     .filter-btn {
-        flex-shrink: 0;
-        padding: 0.6rem 1.2rem;
-        font-size: 0.85rem;
-        white-space: nowrap;
-        margin-right: 0.5rem;
-    }
+    flex-shrink: 0;
+    padding: 0.75rem 1.5rem;  /* More padding inside buttons */
+    font-size: 0.9rem;  /* Slightly larger text */
+    white-space: nowrap;
+    margin-right: 0.5rem;  /* Extra gap between buttons */
+}
+            .filter-btn:last-child {
+    margin-right: 0;  /* Remove margin from last button */
+}
 }
 
             .footer-content {
