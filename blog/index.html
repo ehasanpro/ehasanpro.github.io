@@ -564,25 +564,27 @@
                 flex-direction: column;
             }
 
-         .category-filters {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    justify-content: flex-start;
-    gap: 1rem;  /* ← Increase gap between tabs */
-    padding: 1rem 1.5rem;  /* ← Add horizontal padding */
-}
+   .category-filters {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        justify-content: flex-start;
+        gap: 1rem;  /* Increased from 0.75rem */
+        padding: 1rem 1.5rem;  /* Added horizontal padding */
+    }
 
-.category-filters::-webkit-scrollbar {
-    display: none;
-}
+    .category-filters::-webkit-scrollbar {
+        display: none;
+    }
 
-.filter-btn {
-    flex-shrink: 0;
-    padding: 0.6rem 1.2rem;
-    font-size: 0.85rem;
-    white-space: nowrap;
+    .filter-btn {
+        flex-shrink: 0;
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+        white-space: nowrap;
+        margin-right: 0.5rem;
+    }
 }
 
             .footer-content {
