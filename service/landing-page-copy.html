@@ -36,17 +36,22 @@
             z-index: 1000;
         }
 
-        nav {
+          nav {
             max-width: 1200px;
             margin: 0 auto;
             padding: 1rem 2rem;
+            height: 80px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo-container { display: flex; align-items: center; gap: 1rem; }
-        .logo-container img { height: 50px; width: auto; }
+      
+        .logo-container img {
+            height: 66px;
+            transform: scale(1.35);
+        }
 
         .nav-menu { display: flex; list-style: none; gap: 2rem; }
 
@@ -418,12 +423,12 @@
                 </a>
             </div>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/service/index.html">Services</a></li>
-                <li><a href="/blog/index.html">Blog</a></li>
-                <li><a href="/work/index.html">Portfolio</a></li>
-                <li><a href="/about/index.html">About</a></li>
-                <li><a href="/contact/index.html">Contact</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/service">Service</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/work">Work</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
             <div class="menu-toggle" id="menuToggle">
                 <span></span><span></span><span></span>
