@@ -46,6 +46,14 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+
+     <!--  Article - 2 -->
+    <url>
+        <loc>https://ehasanpro.github.io/blog/article-product-led-growth-hybrid-sales-strategy.html</loc>
+        <lastmod>2026-02-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
     
     <!-- Service Page -->
     <url>
