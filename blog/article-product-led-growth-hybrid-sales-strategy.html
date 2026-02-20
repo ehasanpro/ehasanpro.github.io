@@ -638,19 +638,22 @@
                 font-size: 2rem;
             }
 
-           .article-image {
-    max-height: 300px;
-}
+         .article-image {
+        border-radius: 15px;
+        margin-bottom: 2rem;
+    }
 
-.article-image img {
-    max-height: 300px;
-}
+    .article-image img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;  /* Show full image on mobile too */
+        object-position: center;
+    }
 
-.article-image-placeholder {
-    height: 250px;
-    font-size: 4rem;
-}
-
+    .article-image-placeholder {
+        height: 250px;
+        font-size: 4rem;
+    }
             .author-bio {
                 flex-direction: column;
                 text-align: center;
