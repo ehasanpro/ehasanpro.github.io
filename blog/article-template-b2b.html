@@ -144,10 +144,10 @@
             padding: 4rem 2rem 3rem;
         }
 
-        .article-header-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
+       .article-header-content {
+    max-width: 1000px;  /* Changed from 800px to match article width */
+    margin: 0 auto;
+}
 
         .breadcrumb {
             display: flex;
@@ -203,16 +203,15 @@
             opacity: 0.95;
         }
 
-        /* Article Content */
-        .article-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
-        }
+       /* Article Content */
+.article-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
 
-        .article-image {
+.article-image {
     width: 100%;
-    max-height: 450px;
     border-radius: 15px;
     margin-bottom: 3rem;
     overflow: hidden;
@@ -221,9 +220,8 @@
 
 .article-image img {
     width: 100%;
-    height: 100%;
-    max-height: 450px;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
     object-position: center;
     display: block;
 }
@@ -237,14 +235,15 @@
     justify-content: center;
     font-size: 6rem;
 }
-         .visual-caption {
-            text-align: center;
-            color: var(--text-light);
-            font-size: 0.95rem;
-            font-style: italic;
-            margin-top: -1.5rem;
-            margin-bottom: 2rem;
-        }
+
+.visual-caption {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    font-style: italic;
+    margin-top: -1.5rem;
+    margin-bottom: 2rem;
+}
 
         .article-content {
             font-size: 1.1rem;
@@ -639,19 +638,22 @@
                 font-size: 2rem;
             }
 
-           .article-image {
-    max-height: 300px;
-}
+         .article-image {
+        border-radius: 15px;
+        margin-bottom: 2rem;
+    }
 
-.article-image img {
-    max-height: 300px;
-}
+    .article-image img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;  /* Show full image on mobile too */
+        object-position: center;
+    }
 
-.article-image-placeholder {
-    height: 250px;
-    font-size: 4rem;
-}
-
+    .article-image-placeholder {
+        height: 250px;
+        font-size: 4rem;
+    }
             .author-bio {
                 flex-direction: column;
                 text-align: center;
@@ -733,7 +735,7 @@
         <div class="article-image">
     <img src="/assets/article-death-of-product-led-growth-featured-image.jpg" alt="Business graphic with headline “The Death of Product-Led Growth: Why PLG Companies Are Quietly Rebuilding Sales Teams,” showing icons of analytics on the left and growth/finance on the right.">
          </div>
-    <p class="visual-caption">“The Death of Product-Led Growth: Why PLG Companies Are Quietly Rebuilding Sales Teams” — a visual representation of the transition from analytics-driven product adoption to renewed emphasis on sales teams and strategic growth.</p>
+    <p class="visual-caption">The Death of Product-Led Growth: Why PLG Companies Are Quietly Rebuilding Sales Teams” — a visual snapshot of the shift from analytics-driven adoption to sales-led enterprise growth.</p>
        
         <!-- Article Body -->
        <div class="article-content">
