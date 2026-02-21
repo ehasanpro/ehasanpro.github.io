@@ -67,12 +67,15 @@
             max-width: 100%;
         }
 
-     /* Header & Navigation */
+   /* Header & Navigation - PERMANENT FIX */
 header {
     background: var(--white);
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: sticky;
+    position: fixed;  /* Changed from sticky to fixed */
     top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
     z-index: 1000;
 }
 
