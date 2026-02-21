@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human + AI Hiring Scorecard: Capability-Based Talent Guide| Ehasan Pro</title>
+    <meta name="description" content="Degree requirements dropped 7-9% in AI roles. Learn how capability-based hiring improves signal quality, reduces mis-hires, and unlocks $1.5-2.2M value. Download scorecard.">
+       
+    <!-- Open Graph -->
+    <meta property="og:title" content="Human + AI Hiring Scorecard: Capability-Based Talent Guide">
+    <meta property="og:description" content="Degree requirements dropped 7-9% in AI roles. Learn how capability-based hiring improves signal quality, reduces mis-hires, and unlocks $1.5-2.2M value. Download scorecard.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://ehasanpro.github.io/blog/article-human-ai-hiring-scorecard.html">
+    <meta property="og:image" content="https://ehasanpro.github.io/assets/article-human-ai-hiring-scorecard-featured-image.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Human + AI Hiring Scorecard: Capability-Based Talent Guide">
+    <meta name="twitter:description" content="Degree requirements dropped 7-9% in AI roles. Learn how capability-based hiring improves signal quality, reduces mis-hires, and unlocks $1.5-2.2M value. Download scorecard.">
+    <meta name="twitter:image" content="https://ehasanpro.github.io/assets/article-human-ai-hiring-scorecard-featured-image.jpg">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+     "@context": "https://schema.org",
+     "@type": "Article",
+     "headline": "The Human + AI Hiring Scorecard: Redefining Talent for the AI Economy",
+     "datePublished": "2026-02-25",
+     "author": {
+       "@type": "Person",
+       "name": "Mohammad Enamul Hasan"
+     },
+     "publisher": {
+       "@type": "Organization",
+       "name": "Ehasan Pro"
+     }
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #f59e0b;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f9fafb;
+            --white: #ffffff;
+            --category-color:#0097b2; /* Dark Azure for AI category */
+        }
+
+        html {
+            overflow-x: hidden;
+            max-width: 100%;
+        }
+
+        body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    color: var(--text-dark);
+    overflow-x: hidden;
+    max-width: 100%;
+    padding-top: 80px;
+}
+        /* Header & Navigation - FIXED VERSION */
+       header {
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+       nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding:1rem 2rem;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-container img {
+            height: 66px;
+            transform: scale(1.35);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-dark);
+            transition: 0.3s;
+        }
+
+        /* Article Header */
+        .article-header {
+            background: linear-gradient(135deg, #0097b2 0%,  #00758a 100%);
+            color: var(--white);
+            padding: 4rem 2rem 3rem;
+        }
+
+        .article-header-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .breadcrumb {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+            font-size: 0.9rem;
+            flex-wrap: wrap;
+        }
+
+        .breadcrumb a {
+            color: var(--white);
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .breadcrumb a:hover {
+            opacity: 0.8;
+        }
+
+        .category-badge {
+            display: inline-block;
+            background: var(--accent-color);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-header h1 {
+            font-size: 2.8rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            flex-wrap: wrap;
+        }
+
+        .article-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .article-excerpt {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        /* Article Content */
+        .article-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .article-image {
+            width: 100%;
+            border-radius: 15px;
+            margin-bottom: 3rem;
+            overflow: hidden;
+            background: var(--bg-light);
+        }
+
+        .article-image img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            object-position: center;
+            display: block;
+        }
+
+        .visual-caption {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            font-style: italic;
+            margin-top: -1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: var(--text-dark);
+        }
+
+        .article-content h2 {
+            font-size: 2rem;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .article-content h3 {
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .article-content h4 {
+            font-size: 1.2rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-dark);
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .article-content ul,
+        .article-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.75rem;
+        }
+
+        .article-content blockquote {
+            border-left: 4px solid var(--primary-color);
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: var(--text-light);
+        }
+
+        .article-content strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .article-content a {
+            color: var(--primary-color);
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+
+        .article-content a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Call-out Box */
+        .callout-box {
+            background: var(--bg-light);
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .callout-box strong {
+            color: var(--text-dark);
+            display: block;
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        .callout-box p {
+            margin-bottom: 0;
+        }
+
+        /* Author Bio Section */
+        .author-bio {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 3rem;
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .author-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .author-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .author-info h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .author-info p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .author-social {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .author-social a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .author-social a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Share Buttons */
+        .share-section {
+            margin: 3rem 0;
+            padding: 1.5rem 0;
+            border-top: 2px solid var(--bg-light);
+            border-bottom: 2px solid var(--bg-light);
+        }
+
+        .share-section h4 {
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .share-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .share-btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--white);
+            font-weight: 600;
+            transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .share-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .share-linkedin { background: #0077b5; }
+        .share-twitter { background: #1da1f2; }
+        .share-email { background: var(--text-dark); }
+
+        /* Related Articles */
+        .related-articles {
+            margin-top: 4rem;
+        }
+
+        .related-articles h3 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--text-dark);
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .related-card {
+            background: var(--white);
+            border: 2px solid var(--bg-light);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+        }
+
+        .related-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .related-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-dark);
+        }
+
+        .related-card p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .related-card .read-more {
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .related-card .read-more::after {
+            content: ' →';
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 3rem 2rem 1.5rem;
+            margin-top: 4rem;
+            overflow-x: hidden;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            opacity: 1;
+            color: var(--accent-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s ease;
+            text-decoration: none;
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .social-links a:hover {
+            background: var(--accent-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            opacity: 0.7;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            /* Navigation Mobile */
+            nav {
+                height: 80px;
+                padding: 1rem;
+            }
+
+            .logo-container img {
+                height: 66px;
+                transform: scale(1.35);
+            }
+
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 80px;
+                flex-direction: column;
+                background: var(--white);
+                width: 100%;
+                text-align: center;
+                transition: left 0.3s ease;
+                box-shadow: 0 10px 27px rgba(0,0,0,0.1);
+                padding: 2rem 0;
+                gap: 1rem;
+                z-index: 999;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            /* Article Mobile */
+            .article-header {
+                padding: 3rem 1rem 2rem;
+            }
+
+            .article-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .article-excerpt {
+                font-size: 1rem;
+            }
+
+            .article-container {
+                padding: 2rem 1rem;
+            }
+
+            .article-content {
+                font-size: 1rem;
+            }
+
+            .article-content h2 {
+                font-size: 1.6rem;
+            }
+
+            .article-content h3 {
+                font-size: 1.3rem;
+            }
+
+            .article-image {
+                margin-bottom: 2rem;
+            }
+
+            .author-bio {
+                flex-direction: column;
+                text-align: center;
+                padding: 1.5rem;
+            }
+
+            .author-social {
+                justify-content: center;
+            }
+
+            .article-meta {
+                gap: 1rem;
+            }
+
+            .related-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+
+            .share-buttons {
+                flex-direction: column;
+            }
+
+            .share-btn {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav>
+            <div class="logo-container">
+                <a href="/index.html">
+                    <img src="/assets/ehasanpro-logo.png" alt="Ehasan Pro Logo">
+                </a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/service">Service</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/work">Work</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Article Header -->
+    <section class="article-header">
+        <div class="article-header-content">
+            <div class="breadcrumb">
+                <a href="/">Home</a> / 
+                <a href="/blog">Blog</a> / 
+                <a href="/blog/ai.html">AI & Future of Work</a> / 
+                <span>Human AI Hiring Scorecard</span>
+            </div>
+            <span class="category-badge">🤖 AI & Future of Work</span>
+            <h1>The Human + AI Hiring Scorecard: Redefining Talent for the AI Economy</h1>
+            <div class="article-meta">
+                <span>📅 February 25, 2026</span>
+                <span>⏱️ 6 min read</span>
+                <span>✍️ By Ehasan Pro</span>
+            </div>
+            <p class="article-excerpt">Degree requirements are falling, but 66% of tasks still demand human judgment. Yet most hiring processes still prioritize credentials over capability. This framework reveals the five irreplaceable human skills driving AI-era performance—and a measurable scorecard to help you hire for them.</p>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <article class="article-container">
+       
+        <!-- Featured Image -->
+        <div class="article-image">
+            <img src="/assets/article-human-ai-hiring-scorecard-featured-image.jpg" alt="Human AI Hiring Scorecard">
+        </div>
+        <p class="visual-caption">The Human + AI Hiring Scorecard: Redefining Talent for the AI Economy.</p>
+       
+        <!-- Article Body -->
+     <div class="article-content">
+
+  <h2>Why Hiring Signals Are Collapsing (And Why It Matters)</h2>
+  <p>Between 2019 and 2024, degree requirements fell 7 points for AI-augmented roles and 9 points for roles with rising automation exposure. At the same time, the skills hierarchy inside AI-exposed occupations is evolving 66% faster than just two years ago. As a result, the shelf-life of a "relevant credential" is shrinking month by month.</p>
+  <p>This collapse directly affects your hiring signal quality. Resume screens now capture fewer true high-performers and more false positives — candidates who appear strong on paper but lack the judgment, adaptability, or emotional intelligence required to excel in human–AI hybrid environments.</p>
+
+  <h3>The Cost of Signal Decay</h3>
+  <ul>
+    <li>89% of recruiters say bad hires fail due to soft-skill gaps, not technical weaknesses.</li>
+    <li>Low emotional intelligence is the second most common reason new hires do not reach the 18-month mark.</li>
+    <li>Despite this, most hiring processes still weight credentials at 70% and judgment at just 20%.</li>
+  </ul>
+  <p><strong>Key Insight:</strong> This skew persists because credentials are easy to verify and quick to filter. Judgment, in contrast, is harder to measure — yet nowhere near impossible. What's required is a capability-based hiring framework that evaluates the human differentiators driving performance in an AI era.</p>
+
+  <h2>The Five Irreplaceable Human Capabilities for AI Roles</h2>
+  <p>Not all human skills carry equal value in AI-enhanced work. According to the WEF's Future of Jobs Report 2025, five human capabilities consistently predict performance in augmented roles.</p>
+
+  <h3>1. Creative Thinking: Problem-Framing Over Problem-Solving</h3>
+  <p>AI excels at solving defined problems, but only humans can determine which problems are worth solving. In augmented teams, strong creative thinkers shift from execution to strategy. Harvard research shows creative problem-framing predicts three times greater impact in roles where humans guide AI.</p>
+
+  <h3>2. Analytical Thinking: Judgment Under Uncertainty</h3>
+  <p>High-performing analysts don't simply interpret AI-generated outputs — they challenge them. They ask what the analysis might be missing, question assumptions, and adjust decisions based on context. WEF data ranks analytical thinking as the second fastest-growing capability through 2030.</p>
+
+  <h3>3. Emotional Intelligence (EQ): The 2x Performance Multiplier</h3>
+  <p>EQ predicts performance twice as well as IQ and technical skills combined. In human–AI collaboration, EQ becomes even more important because humans manage ambiguity, resolve exceptions, and maintain trust with stakeholders. Teams with high-EQ members experience:</p>
+  <ul>
+    <li>24% higher engagement</li>
+    <li>35% fewer errors</li>
+    <li>18% higher customer NPS</li>
+  </ul>
+
+  <h3>4. Resilience &amp; Adaptability: Learning Velocity</h3>
+  <p>By 2030, 39% of skills will have changed. The differentiator is not what someone knows today — it's how quickly they can learn tomorrow. Yet many hiring processes still emphasize "relevant experience," which reflects the past, instead of "learning velocity," which predicts the future.</p>
+
+  <h3>5. Leadership &amp; Collaboration: Multiplying Through Others</h3>
+  <p>In augmented environments, individual excellence matters less than a person's ability to elevate the performance of the entire team. Collaboration effectiveness increased 52% in cross-functional teams led by strong leaders.</p>
+
+  <h2>Technical Skills as Threshold Competencies (Not Differentiators)</h2>
+  <p>In the AI era, technical skills remain essential — but only up to a certain threshold. AI literacy, data fluency, and role-specific tool proficiency must be verified as baseline competencies. However, once a candidate clears that threshold, additional technical depth does not predict higher performance.</p>
+  <p>For hiring, that means:</p>
+  <ul>
+    <li>Establish a clear technical minimum per role</li>
+    <li>Verify that floor early</li>
+    <li>Then shift most of the evaluation toward the human differentiators that truly drive ROI</li>
+  </ul>
+
+  <h2>The Augmentation Dividend: Why This Hiring Model Drives ROI</h2>
+  <p>PwC's analysis of one billion job ads found that workers with human + AI skills command a <strong>56% wage premium</strong>. McKinsey reports <strong>66% productivity gains</strong> when teams combine AI tools with human capability development. Most importantly, the ROI compounds only when teams hire for both simultaneously:</p>
+  <ul>
+    <li><strong>AI tools alone:</strong> ROI falls ~50%</li>
+    <li><strong>Training alone:</strong> ROI falls ~33%</li>
+    <li><strong>Tools + capability-based hiring + training:</strong> 300–700% ROI in 12 months</li>
+  </ul>
+  <p><strong>Business Impact:</strong> For a 100-person team, capability-based hiring can unlock $1.5–$2.2 million in annual value.</p>
+
+  <h2>The Human + AI Hiring Scorecard: A Measurable Framework</h2>
+
+  <h3>1. Role Profile &amp; Context</h3>
+  <p>Define the role's augmentation model clearly — which tasks will AI automate, which decisions remain human, and where humans and AI collaborate in workflows. This alignment prevents mis-hiring by clarifying what the role actually requires.</p>
+
+  <h3>2. Criteria &amp; Weighting</h3>
+  <ul>
+    <li><strong>Technical baseline:</strong> 20%</li>
+    <li><strong>Creative thinking:</strong> 15%</li>
+    <li><strong>Analytical judgment:</strong> 15%</li>
+    <li><strong>EQ &amp; collaboration:</strong> 20%</li>
+    <li><strong>Learning velocity:</strong> 15%</li>
+    <li><strong>AI fluency:</strong> 15%</li>
+  </ul>
+
+  <h3>3. Evidence Sources (The Critical Shift)</h3>
+  <p>Move beyond resume keyword checks toward predictive sources such as:</p>
+  <ul>
+    <li>Work samples or portfolios</li>
+    <li>Situational judgment tests</li>
+    <li>Behavioral interviews</li>
+    <li>Reference calls focused on team impact</li>
+    <li>AI fluency verification</li>
+  </ul>
+
+  <h3>4. Scoring Rubric</h3>
+  <p>Define what "excellent," "good," and "acceptable" look like for each capability. For example, in <strong>Creative Thinking</strong>:</p>
+  <ul>
+    <li><strong>Excellent:</strong> Reframes problems, challenges assumptions, proposes novel approaches</li>
+    <li><strong>Good:</strong> Understands brief, applies standard methods clearly</li>
+    <li><strong>Acceptable:</strong> Follows process with limited original thinking</li>
+  </ul>
+
+  <h3>5. Decision Rules</h3>
+  <ul>
+    <li>Technical baseline is pass/fail</li>
+    <li>Weighted criteria determine ranking</li>
+    <li>Tie-breaks are predefined</li>
+    <li>Bias monitoring ensures fairness across demographic groups</li>
+  </ul>
+
+  <h2>Three Real Candidate Vignettes (Before &amp; After the Scorecard)</h2>
+
+  <h3>Candidate A — The High-Credential Applicant Who Underperformed</h3>
+  <p><strong>Before:</strong> An applicant with top-tier degrees and multiple certifications advanced rapidly in ATS screening.</p>
+  <p><strong>After:</strong> Their creative thinking assessment landed in the 25th percentile, situational testing showed limited judgment under uncertainty, and references highlighted difficulty with stakeholder alignment. They met the technical floor — but lacked the differentiators required for success. Under the new model, they became an informed "no."</p>
+
+  <h3>Candidate B — The Nontraditional Applicant Who Excelled</h3>
+  <p><strong>Before:</strong> A candidate without a formal degree was screened out in a credential-heavy process.</p>
+  <p><strong>After:</strong> Their portfolio, judgment scenarios, and collaboration feedback showed strengths across Tier 2 skills. Their AI fluency test demonstrated practical hybrid workflow experience. They scored in the top 15% overall and were hired.</p>
+
+  <h3>Candidate C — The Mid-Level Performer With High Upside</h3>
+  <p><strong>Before:</strong> This candidate appeared average on paper but demonstrated strong learning velocity and adaptability.</p>
+  <p><strong>After:</strong> The scorecard revealed potential for rapid upskilling and future leadership. They were hired and became a standout performer within six months.</p>
+
+  <h2>30/60/90-Day Rollout: How to Implement the Scorecard</h2>
+
+  <h3>Days 1–30: Alignment &amp; Calibration</h3>
+  <ul>
+    <li>Define which roles require immediate calibration</li>
+    <li>Align leaders on the capability model</li>
+    <li>Document the technical baseline for each role</li>
+    <li>Train hiring managers on the five critical capability definitions</li>
+  </ul>
+
+  <h3>Days 31–60: Pilot &amp; Evidence Collection</h3>
+  <ul>
+    <li>Pilot in two to three functions</li>
+    <li>Collect work samples and run judgment tests</li>
+    <li>Compare candidate quality between old and new methods</li>
+    <li>Conduct calibration discussions after each hiring round</li>
+  </ul>
+
+  <h3>Days 61–90: Scale &amp; Optimize</h3>
+  <ul>
+    <li>Expand to additional roles</li>
+    <li>Train recruiters on structured interviews</li>
+    <li>Build bias-monitoring dashboards</li>
+    <li>Establish quarterly recalibration cycles</li>
+  </ul>
+
+  <h2>The KPIs That Predict Success (10-Metric Scorecard)</h2>
+  <ul>
+    <li><strong>Technical Baseline Pass Rate</strong> — Tracks how many candidates meet the necessary threshold before deeper evaluation</li>
+    <li><strong>Tier 2 Capability Scores</strong> — Measures creative thinking, analytical judgment, EQ, adaptability, and collaboration</li>
+    <li><strong>Learning Velocity Indicators</strong> — Assessed through test performance and past behavior patterns</li>
+    <li><strong>Work Sample Completion Quality</strong> — Evaluates clarity, originality, and strategic reasoning</li>
+    <li><strong>AI Fluency Verification</strong> — Ensures candidates can work effectively in hybrid environments</li>
+    <li><strong>Candidate-to-Offer Ratio</strong> — Indicates signal quality and funnel health</li>
+    <li><strong>Quality of Hire (90-Day &amp; 180-Day)</strong> — Performance, engagement, and judgment indicators</li>
+    <li><strong>Manager Satisfaction Scores</strong> — Feedback on new hire contribution and team fit</li>
+    <li><strong>Time-to-Productivity</strong> — Measured by output speed, decision quality, and role clarity</li>
+    <li><strong>First-Year Retention</strong> — A proxy for alignment, capability match, and onboarding quality</li>
+  </ul>
+
+  <h2>Conclusion: A Practical Reset for Hiring in the AI Era</h2>
+  <p>Most hiring systems were built for a pre-AI world — one where experience and credentials were reasonable predictors of performance. That world no longer exists.</p>
+  <p>Today's hybrid human–AI environment rewards creativity, judgment, emotional intelligence, learning velocity, and leadership. The Human + AI Hiring Scorecard doesn't replace your hiring process — it sharpens it. It gives teams clearer signals, reduces mis-hires, supports stronger onboarding, and helps organizations build a workforce designed for 2025 and beyond.</p>
+  <p>Adopt the model, calibrate it carefully, and your hiring will shift from credential-biased to capability-led — unlocking the full productivity potential of augmented talent.</p>
+
+</div>
+
+<div class="article-cta">
+
+  <h3>Download the Human + AI Hiring Scorecard Template (PDF)</h3>
+  <p>A ready-to-use scorecard with criteria, evidence sources, and a scoring rubric for immediate deployment.</p>
+  <a href="#">Download Now</a>
+
+  <h3>Join the Workforce Strategy Newsletter</h3>
+  <p>Monthly insights on hiring, capability development, and AI-augmented talent strategies.</p>
+  <a href="#">Subscribe Now</a>
+
+</div>
+
+        <!-- Share Section -->
+        <div class="share-section">
+            <h4>Share This Article:</h4>
+            <div class="share-buttons">
+                <a href="https://www.linkedin.com/in/ehasanpro" class="share-btn share-linkedin">📎 LinkedIn</a>
+                <a href="https://x.com/EhasanPro" class="share-btn share-twitter">🐦 Twitter</a>
+                <a href="mailto:ehasan.professional@gmail.com" class="share-btn share-email">✉️ Email</a>
+            </div>
+        </div>
+
+        <!-- Author Bio -->
+        <div class="author-bio">
+            <div class="author-avatar">
+                <img src="/assets/author-image.png" alt="Mohammad Enamul Hasan">
+            </div>
+            <div class="author-info">
+                <h4>About Ehasan Pro</h4>
+                <p>Strategic copywriter specializing in B2B SaaS, thought leadership, and conversion-focused content. Helping brands communicate their value and turn readers into customers since 2018.</p>
+                <div class="author-social">
+                    <a href="https://www.linkedin.com/in/ehasanpro">LinkedIn →</a>
+                    <a href="https://x.com/EhasanPro">Twitter →</a>
+                    <a href="/contact">Work With Me →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Articles -->
+        <div class="related-articles">
+            <h3>You Might Also Like</h3>
+            <div class="related-grid">
+                <a href="https://ehasanpro.github.io/blog/article-brand-visibility-seo-citation-premium.html" class="related-card">
+                    <h4>Brand Visibility SEO: The 35% Citation Premium Driving ROI</h4>
+                    <p>Brands cited in AI Overviews see 35% more organic clicks and 91% higher paid CTR. Discover the citation premium framework and calculate your brand visibility ROI.</p>
+                    <span class="read-more">Read More</span>
+                </a>
+                <a href="#" class="related-card">
+                    <h4>ChatGPT vs. Human Copywriters: The Real Story</h4>
+                    <p>An honest look at where AI excels and where human creativity remains irreplaceable.</p>
+                    <span class="read-more">Read More</span>
+                </a>
+                <a href="#" class="related-card">
+                    <h4>The Ultimate Guide to SaaS Content Marketing</h4>
+                    <p>Proven strategies that top SaaS companies use to attract and convert audiences.</p>
+                    <span class="read-more">Read More</span>
+                </a>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Ehasan Pro</h4>
+                <p>Strategic copywriter helping brands and entrepreneurs communicate their value and convert their audience.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/ehasanpro" aria-label="LinkedIn">in</a>
+                    <a href="https://x.com/EhasanPro" aria-label="Twitter">𝕏</a>
+                    <a href="https://ehasanpro.medium.com" aria-label="Medium">M</a>
+                    <a href="mailto:ehasan.professional@gmail.com" aria-label="Email">@</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/service">Service</a></li>
+                    <li><a href="/work">Work</a></li>
+                    <li><a href="/about">About Me</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Blog Categories</h4>
+                <ul>
+                    <li><a href="/blog/ai.html">AI & Future of Work</a></li>
+                    <li><a href="/blog/b2b.html">B2B & SaaS</a></li>
+                    <li><a href="/blog/marketing.html">Digital Marketing & SEO</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Get In Touch</h4>
+                <ul>
+                    <li><a href="/contact">Contact Form</a></li>
+                    <li><a href="mailto:ehasan.professional@gmail.com">ehasan.professional@gmail.com</a></li>
+                    <li><a href="/contact">Book a Call</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ehasan Pro. All rights reserved. | Crafted with purpose.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!menuToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
