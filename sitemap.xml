@@ -70,7 +70,14 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-    
+
+        <!--  Article - 5 -->
+    <url>
+        <loc>https://ehasanpro.github.io/blog/article-zero-click-post-seo-strategy.html</loc>
+        <lastmod>2026-02-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
     
     <!-- Service Page -->
     <url>
