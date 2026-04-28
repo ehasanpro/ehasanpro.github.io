@@ -94,6 +94,14 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+
+     <!--  Article - 8 -->
+    <url>
+        <loc>https://ehasanpro.github.io/blog/article-saas-efficient-growth-2026-efficiency-operating-covenant.html</loc>
+        <lastmod>2026-04-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
     
     
     <!-- Service Page -->
