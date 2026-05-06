@@ -102,6 +102,15 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+
+      <!--  Article - 9 -->
+    <url>
+        <loc>https://ehasanpro.github.io/blog/article-generative-engine-optimization.html</loc>
+        <lastmod>2026-05-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
     
     
     <!-- Service Page -->
