@@ -118,7 +118,15 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+
     
+        <!--  Article - 11 -->
+    <url>
+        <loc>https://ehasanpro.github.io/blog/article-net-revenue-retention-benchmark.html</loc>
+        <lastmod>2026-06-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
     
     
     <!-- Service Page -->
