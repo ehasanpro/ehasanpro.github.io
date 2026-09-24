@@ -743,6 +743,12 @@
 <h2>The Architectural Test: AI-Enhanced vs. AI-Native SaaS</h2>
 
 <p>An AI-native SaaS product is defined by an architectural property, not a UI pattern, a feature set, or a model quality claim. "AI-native" has been used to describe enough bolt-on chatbots that it has nearly lost meaning — so the distinction is worth making exact before evaluating any roadmap against it.</p>
+
+<!-- Article Quote-3 -->
+<div class="article-image">
+    <img src="/assets/article-ai-saas-product-strategy-2026-quote-3.jpg" alt="quote-3">
+</div> 
+
 <p>An AI-enhanced product adds AI as a layer to an existing architecture. When a customer uses it, the output depends on the foundation model and the prompt engineering. The product does not get smarter from the interaction. Switch to a different model tomorrow and your product behaves differently — but not necessarily worse — because nothing in your architecture was learning from the customer.</p>
 <p>An AI-native product is designed from the start to capture structured outcome data from every customer interaction and feed it back into model improvement. The product gets measurably smarter with use. Switch to a different model and you don't just change a behavior — you lose the accumulated intelligence of your customer base. <strong>That asymmetry is the moat.</strong></p>
 <p>One misconception CPOs consistently express: AI-native requires abandoning structured product interfaces for conversational ones. Two widely cited production examples challenge this directly. Cursor — which crossed $1 billion in annualized revenue in November 2025, roughly two years after its public commercial launch — is, structurally, a fork of VS Code. It is a familiar code editor with AI operating at the logic layer; every VS Code extension still works. Hebbia operates through a table-based document analysis interface — a structured, grid-like format where AI processes reasoning invisible to the user.</p>
@@ -755,6 +761,16 @@
 <li>An AI reasoning layer that operates on the output and feeds structured data back into the learning pipeline</li>
 </ul>
 <p>The CPO building structured product UI while worrying they're "failing the AI-native promise" is building the right thing. The AI reasoning layer is what needs to compound — and that compounding is invisible to the user.</p>
+
+<!-- Article Quote-1 -->
+<div class="article-image">
+    <img src="/assets/article-ai-saas-product-strategy-2026-quote-1.jpg" alt="quote-1">
+</div> 
+
+<!-- Article Visual-1 -->
+<div class="article-image">
+    <img src="/assets/article-ai-saas-product-strategy-2026-visual-1.jpg" alt="visual-1">
+</div> 
 
 <h2>The AI Data Flywheel: How Products Get Smarter — and Why Most Never Do</h2>
 
@@ -770,6 +786,12 @@
 </ul>
 <p>Each rotation tightens the loop.</p>
 <p>The word "structured" is load-bearing. Unstructured interaction logs — the clickstreams, session replays, and API call histories that most SaaS products already captured — do not feed a flywheel. They describe what happened. The flywheel requires outcome labels: did the AI's output achieve the desired result? Did the customer accept the suggestion or override it? Was the generated response accurate, or did the user correct it? This ground truth signal is what retrains the model. Without it, you have a log file, not a learning loop.</p>
+
+<!-- Article Visual-2 -->
+<div class="article-image">
+    <img src="/assets/article-ai-saas-product-strategy-2026-visual-2.jpg" alt="visual-2">
+</div> 
+
 <p>It is also worth naming a common architectural dead end: retrieval-augmented generation (RAG) alone does not constitute a flywheel. RAG improves response accuracy by grounding outputs in current documents — but unless those retrieval decisions and their outcomes are labeled and fed back into training, the system does not improve from use. The flywheel requires the feedback pipeline, not just the retrieval layer.</p>
 <p>Capturing structured outcome data requires product decisions made at inception: what to label, how to surface ground truth, how to build the feedback pipeline that moves labeled data back into training. These decisions are prohibitively difficult to add after the fact. Retrofitting them onto an existing product requires redesigning the data model, changing the interaction layer to surface outcome signals the original architecture never captured, and building training infrastructure simultaneously while maintaining product stability. The work is not technically impossible; it is prohibitively disruptive given the architectural cost and timeline it requires.</p>
 <p>That disruption cost is zero for an AI-native startup. They designed the flywheel at inception, because there was no existing architecture to redesign against.</p>
@@ -778,6 +800,12 @@
 <blockquote>A competitor with the same foundation model and API access cannot replicate it, not because of lock-in mechanics, but because the data that makes it valuable exists only in your infrastructure. The switching cost compounds with every interaction.</blockquote>
 
 <h2>The AI Product Roadmap Spectrum: Four Stages from Feature to Moat</h2>
+
+
+<!-- Article Visual-3 -->
+<div class="article-image">
+    <img src="/assets/article-ai-saas-product-strategy-2026-visual-3.jpg" alt="visual-3">
+</div> 
 
 <p>Four positions on a spectrum define where any B2B SaaS product sits architecturally. The positions are diagnostic, not judgmental — knowing where you are is the prerequisite for knowing what the next investment requires.</p>
 
@@ -799,6 +827,11 @@
 <p>At Stage 3 and above, AI governance becomes a design requirement, not a compliance afterthought. In one illustrative case shared by a practitioner: after deploying five or six AI services in production — with prompts updated without version control and APIs swapped without dependency documentation — an enterprise customer requested a full audit trail of which models had touched their data. The team needed two weeks to reconstruct an answer that should have been instantly retrievable. At enterprise scale, that scramble costs the deal. Model versioning, dependency tracking, and audit trails must be built into the architecture at Stage 3, not requested by legal at Stage 4.</p>
 <p>The diagnostic question that locates any product on this spectrum in thirty minutes: <em>if you replaced your foundation model tomorrow, what would be lost?</em></p>
 <p>At Stage 1 or 2, the answer is "very little — the interface stays the same and the new model might actually perform better." At Stage 4, the answer is "the entire accumulated intelligence of our customer base — the training data, the personalized model weights, the outcome labels from every customer interaction." The distance between those two answers is the distance between a feature and a moat.</p>
+
+<!-- Article Quote-2 -->
+<div class="article-image">
+    <img src="/assets/article-ai-saas-product-strategy-2026-quote-2.jpg" alt="quote-2">
+</div> 
 
 <h2>The Asymmetric Threat: Why AI-Native Startups Don't Need a Better Model to Win</h2>
 
